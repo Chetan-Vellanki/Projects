@@ -1,0 +1,107 @@
+magic
+tech scmos
+timestamp 1699128638
+<< nwell >>
+rect -32 -3 66 26
+<< ntransistor >>
+rect -15 -25 -10 -20
+rect 1 -25 6 -20
+rect 17 -25 22 -20
+rect 33 -25 38 -20
+<< ptransistor >>
+rect -15 9 -10 14
+rect 1 9 6 14
+rect 17 9 22 14
+rect 33 9 38 14
+<< ndiffusion >>
+rect -18 -25 -15 -20
+rect -10 -25 1 -20
+rect 6 -25 17 -20
+rect 22 -25 33 -20
+rect 38 -25 40 -20
+<< pdiffusion >>
+rect -18 9 -15 14
+rect -10 9 -7 14
+rect -2 9 1 14
+rect 6 9 9 14
+rect 14 9 17 14
+rect 22 9 25 14
+rect 30 9 33 14
+rect 38 9 41 14
+<< ndcontact >>
+rect -23 -25 -18 -20
+rect 40 -25 45 -20
+<< pdcontact >>
+rect -23 9 -18 14
+rect -7 9 -2 14
+rect 9 9 14 14
+rect 25 9 30 14
+rect 41 9 46 14
+<< nsubstratencontact >>
+rect 53 9 58 14
+<< polysilicon >>
+rect -15 14 -10 18
+rect 1 14 6 18
+rect 17 14 22 18
+rect 33 14 38 18
+rect -15 -9 -10 9
+rect 1 -9 6 9
+rect 17 -9 22 9
+rect 33 -9 38 9
+rect -14 -14 -10 -9
+rect 2 -14 6 -9
+rect 18 -14 22 -9
+rect 34 -14 38 -9
+rect -15 -20 -10 -14
+rect 1 -20 6 -14
+rect 17 -20 22 -14
+rect 33 -20 38 -14
+rect -15 -32 -10 -25
+rect 1 -32 6 -25
+rect 17 -32 22 -25
+rect 33 -32 38 -25
+<< polycontact >>
+rect -19 -14 -14 -9
+rect -3 -14 2 -9
+rect 13 -14 18 -9
+rect 29 -14 34 -9
+<< metal1 >>
+rect -32 26 66 30
+rect -23 14 -18 26
+rect 9 14 14 26
+rect 41 14 46 26
+rect 53 14 58 26
+rect -7 5 -2 9
+rect 25 6 30 9
+rect 25 5 45 6
+rect -7 1 45 5
+rect 40 -8 45 1
+rect 69 0 84 4
+rect 108 0 112 4
+rect 69 -8 73 0
+rect -23 -14 -19 -9
+rect -7 -14 -3 -9
+rect 9 -14 13 -9
+rect 25 -14 29 -9
+rect 40 -13 73 -8
+rect 40 -20 45 -13
+rect -23 -34 -18 -25
+rect 76 -34 81 -13
+rect -23 -38 81 -34
+use not_without_labels  not_without_labels_0
+timestamp 1699100137
+transform 1 0 82 0 1 -6
+box -16 -12 33 36
+<< labels >>
+rlabel metal1 -6 28 -6 28 5 Vdd!
+rlabel metal1 -22 -12 -22 -12 1 input_A
+rlabel metal1 -6 -12 -6 -12 1 input_B
+rlabel metal1 10 -12 10 -12 1 input_C
+rlabel metal1 26 -11 26 -11 1 input_D
+rlabel metal1 43 -8 43 -8 1 v_output_nand_4
+rlabel metal1 -21 -28 -21 -28 1 Gnd!
+rlabel ndiffusion 28 -23 28 -23 1 node_1
+rlabel ndiffusion 12 -23 12 -23 1 node_2
+rlabel ndiffusion -5 -23 -5 -23 1 node_3
+rlabel metal1 110 2 110 2 7 v_output_and_4
+<< end >>

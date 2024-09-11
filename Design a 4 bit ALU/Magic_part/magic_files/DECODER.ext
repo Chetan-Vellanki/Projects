@@ -1,0 +1,111 @@
+timestamp 1701340679
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 9
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+node "DEC_AND_NODE_4" 42 248.064 168 47 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "D3" 23 114.466 260 39 ndif 40 26 40 26 0 0 0 0 0 0 0 0 0 0 195 94 0 0 0 0 0 0 0 0 0 0
+node "DEC_D3_NAND" 99 516.966 180 47 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 439 242 0 0 0 0 0 0 0 0 0 0
+node "DEC_AND_NODE_3" 42 248.064 168 143 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "D2" 23 114.466 261 135 ndif 40 26 40 26 0 0 0 0 0 0 0 0 0 0 195 94 0 0 0 0 0 0 0 0 0 0
+node "DEC_D2_NAND" 99 520.29 180 143 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "Dec_AND_node_2" 42 248.064 169 247 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "S1" 326 2764.14 62 228 pc 0 0 0 0 0 0 0 0 0 0 921 400 0 0 1940 828 123 68 0 0 0 0 0 0 0 0
+node "D1" 23 104.663 260 239 ndif 40 26 40 26 0 0 0 0 0 0 0 0 0 0 183 88 0 0 0 0 0 0 0 0 0 0
+node "DEC_D1_NAND" 99 513.722 181 247 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 435 240 0 0 0 0 0 0 0 0 0 0
+node "S0" 333 7918.25 24 228 pc 0 0 0 0 0 0 0 0 0 0 921 400 0 0 203 112 2453 1252 0 0 0 0 0 0 0 0
+node "gnd" 283 8809.89 21 219 ndc 330 232 0 0 0 0 0 0 0 0 0 0 0 0 4383 1776 2578 1124 0 0 0 0 0 0 0 0
+node "Dec_AND_node_1" 42 248.064 170 365 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "D0" 23 75.3517 261 358 ndif 40 26 40 26 0 0 0 0 0 0 0 0 0 0 147 70 0 0 0 0 0 0 0 0 0 0
+node "DEC_D0_NAND" 98 511.796 182 365 ndif 30 22 90 46 0 0 0 0 0 0 186 86 0 0 455 242 0 0 0 0 0 0 0 0 0 0
+node "S1c" 269 4368.61 71 219 ndif 40 26 40 26 0 0 0 0 0 0 730 312 0 0 295 148 1927 612 0 0 0 0 0 0 0 0
+node "S0c" 272 5093.12 33 219 ndif 40 26 40 26 0 0 0 0 0 0 730 312 0 0 2388 726 1262 514 0 0 0 0 0 0 0 0
+node "vdd" 44642 14777.1 2 234 nw 225 180 490 336 9259 1352 0 0 0 0 0 0 0 0 8956 3312 0 0 0 0 0 0 0 0 0 0
+cap "DEC_D2_NAND" "DEC_AND_NODE_3" 85.2819
+cap "S0" "S1c" 73.08
+cap "gnd" "DEC_D1_NAND" 159.401
+cap "S0" "Dec_AND_node_2" 89.1066
+cap "vdd" "D0" 40.8836
+cap "DEC_D3_NAND" "D3" 30.251
+cap "gnd" "D3" 51.6155
+cap "vdd" "D2" 40.9802
+cap "S0c" "S1c" 15.9851
+cap "S0c" "DEC_AND_NODE_3" 88.2215
+cap "DEC_D2_NAND" "D2" 30.251
+cap "DEC_AND_NODE_3" "gnd" 77.1959
+cap "gnd" "S1c" 55.4061
+cap "gnd" "Dec_AND_node_2" 77.3115
+cap "gnd" "D1" 51.6155
+cap "S0" "DEC_AND_NODE_4" 89.1066
+cap "gnd" "D0" 51.6155
+cap "DEC_AND_NODE_3" "S1" 89.1066
+cap "S1" "S1c" 30.251
+cap "gnd" "D2" 51.6155
+cap "DEC_D2_NAND" "vdd" 94.003
+cap "DEC_D0_NAND" "S1c" 15.3106
+cap "S0" "vdd" 202.099
+cap "DEC_D3_NAND" "DEC_AND_NODE_4" 85.2819
+cap "gnd" "DEC_AND_NODE_4" 77.0615
+cap "DEC_D1_NAND" "S1c" 6.44802
+cap "DEC_D1_NAND" "Dec_AND_node_2" 85.2819
+cap "DEC_D1_NAND" "D1" 30.251
+cap "DEC_D0_NAND" "D0" 30.251
+cap "DEC_D3_NAND" "vdd" 94.0594
+cap "S0c" "vdd" 230.788
+cap "gnd" "vdd" 40.2252
+cap "S0c" "Dec_AND_node_1" 88.2215
+cap "gnd" "Dec_AND_node_1" 76.8303
+cap "S0c" "DEC_D2_NAND" 6.44802
+cap "S1" "DEC_AND_NODE_4" 88.2215
+cap "DEC_D2_NAND" "gnd" 157.853
+cap "S0" "DEC_D3_NAND" 15.3106
+cap "Dec_AND_node_2" "S1c" 88.2215
+cap "S0c" "S0" 43.5424
+cap "S0" "gnd" 92.3343
+cap "vdd" "S1" 201.098
+cap "DEC_D0_NAND" "vdd" 94.0231
+cap "DEC_D0_NAND" "Dec_AND_node_1" 85.2819
+cap "DEC_D3_NAND" "gnd" 157.853
+cap "DEC_D2_NAND" "S1" 15.3106
+cap "S0c" "gnd" 51.6155
+cap "S0" "S1" 28.5318
+cap "DEC_D1_NAND" "vdd" 94.0352
+cap "vdd" "D3" 40.9802
+cap "S0" "DEC_D1_NAND" 15.3106
+cap "DEC_D3_NAND" "S1" 6.44802
+cap "S0c" "S1" 511.187
+cap "gnd" "S1" 131.827
+cap "S0c" "DEC_D0_NAND" 6.44802
+cap "vdd" "S1c" 192.69
+cap "DEC_D0_NAND" "gnd" 145.266
+cap "Dec_AND_node_1" "S1c" 89.1066
+cap "vdd" "D1" 40.9802
+fet nfet 255 39 256 40 25 20 "Gnd!" "DEC_D3_NAND" 10 0 "gnd" 5 35,24 "D3" 5 40,26
+fet nfet 198 47 199 48 25 20 "Gnd!" "S0" 10 0 "gnd" 5 30,22 "DEC_AND_NODE_4" 5 35,24
+fet nfet 175 47 176 48 25 20 "Gnd!" "S1" 10 0 "DEC_AND_NODE_4" 5 35,24 "DEC_D3_NAND" 5 30,22
+fet pfet 255 61 256 62 25 20 "vdd" "DEC_D3_NAND" 10 0 "vdd" 5 35,24 "D3" 5 40,26
+fet pfet 198 76 199 77 25 20 "vdd" "S0" 10 0 "DEC_D3_NAND" 5 45,23 "vdd" 5 35,24
+fet pfet 175 76 176 77 25 20 "vdd" "S1" 10 0 "vdd" 5 35,24 "DEC_D3_NAND" 5 45,23
+fet nfet 256 135 257 136 25 20 "Gnd!" "DEC_D2_NAND" 10 0 "gnd" 5 35,24 "D2" 5 40,26
+fet nfet 198 143 199 144 25 20 "Gnd!" "S1" 10 0 "gnd" 5 30,22 "DEC_AND_NODE_3" 5 35,24
+fet nfet 175 143 176 144 25 20 "Gnd!" "S0c" 10 0 "DEC_AND_NODE_3" 5 35,24 "DEC_D2_NAND" 5 30,22
+fet pfet 256 157 257 158 25 20 "vdd" "DEC_D2_NAND" 10 0 "vdd" 5 35,24 "D2" 5 40,26
+fet pfet 198 172 199 173 25 20 "vdd" "S1" 10 0 "DEC_D2_NAND" 5 45,23 "vdd" 5 35,24
+fet pfet 175 172 176 173 25 20 "vdd" "S0c" 10 0 "vdd" 5 35,24 "DEC_D2_NAND" 5 45,23
+fet nfet 255 239 256 240 25 20 "Gnd!" "DEC_D1_NAND" 10 0 "gnd" 5 35,24 "D1" 5 40,26
+fet nfet 66 219 67 220 25 20 "Gnd!" "S1" 10 0 "gnd" 5 35,24 "S1c" 5 40,26
+fet nfet 28 219 29 220 25 20 "Gnd!" "S0" 10 0 "gnd" 5 35,24 "S0c" 5 40,26
+fet pfet 66 241 67 242 25 20 "vdd" "S1" 10 0 "vdd" 5 35,24 "S1c" 5 40,26
+fet pfet 28 241 29 242 25 20 "vdd" "S0" 10 0 "vdd" 5 35,24 "S0c" 5 40,26
+fet nfet 199 247 200 248 25 20 "Gnd!" "S0" 10 0 "gnd" 5 30,22 "Dec_AND_node_2" 5 35,24
+fet nfet 176 247 177 248 25 20 "Gnd!" "S1c" 10 0 "Dec_AND_node_2" 5 35,24 "DEC_D1_NAND" 5 30,22
+fet pfet 255 261 256 262 25 20 "vdd" "DEC_D1_NAND" 10 0 "vdd" 5 35,24 "D1" 5 40,26
+fet pfet 199 276 200 277 25 20 "vdd" "S0" 10 0 "DEC_D1_NAND" 5 45,23 "vdd" 5 35,24
+fet pfet 176 276 177 277 25 20 "vdd" "S1c" 10 0 "vdd" 5 35,24 "DEC_D1_NAND" 5 45,23
+fet nfet 256 358 257 359 25 20 "Gnd!" "DEC_D0_NAND" 10 0 "gnd" 5 35,24 "D0" 5 40,26
+fet nfet 200 365 201 366 25 20 "Gnd!" "S1c" 10 0 "gnd" 5 30,22 "Dec_AND_node_1" 5 35,24
+fet nfet 177 365 178 366 25 20 "Gnd!" "S0c" 10 0 "Dec_AND_node_1" 5 35,24 "DEC_D0_NAND" 5 30,22
+fet pfet 256 380 257 381 25 20 "vdd" "DEC_D0_NAND" 10 0 "vdd" 5 35,24 "D0" 5 40,26
+fet pfet 200 394 201 395 25 20 "vdd" "S1c" 10 0 "DEC_D0_NAND" 5 45,23 "vdd" 5 35,24
+fet pfet 177 394 178 395 25 20 "vdd" "S0c" 10 0 "vdd" 5 35,24 "DEC_D0_NAND" 5 45,23

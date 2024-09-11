@@ -1,0 +1,21 @@
+.include TSMC_180nm.txt
+.include ENABLE.sub
+.include OR.sub
+.include XOR.sub
+.include FULL_ADDER.sub
+
+.subckt ADDER_SUBTRACTOR A3 A2 A1 A0 B3 B2 B1 B0 D0 D1 S_4 S_3 S_2 S_1 S_0 vdd gnd
+X_Enable_input_for_sum D0 D1 D_enable vdd gnd OR
+X_Enable_A_B_for_Adding A3 A2 A1 A0 B3 B2 B1 B0 D_enable A3e A2e A1e A0e B3e B2e B1e B0e vdd gnd ENABLE
+X_xor_B0_D1 B0e D1 xor_B0_D1 vdd gnd XOR
+X_xor_B1_D1 B1e D1 xor_B1_D1 vdd gnd XOR
+X_xor_B2_D1 B2e D1 xor_B2_D1 vdd gnd XOR
+X_xor_B3_D1 B3e D1 xor_B3_D1 vdd gnd XOR
+
+X_sum_A0_B0 A0e xor_B0_D1 D1  S_0 C_1 vdd gnd FULL_ADDER
+X_sum_A1_B1 A1e xor_B1_D1 C_1 S_1 C_2 vdd gnd FULL_ADDER
+X_sum_A2_B2 A2e xor_B2_D1 C_2 S_2 C_3 vdd gnd FULL_ADDER
+X_sum_A3_B3 A3e xor_B3_D1 C_3 S_3 S_4 vdd gnd FULL_ADDER
+
+
+.ends ADDER_SUBTRACTOR

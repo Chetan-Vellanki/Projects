@@ -1,0 +1,59 @@
+.include TSMC_180nm.txt
+.include DECODER.sub
+.include ADDER_SUBTRACTOR.sub
+.include COMPARATOR.sub
+.include ANDING.sub
+** defining dimensions for the MOSFET 
+* Here taken identical mosfets with same W/L ratio
+.param supply_voltage = 1.8
+.param lambda = 180n
+.param w = {10* lambda}
+.param l = {2* lambda}   
+
+.global gnd
+.global vdd
+
+VDD vdd gnd 'supply_voltage'
+** GIVING INPUT signals S0 S1 ,A and B
+V_input_S0 S0 gnd PULSE(0 1.8 200n 50p 50p 200n 400n)
+V_input_S1 S1 gnd PULSE(0 1.8 400n 50p 50p 400n 800n)
+V_input_A3 A3 gnd PULSE(0 1.8 0 50p 50p 50n 100n)
+V_input_A2 A2 gnd PULSE(0 1.8 50n 50p 50p 75n 150n)
+V_input_A1 A1 gnd PULSE(0 1.8 0 50p 50p 100n 200n)
+V_input_A0 A0 gnd PULSE(0 1.8 50n 50p 50p 50n 100n)
+V_input_B3 B3 gnd PULSE(0 1.8 0 50p 50p 50n 100n)
+V_input_B2 B2 gnd PULSE(0 1.8 75n 50p 50p 75n 150n)  
+V_input_B1 B1 gnd PULSE(0 1.8 0 50p 50p 100n 200n)
+V_input_B0 B0 gnd PULSE(1.8 0 50n 50p 50p 50n 100n)
+
+X_send_select_lines_to_DECODER S0 S1 D0 D1 D2 D3 vdd gnd DECODER
+X_calling_ADDER_SUBTRACTOR_BLOCK A3 A2 A1 A0 B3 B2 B1 B0 D0 D1 S_4 S_3 S_2 S_1 S_0 vdd gnd ADDER_SUBTRACTOR
+X_calling_COMPARATOR_BLOCK A3 A1 A1 A0 B3 B2 B1 B0 D2 Y_GT Y_EQ Y_LS vdd gnd COMPARATOR
+X_calling_ANDER_BLOCK A3 A2 A1 A0 B3 B2 B1 B0 D3 Y_and3 Y_and2 Y_and1 Y_and0 vdd gnd ANDING
+
+C_output output gnd 100f
+C_node_1 node_1 gnd 100f
+C_node_2 node_2 gnd 100f
+C_node_3 node_3 gnd 100f
+C_node_4 node_4 gnd 100f
+** testing COMPARATOR MODULE
+* .tran 10n 2u
+* .control
+* run
+* plot v(S1)+32 v(S0)+30 v(D0)+28 v(D1)+26 v(A3)+24 v(A2)+22 v(A1)+20 v(A0)+18 v(B3)+16 v(B2)+14 v(B1)+12 v(B0)+10 v(S_4)+8 v(S_3)+6 v(S_2)+4 v(S_1)+2 v(S_0) 
+* .endc
+* .end
+
+* .tran 1n 900n
+* .control  
+* run 
+* plot v(S1)+26 v(S0)+24 v(D2)+22 v(A3)+20 v(A2)+18 v(A1)+16 v(A0)+14 v(B3)+12 v(B2)+10 v(B1)+8 v(B0)+6 v(Y_GT)+4 v(Y_EQ)+2 v(Y_LS) 
+* .endc
+* .end
+
+.tran 10n 2u
+.control
+run
+plot v(S1)+28 v(S0)+26 v(D3)+24 v(A3)+22 v(A2)+20 v(A1)+18 v(A0)+16 v(B3)+14 v(B2)+12 v(B1)+10 v(B0)+8 v(Y_and3)+6 v(Y_and2)+4 v(Y_and1)+2 v(Y_and0)
+.endc
+.end

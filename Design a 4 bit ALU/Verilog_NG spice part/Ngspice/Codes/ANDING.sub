@@ -1,0 +1,13 @@
+.include TSMC_180nm.txt
+.include AND.sub
+.include ENABLE.sub
+
+.subckt ANDING A3 A2 A1 A0 B3 B2 B1 B0 D3 Y_and3 Y_and2 Y_and1 Y_and0 vdd gnd
+X_A_enabling A3 A2 A1 A0 B3 B2 B1 B0 D3 A3e A2e A1e A0e B3e B2e B1e B0e vdd gnd ENABLE
+
+X_And0 A0e B0e Y_and0 vdd gnd AND
+X_And1 A1e B1e Y_and1 vdd gnd AND
+X_And2 A2e B2e Y_and2 vdd gnd AND
+X_And3 A3e B3e Y_and3 vdd gnd AND
+
+.ends ANDING

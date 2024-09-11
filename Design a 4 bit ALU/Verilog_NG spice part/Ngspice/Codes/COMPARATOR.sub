@@ -1,0 +1,51 @@
+.include TSMC_180nm.txt
+.include ENABLE.sub
+.include XNOR.sub
+.include four_input_and.sub
+.include AND.sub
+.include NOT.sub
+.include three_input_and.sub
+.include five_input_and.sub
+.include four_input_or.sub
+
+.subckt COMPARATOR A3 A1 A1 A0 B3 B2 B1 B0 D2 Y_GT Y_EQ Y_LS vdd gnd
+X_comparator_enable A3 A2 A1 A0 B3 B2 B1 B0 D2 A3e A2e A1e A0e B3e B2e B1e B0e vdd gnd ENABLE
+
+** CHECK IF BOTH INPUTS ARE EQUAL
+X_xnor_a0_b0 A0e B0e xnor_a0_b0 vdd gnd XNOR
+X_xnor_a1_b1 A1e B1e xnor_a1_b1 vdd gnd XNOR
+X_xnor_a2_b2 A2e B2e xnor_a2_b2 vdd gnd XNOR
+X_xnor_a3_b3 A3e B3e xnor_a3_b3 vdd gnd XNOR
+* now anding all the xnor output if the output is 1 then both inputs are equal 
+X_four_and_for_equal_compare xnor_a0_b0 xnor_a1_b1 xnor_a2_b2 xnor_a3_b3 Y_EQ vdd gnd four_input_and
+X_notting_B3 B3e B3ec vdd gnd NOT
+X_notting_B2 B2e B2ec vdd gnd NOT
+X_notting_B1 B1e B1ec vdd gnd NOT
+X_notting_B0 B0e B0ec vdd gnd NOT
+X_notting_A3 A3e A3ec vdd gnd NOT
+X_notting_A2 A2e A2ec vdd gnd NOT
+X_notting_A1 A1e A1ec vdd gnd NOT
+X_notting_A0 A0e A0ec vdd gnd NOT
+
+** CHECK IF First input A is greater than Second input B
+
+X_a3_gt_b3 A3e B3ec a3_gt_b3 vdd gnd AND
+X_a3_eq_b3_a2_gt_b2 xnor_a3_b3 A2e B2ec a3_eq_b3_a2_gt_b2 vdd gnd three_input_and
+X_a3_eq_b3_a2_eq_b2_a1_gt_b1 xnor_a3_b3 xnor_a2_b2 A1e B1ec a3_eq_b3_a2_eq_b2_a1_gt_b1 vdd gnd four_input_and
+X_a3_eq_b3_a2_eq_b2_a1_eq_b1_a0_gt_b0 xnor_a3_b3 xnor_a2_b2 xnor_a1_b1 A0e B0ec a3_eq_b3_a2_eq_b2_a1_eq_b1_a0_gt_b0 vdd gnd five_input_and
+
+* oring all the obtained outputs if any one of them satisfies then A>B
+X_A_GT_B a3_gt_b3  a3_eq_b3_a2_gt_b2  a3_eq_b3_a2_eq_b2_a1_gt_b1  a3_eq_b3_a2_eq_b2_a1_eq_b1_a0_gt_b0  Y_GT vdd gnd four_input_or
+
+
+
+** CHECK IF First input A is lesser than Second input B
+X_a3_ls_b3 A3ec B3e a3_ls_b3 vdd gnd AND
+X_a3_eq_b3_a2_ls_b2 xnor_a3_b3 A2ec B2e a3_eq_b3_a2_ls_b2 vdd gnd three_input_and
+X_a3_eq_b3_a2_eq_b2_a1_ls_b1 xnor_a3_b3 xnor_a2_b2 A1ec B1e a3_eq_b3_a2_eq_b2_a1_ls_b1 vdd gnd four_input_and
+X_a3_eq_b3_a2_eq_b2_a1_eq_b1_a0_ls_b0 xnor_a3_b3 xnor_a2_b2 xnor_a1_b1 A0ec B0e a3_eq_b3_a2_eq_b2_a1_eq_b1_a0_ls_b0 vdd gnd five_input_and
+
+* oring all the obtained outputs if any one of them satisfies then A<B
+X_A_LS_B a3_ls_b3  a3_eq_b3_a2_ls_b2  a3_eq_b3_a2_eq_b2_a1_ls_b1  a3_eq_b3_a2_eq_b2_a1_eq_b1_a0_ls_b0  Y_LS vdd gnd four_input_or
+
+.ends COMPARATOR

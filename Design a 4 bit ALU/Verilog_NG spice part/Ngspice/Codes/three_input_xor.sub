@@ -1,0 +1,7 @@
+.include TSMC_180nm.txt
+.include XOR.sub
+.subckt three_input_xor input_A input_B input_C output vdd gnd
+X_xor_first_two input_A input_B output_xor_first_two vdd gnd XOR
+X_final_result input_C output_xor_first_two output vdd gnd XOR
+
+.ends three_input_xor

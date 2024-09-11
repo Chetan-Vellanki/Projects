@@ -1,0 +1,57 @@
+* SPICE3 file created from XNOR.ext - technology: scmos
+
+.option scale=0.09u
+
+M1000 input_Bc input_B Vdd Vdd pfet w=5 l=5
++  ad=40 pd=26 as=185 ps=124
+M1001 input_Bc input_B Gnd Gnd nfet w=5 l=5
++  ad=40 pd=26 as=170 ps=105
+M1002 input_Ac input_A Vdd Vdd pfet w=5 l=5
++  ad=40 pd=26 as=0 ps=0
+M1003 input_Ac input_A Gnd Gnd nfet w=5 l=5
++  ad=40 pd=26 as=0 ps=0
+M1004 v_output_xnor_2 v_output_xor_2 Vdd Vdd pfet w=5 l=5
++  ad=40 pd=26 as=0 ps=0
+M1005 v_output_xnor_2 v_output_xor_2 Gnd Gnd nfet w=5 l=5
++  ad=40 pd=26 as=0 ps=0
+M1006 v_output_xor_2 input_Ac node_3 w_19_n33# pfet w=5 l=5
++  ad=17 pd=13 as=65 ps=36
+M1007 v_output_xor_2 input_Bc node_4 Vdd pfet w=5 l=5
++  ad=0 pd=0 as=65 ps=36
+M1008 node_3 input_B Vdd w_19_n33# pfet w=5 l=5
++  ad=0 pd=0 as=0 ps=0
+M1009 node_4 input_A Vdd Vdd pfet w=5 l=5
++  ad=0 pd=0 as=0 ps=0
+M1010 node_1 input_B Gnd Gnd nfet w=5 l=5
++  ad=65 pd=36 as=0 ps=0
+M1011 v_output_xor_2 input_A node_1 Gnd nfet w=5 l=5
++  ad=25 pd=7 as=0 ps=0
+M1012 node_2 input_Ac Gnd Gnd nfet w=5 l=5
++  ad=65 pd=36 as=0 ps=0
+M1013 v_output_xor_2 input_Bc node_2 Gnd nfet w=5 l=5
++  ad=0 pd=0 as=0 ps=0
+C0 input_Bc Vdd 0.50fF
+C1 input_B input_Ac 0.11fF
+C2 Vdd v_output_xor_2 0.79fF
+C3 input_B w_19_n33# 0.16fF
+C4 input_Ac Vdd 0.06fF
+C5 input_Bc v_output_xor_2 0.17fF
+C6 input_A input_Ac 0.02fF
+C7 Vdd w_19_n33# 0.22fF
+C8 Vdd v_output_xnor_2 0.06fF
+C9 input_Ac v_output_xor_2 0.13fF
+C10 input_B Vdd 0.11fF
+C11 input_B input_A 0.03fF
+C12 input_B input_Bc 0.02fF
+C13 v_output_xor_2 w_19_n33# 0.05fF
+C14 input_Ac w_19_n33# 0.21fF
+C15 v_output_xor_2 v_output_xnor_2 0.02fF
+C16 input_Ac v_output_xnor_2 0.02fF
+C17 input_A Vdd 0.27fF
+C18 w_19_n33# Gnd 1.82fF
+C19 v_output_xnor_2 Gnd 0.13fF
+C20 v_output_xor_2 Gnd 0.52fF
+C21 input_Ac Gnd 2.53fF
+C22 input_A Gnd 0.91fF
+C23 input_Bc Gnd 0.25fF
+C24 input_B Gnd 1.81fF

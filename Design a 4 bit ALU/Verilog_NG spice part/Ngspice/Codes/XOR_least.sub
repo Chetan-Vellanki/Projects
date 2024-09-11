@@ -1,0 +1,12 @@
+.include TSMC_180nm.txt
+.subckt XOR_least input_A input_B output vdd gnd
+
+M_n_1 output input_B gnd gnd CMOSN W = {w} L = {l}
++ AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+M_p_1 output input_B input_A vdd CMOSP W = {w} L = {l} 
++ AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+M_p_2 output input_A input_B vdd CMOSP w = {w} L = {l} 
++ AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+.ends XOR_least

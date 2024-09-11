@@ -1,0 +1,793 @@
+timestamp 1701376110
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 9
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+node "xnor_16" 20 0 -977 -60 pdif 0 0 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "xnor_14" 17 0 -1060 -60 ndif 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "xnor_15" 17 0 -977 -21 ndif 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "xnor_13" 20 0 -1060 -21 pdif 0 0 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "A0c" 192 1682.44 -1124 -39 ndc 40 26 40 26 0 0 0 0 0 0 530 222 0 0 1545 666 0 0 0 0 0 0 0 0 0 0
+node "xor_4" 159 1625.27 -1180 -30 pc 80 52 80 52 0 0 0 0 0 0 191 88 0 0 2065 934 0 0 0 0 0 0 0 0 0 0
+node "B0c" 249 1887.3 -1047 -25 p 40 26 40 26 0 0 0 0 0 0 720 298 0 0 1350 550 0 0 0 0 0 0 0 0 0 0
+node "DEC_AND_NODE_4" 42 248.064 168 47 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "DEC_D3_NAND" 99 516.966 180 47 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 439 242 0 0 0 0 0 0 0 0 0 0
+node "xnor_11" 20 0 -977 115 pdif 0 0 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "xnor_10" 17 0 -1060 115 ndif 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "A_compare_B_node_1" 15 0 -1274 132 ndif 55 32 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "A_compare_B_node_2" 15 0 -1290 132 ndif 55 32 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "A_compare_B_node_3" 15 0 -1306 132 ndif 55 32 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "DEC_AND_NODE_3" 42 248.064 168 143 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "xnor_12" 17 0 -977 154 ndif 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "xnor_9" 20 0 -1060 154 pdif 0 0 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "DEC_D2_NAND" 99 520.29 180 143 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "A1c" 192 1675.61 -1124 136 ndc 40 26 40 26 0 0 0 0 0 0 530 222 0 0 1545 666 0 0 0 0 0 0 0 0 0 0
+node "xor_3" 160 1780.86 -1180 145 pc 80 52 80 52 0 0 0 0 0 0 191 88 0 0 2240 1034 0 0 0 0 0 0 0 0 0 0
+node "A0e_xnor_B0e" 133 2346.31 -1263 109 pc 40 26 40 26 0 0 0 0 0 0 342 146 0 0 673 332 430 286 0 0 0 0 0 0 0 0
+node "A1e_xnor_B1e" 135 3171.65 -1279 109 pc 40 26 40 26 0 0 0 0 0 0 342 146 0 0 648 334 844 454 0 0 0 0 0 0 0 0
+node "B1c" 249 1887.3 -1047 150 p 40 26 40 26 0 0 0 0 0 0 720 298 0 0 1350 550 0 0 0 0 0 0 0 0 0 0
+node "compare_node_8" 42 248.064 -215 213 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "A_equal_B" 23 88.3254 -1378 148 ndc 40 26 40 26 0 0 0 0 0 0 0 0 0 0 163 78 0 0 0 0 0 0 0 0 0 0
+node "A_equal_B_c" 128 617.397 -1370 143 p 35 24 110 64 0 0 0 0 0 0 191 88 0 0 711 320 0 0 0 0 0 0 0 0 0 0
+node "compare_node_7" 42 248.064 -359 213 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "compare_node_6" 42 248.064 -508 215 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "Dec_AND_node_2" 42 248.064 169 247 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "S1" 326 2764.14 62 228 pc 0 0 0 0 0 0 0 0 0 0 921 400 0 0 1940 828 123 68 0 0 0 0 0 0 0 0
+node "compare_B3e_nand" 99 520.29 -266 200 p 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "compare_B2e_nand" 99 520.29 -410 200 p 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "compare_node_5" 42 248.064 -653 216 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "compare_B1e" 397 11453.8 -1084 112 pc 40 26 40 26 0 0 0 0 0 0 1091 458 0 0 321 174 4804 1680 1619 730 0 0 0 0 0 0
+node "D1" 23 104.663 260 239 ndif 40 26 40 26 0 0 0 0 0 0 0 0 0 0 183 88 0 0 0 0 0 0 0 0 0 0
+node "compare_B1e_nand" 99 520.29 -559 202 p 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "compare_B0e" 391 7351.84 -1084 -63 pc 40 26 40 26 0 0 0 0 0 0 1091 458 0 0 3562 1250 1649 662 0 0 0 0 0 0 0 0
+node "compare_B0e_nand" 99 520.29 -704 203 p 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "DEC_D1_NAND" 99 513.722 181 247 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 435 240 0 0 0 0 0 0 0 0 0 0
+node "S0" 333 7918.25 24 228 pc 0 0 0 0 0 0 0 0 0 0 921 400 0 0 203 112 2453 1252 0 0 0 0 0 0 0 0
+node "compare_node_1" 42 248.064 -215 321 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "compare_node_2" 42 248.064 -351 321 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "compare_node_3" 42 248.064 -497 323 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "xnor_8" 20 0 -980 300 pdif 0 0 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "compare_node_4" 42 248.064 -644 323 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "xnor_6" 17 0 -1063 300 ndif 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "compare_B2e" 400 13301.1 -1087 297 pc 40 26 40 26 0 0 0 0 0 0 1091 458 0 0 382 186 4605 2076 328 214 0 0 0 0 0 0
+node "compare_A3e_nand" 99 520.29 -266 308 p 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "compare_A2e_nand" 99 520.29 -402 308 p 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "compare_A1e" 240 12268.2 -1116 131 p 40 26 40 26 0 0 0 0 0 0 571 250 0 0 2613 950 4660 1898 0 0 0 0 0 0 0 0
+node "compare_A0e" 233 9195.21 -1116 -44 p 40 26 40 26 0 0 0 0 0 0 571 250 0 0 6179 1770 2932 884 0 0 0 0 0 0 0 0
+node "xnor_7" 17 0 -980 339 ndif 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "xnor_5" 20 0 -1063 339 pdif 0 0 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "Dec_AND_node_1" 42 248.064 170 365 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "compare_A1e_nand" 99 520.29 -548 310 p 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "compare_A0e_nand" 99 520.29 -695 310 p 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "D0" 24 395.495 261 358 ndif 40 26 40 26 0 0 0 0 0 0 0 0 0 0 177 84 98 56 0 0 0 0 0 0 0 0
+node "D2" 1082 28467.5 -646 191 pc 40 26 40 26 0 0 0 0 0 0 2920 1248 0 0 795 414 8706 4388 0 0 0 0 0 0 0 0
+node "A2c" 192 1683.4 -1127 321 ndc 40 26 40 26 0 0 0 0 0 0 530 222 0 0 1545 666 0 0 0 0 0 0 0 0 0 0
+node "A2e_xnor_B2e" 143 2292.97 -1295 125 p 40 26 40 26 0 0 0 0 0 0 367 156 0 0 1576 758 194 130 0 0 0 0 0 0 0 0
+node "compare_A2e" 240 12130.2 -1119 316 p 40 26 40 26 0 0 0 0 0 0 571 250 0 0 3547 1294 4153 1654 0 0 0 0 0 0 0 0
+node "xor_2" 159 1636.01 -1183 330 pc 80 52 80 52 0 0 0 0 0 0 191 88 0 0 2065 934 0 0 0 0 0 0 0 0 0 0
+node "B2c" 249 1974.94 -1050 335 p 40 26 40 26 0 0 0 0 0 0 720 298 0 0 1350 550 0 0 0 0 0 0 0 0 0 0
+node "DEC_D0_NAND" 98 511.796 182 365 ndif 30 22 90 46 0 0 0 0 0 0 186 86 0 0 455 242 0 0 0 0 0 0 0 0 0 0
+node "ander_node_5" 42 248.064 915 438 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "ander_node_6" 42 248.064 770 437 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "ander_node_7" 42 248.064 621 435 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "S1c" 269 4368.61 71 219 ndif 40 26 40 26 0 0 0 0 0 0 730 312 0 0 295 148 1927 612 0 0 0 0 0 0 0 0
+node "S0c" 272 5093.12 33 219 ndif 40 26 40 26 0 0 0 0 0 0 730 312 0 0 2388 726 1262 514 0 0 0 0 0 0 0 0
+node "ander_node_8" 42 248.064 477 435 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "and_b0e_nand" 99 520.29 927 438 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "and_b1e_nand" 99 520.29 782 437 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "and_b2e_nand" 99 520.29 633 435 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "and_b3e_nand" 99 520.29 489 435 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "B0" 272 27838.1 -623 191 pc 0 0 0 0 0 0 0 0 0 0 730 312 0 0 150 80 17763 4570 905 572 0 0 0 0 0 0
+node "B1" 263 23611.2 -478 190 pc 0 0 0 0 0 0 0 0 0 0 730 312 0 0 140 76 16003 3820 1033 392 0 0 0 0 0 0
+node "B2" 266 18705.6 -329 188 pc 0 0 0 0 0 0 0 0 0 0 730 312 0 0 140 76 8956 3090 1067 398 0 0 0 0 0 0
+node "B3" 269 11262.4 -185 188 pc 0 0 0 0 0 0 0 0 0 0 730 312 0 0 3514 1520 2594 1406 0 0 0 0 0 0 0 0
+node "ander_node_12" 42 248.064 1547 546 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "ander_node_11" 42 248.064 1400 546 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "ander_node_10" 42 248.064 1254 544 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "ander_node_9" 42 248.064 1118 544 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "A0_and_B0" 23 75.3517 1640 538 ndif 40 26 40 26 0 0 0 0 0 0 0 0 0 0 147 70 0 0 0 0 0 0 0 0 0 0
+node "A1_and_B1" 23 75.3517 1493 538 ndif 40 26 40 26 0 0 0 0 0 0 0 0 0 0 147 70 0 0 0 0 0 0 0 0 0 0
+node "A2_and_B2" 23 75.3517 1347 536 ndif 40 26 40 26 0 0 0 0 0 0 0 0 0 0 147 70 0 0 0 0 0 0 0 0 0 0
+node "A3_and_B3" 23 75.3517 1211 536 ndif 40 26 40 26 0 0 0 0 0 0 0 0 0 0 147 70 0 0 0 0 0 0 0 0 0 0
+node "ander_node_4" 42 248.064 906 545 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "ander_node_3" 42 248.064 759 545 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "ander_node_2" 42 248.064 613 543 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "xnor_4" 20 0 -977 522 pdif 0 0 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "xnor_2" 17 0 -1060 522 ndif 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "ander_node_1" 42 248.064 477 543 ndc 70 48 0 0 0 0 0 0 0 0 0 0 0 0 366 186 0 0 0 0 0 0 0 0 0 0
+node "compare_B3e" 398 16097.9 -1084 519 pc 40 26 40 26 0 0 0 0 0 0 1091 458 0 0 358 186 7170 2542 266 140 0 0 0 0 0 0
+node "A0_and_B0_nand" 99 520.29 1559 546 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "A1_and_B1_nand" 99 520.29 1412 546 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "A2_and_B2_nand" 99 520.29 1266 544 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "A3_and_B3_nand" 99 520.29 1130 544 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "xnor_3" 17 0 -977 561 ndif 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "gnd" 2141 56045.6 -1365 148 ndif 2445 1698 0 0 0 0 0 0 0 0 0 0 0 0 52653 19102 9170 4358 0 0 0 0 0 0 0 0
+node "xnor_1" 20 0 -1060 561 pdif 0 0 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "and_b0e" 144 3101.66 1008 430 ndif 40 26 40 26 0 0 0 0 0 0 365 156 0 0 273 130 752 326 4671 1058 0 0 0 0 0 0
+node "and_a0e" 148 3541.93 999 537 ndif 40 26 40 26 0 0 0 0 0 0 365 156 0 0 361 174 1072 426 2559 1014 0 0 0 0 0 0
+node "and_b1e" 149 3649.23 863 429 ndif 40 26 40 26 0 0 0 0 0 0 365 156 0 0 333 164 1021 432 3057 1206 0 0 0 0 0 0
+node "and_a1e" 147 5299.32 852 537 ndif 40 26 40 26 0 0 0 0 0 0 365 156 0 0 3435 1200 1282 482 0 0 0 0 0 0 0 0
+node "and_b2e" 148 3870.59 714 427 ndif 40 26 40 26 0 0 0 0 0 0 365 156 0 0 339 166 1132 456 3733 1234 0 0 0 0 0 0
+node "and_a2e" 150 5463.78 706 535 ndif 40 26 40 26 0 0 0 0 0 0 365 156 0 0 3091 1252 1163 532 0 0 0 0 0 0 0 0
+node "and_b3e" 153 3783.26 570 427 ndif 40 26 40 26 0 0 0 0 0 0 365 156 0 0 343 170 1091 454 2709 1308 0 0 0 0 0 0
+node "and_a3e" 149 9534.53 570 535 ndif 40 26 40 26 0 0 0 0 0 0 365 156 0 0 303 148 4255 1668 0 0 0 0 0 0 0 0
+node "and_a0e_nand" 99 520.29 918 545 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "and_a1e_nand" 99 520.29 771 545 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "and_a2e_nand" 99 520.29 625 543 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "and_a3e_nand" 99 520.29 489 543 ndif 30 22 90 46 0 0 0 0 0 0 191 88 0 0 443 244 0 0 0 0 0 0 0 0 0 0
+node "A0" 266 24200.5 -614 298 pc 0 0 0 0 0 0 0 0 0 0 730 312 0 0 646 368 15242 4034 0 0 0 0 0 0 0 0
+node "A1" 264 20613.5 -467 298 pc 0 0 0 0 0 0 0 0 0 0 730 312 0 0 811 356 11373 3356 0 0 0 0 0 0 0 0
+node "A2" 261 13574.2 -321 296 pc 0 0 0 0 0 0 0 0 0 0 730 312 0 0 1761 780 7234 2160 0 0 0 0 0 0 0 0
+node "D3" 1080 23219.6 260 39 ndif 40 26 40 26 0 0 0 0 0 0 2920 1248 0 0 1361 692 6049 3436 0 0 0 0 0 0 0 0
+node "A3" 254 11074.2 -185 296 pc 0 0 0 0 0 0 0 0 0 0 730 312 0 0 140 76 5363 1832 0 0 0 0 0 0 0 0
+node "A3c" 192 1683.4 -1124 543 ndc 40 26 40 26 0 0 0 0 0 0 530 222 0 0 1545 666 0 0 0 0 0 0 0 0 0 0
+node "A3e_xnor_B3e" 144 4712.67 -1311 125 p 40 26 40 26 0 0 0 0 0 0 367 156 0 0 2787 962 1284 452 0 0 0 0 0 0 0 0
+node "compare_A3e" 236 11123.7 -1116 538 p 40 26 40 26 0 0 0 0 0 0 571 250 0 0 4162 1350 4493 1500 0 0 0 0 0 0 0 0
+node "xor_1" 159 1640.89 -1180 552 pc 80 52 80 52 0 0 0 0 0 0 191 88 0 0 2065 934 0 0 0 0 0 0 0 0 0 0
+node "B3c" 249 1961.25 -1047 557 p 40 26 40 26 0 0 0 0 0 0 720 298 0 0 1350 550 0 0 0 0 0 0 0 0 0 0
+node "vdd" 329133 126304 -1385 163 nw 1791 1426 3500 2380 76339 10350 0 0 0 0 0 0 0 0 50038 19884 9535 3602 0 0 0 0 0 0 0 0
+cap "gnd" "and_b0e_nand" 148.342
+cap "vdd" "DEC_D0_NAND" 94.0231
+cap "A0c" "A0e_xnor_B0e" 41.238
+cap "compare_B3e" "B2" 7.97631
+cap "D2" "compare_node_8" 89.1066
+cap "vdd" "and_b0e_nand" 94.003
+cap "B1" "compare_node_6" 88.2215
+cap "compare_A2e" "A2c" 38.7049
+cap "compare_B3e" "B3c" 30.251
+cap "gnd" "compare_node_2" 76.8303
+cap "gnd" "A3_and_B3" 51.6155
+cap "gnd" "compare_A3e_nand" 148.342
+cap "and_a2e_nand" "A2" 6.44802
+cap "S0" "DEC_D1_NAND" 15.3106
+cap "S0c" "DEC_D2_NAND" 6.44802
+cap "B3" "compare_B3e_nand" 6.44802
+cap "and_b3e_nand" "gnd" 148.342
+cap "A0" "ander_node_4" 89.6805
+cap "xor_1" "gnd" 127.657
+cap "gnd" "A0_and_B0" 51.6155
+cap "vdd" "gnd" 195.011
+cap "vdd" "A3_and_B3" 40.8836
+cap "compare_B1e" "compare_B1e_nand" 30.251
+cap "A3" "ander_node_1" 88.2215
+cap "vdd" "compare_A3e_nand" 94.003
+cap "A1e_xnor_B1e" "xor_3" 55.6081
+cap "and_b3e_nand" "vdd" 94.003
+cap "vdd" "xor_1" 410.409
+cap "vdd" "A0_and_B0" 40.8836
+cap "D3" "ander_node_5" 89.1066
+cap "and_b1e" "and_b0e" 17.6402
+cap "compare_B2e" "B0" 4.39414
+cap "compare_A2e_nand" "A2" 6.44802
+cap "gnd" "ander_node_6" 76.8303
+cap "compare_B3e" "A3c" 14.3315
+cap "Dec_AND_node_1" "S0c" 88.2215
+cap "and_b3e" "ander_node_9" 89.1066
+cap "compare_A3e" "compare_B3e" 46.9265
+cap "S0c" "S0" 43.5424
+cap "gnd" "Dec_AND_node_2" 77.3115
+cap "gnd" "and_a3e" 51.6155
+cap "D3" "A3" 112.603
+cap "and_b3e" "D3" 6.73157
+cap "B2" "and_b2e_nand" 6.44802
+cap "vdd" "and_a3e" 141.09
+cap "compare_B1e" "compare_B2e" 15.7308
+cap "A_equal_B_c" "A0e_xnor_B0e" 3.22218
+cap "A3" "compare_node_1" 88.2215
+cap "compare_B3e" "compare_B2e" 4.39414
+cap "compare_A0e_nand" "D2" 15.3106
+cap "A0" "and_a1e" 6.95525
+cap "A0" "and_a0e_nand" 6.44802
+cap "gnd" "ander_node_7" 76.8303
+cap "A0" "compare_A2e" 11.5433
+cap "compare_A2e_nand" "compare_A2e" 30.251
+cap "DEC_D3_NAND" "S1" 6.44802
+cap "gnd" "and_b1e" 102.119
+cap "A1" "A2" 22.62
+cap "D3" "ander_node_1" 89.1066
+cap "A1_and_B1_nand" "ander_node_11" 85.2819
+cap "B2c" "gnd" 80.7838
+cap "gnd" "and_a1e_nand" 148.342
+cap "vdd" "and_b1e" 117.01
+cap "gnd" "xor_2" 127.657
+cap "B2c" "vdd" 206.704
+cap "B3" "compare_node_8" 88.2215
+cap "vdd" "and_a1e_nand" 94.003
+cap "compare_B0e_nand" "gnd" 148.342
+cap "gnd" "A3e_xnor_B3e" 53.6313
+cap "compare_B2e_nand" "gnd" 148.342
+cap "vdd" "xor_2" 452.209
+cap "compare_node_2" "D2" 89.1066
+cap "xor_1" "A3e_xnor_B3e" 39.0122
+cap "and_b3e" "B1" 7.09005
+cap "DEC_D3_NAND" "DEC_AND_NODE_4" 85.2819
+cap "compare_A3e_nand" "D2" 15.3106
+cap "gnd" "D2" 334.121
+cap "vdd" "compare_B2e_nand" 94.003
+cap "vdd" "compare_B0e_nand" 94.003
+cap "compare_A1e" "compare_A2e" 17.8031
+cap "vdd" "A3e_xnor_B3e" 272.382
+cap "D3" "and_b1e_nand" 15.3106
+cap "vdd" "D2" 673.071
+cap "and_b3e" "and_b2e" 12.2112
+cap "ander_node_2" "A2" 91.7188
+cap "gnd" "DEC_D1_NAND" 159.401
+cap "S0c" "DEC_D0_NAND" 6.44802
+cap "A1" "compare_A2e" 11.7738
+cap "xor_3" "B1c" 75.4881
+cap "vdd" "DEC_D1_NAND" 94.0352
+cap "compare_node_4" "A0" 88.2215
+cap "and_b0e_nand" "B0" 6.44802
+cap "compare_B1e_nand" "compare_node_6" 85.2819
+cap "S0c" "gnd" 51.6155
+cap "Dec_AND_node_2" "DEC_D1_NAND" 85.2819
+cap "gnd" "B0" 5.4295
+cap "A1c" "A0e_xnor_B0e" 36.2297
+cap "gnd" "xnor_15" 0.147193
+cap "and_a0e" "gnd" 83.8165
+cap "DEC_AND_NODE_3" "S1" 89.1066
+cap "compare_node_7" "B2" 88.2215
+cap "compare_A3e" "A2" 208.394
+cap "xor_4" "A0e_xnor_B0e" 35.9997
+cap "vdd" "S0c" 230.788
+cap "vdd" "B0" 151.575
+cap "vdd" "and_a0e" 136.432
+cap "A3_and_B3_nand" "A3_and_B3" 30.251
+cap "compare_B2e" "compare_A0e" 14.0641
+cap "B2c" "xor_2" 75.4881
+cap "A3_and_B3_nand" "gnd" 148.342
+cap "D3" "and_a2e_nand" 15.3106
+cap "gnd" "ander_node_3" 76.8303
+cap "D3" "B1" 5.59955
+cap "gnd" "ander_node_8" 76.8303
+cap "compare_B1e" "gnd" 281.63
+cap "S1c" "S1" 30.251
+cap "and_b3e_nand" "ander_node_8" 85.2819
+cap "B1" "and_b1e_nand" 6.44802
+cap "vdd" "A3_and_B3_nand" 94.003
+cap "and_b2e" "D3" 9.17036
+cap "compare_B3e" "gnd" 306.994
+cap "vdd" "compare_B1e" 162.042
+cap "and_a0e" "and_a3e" 12.2112
+cap "xnor_12" "xor_3" 0.147193
+cap "ander_node_11" "gnd" 76.8303
+cap "ander_node_10" "A2_and_B2_nand" 85.2819
+cap "gnd" "A1e_xnor_B1e" 148.075
+cap "compare_B3e" "vdd" 162.042
+cap "ander_node_12" "and_b0e" 89.1066
+cap "and_b2e" "A2_and_B2_nand" 15.3106
+cap "gnd" "compare_node_3" 76.8303
+cap "D3" "DEC_D3_NAND" 30.251
+cap "gnd" "A2e_xnor_B2e" 53.6313
+cap "compare_B0e_nand" "D2" 15.3106
+cap "and_b0e" "A0_and_B0_nand" 15.3106
+cap "vdd" "A1e_xnor_B1e" 167.865
+cap "compare_B2e_nand" "D2" 15.3106
+cap "A3_and_B3_nand" "and_a3e" 6.44802
+cap "B3" "gnd" 12.7039
+cap "compare_A1e" "A1c" 38.7049
+cap "vdd" "A2e_xnor_B2e" 273.312
+cap "and_b3e_nand" "B3" 6.44802
+cap "DEC_D2_NAND" "S1" 15.3106
+cap "and_a2e" "gnd" 95.8873
+cap "vdd" "B3" 151.897
+cap "and_a2e" "vdd" 135.377
+cap "and_b1e" "B0" 6.78225
+cap "and_b3e" "B2" 105.897
+cap "xnor_3" "gnd" 0.147193
+cap "and_a0e" "and_b1e" 0.00419401
+cap "xnor_3" "xor_1" 0.147193
+cap "gnd" "and_b2e_nand" 148.342
+cap "compare_A2e" "compare_B2e" 39.7104
+cap "S0" "S1" 28.5318
+cap "vdd" "and_b2e_nand" 94.003
+cap "compare_A0e" "compare_A0e_nand" 30.251
+cap "A1_and_B1_nand" "and_a1e" 6.44802
+cap "gnd" "ander_node_12" 76.8303
+cap "compare_B0e_nand" "B0" 6.44802
+cap "and_b2e" "B1" 10.0938
+cap "and_a2e" "and_a3e" 29.0236
+cap "gnd" "A0_and_B0_nand" 148.342
+cap "and_a1e_nand" "ander_node_3" 85.2819
+cap "B0" "D2" 4.41117
+cap "and_b2e" "ander_node_10" 89.1066
+cap "A0_and_B0" "A0_and_B0_nand" 30.251
+cap "vdd" "A0_and_B0_nand" 94.003
+cap "ander_node_11" "and_b1e" 89.1066
+cap "B0c" "compare_B0e" 30.251
+cap "DEC_AND_NODE_4" "S0" 89.1066
+cap "compare_B0e" "compare_B2e" 8.16182
+cap "compare_B1e" "D2" 4.39414
+cap "compare_B3e" "D2" 5.58819
+cap "A1c" "xor_3" 35.74
+cap "A2e_xnor_B2e" "xor_2" 35.9997
+cap "ander_node_2" "D3" 89.1066
+cap "D3" "B2" 6.73157
+cap "gnd" "ander_node_4" 76.8303
+cap "gnd" "compare_A0e" 150.115
+cap "and_b2e_nand" "ander_node_7" 85.2819
+cap "gnd" "A0c" 1437.21
+cap "gnd" "compare_node_6" 76.8303
+cap "compare_node_3" "D2" 89.1066
+cap "gnd" "B1c" 610.987
+cap "vdd" "compare_A0e" 164.303
+cap "B3" "D2" 16.0162
+cap "vdd" "A0c" 146.829
+cap "gnd" "A2" 89.0817
+cap "A2" "compare_node_2" 88.2215
+cap "compare_A1e" "A0" 237.584
+cap "vdd" "B1c" 206.704
+cap "compare_B1e" "B0" 13.7147
+cap "vdd" "A2" 193.791
+cap "compare_B3e" "B0" 4.39414
+cap "B0c" "xor_4" 75.4881
+cap "compare_A1e" "compare_A1e_nand" 30.251
+cap "gnd" "A2_and_B2" 51.6155
+cap "compare_node_7" "gnd" 76.8303
+cap "A2" "and_a3e" 164.509
+cap "gnd" "and_a1e" 84.3156
+cap "ander_node_2" "and_a2e_nand" 85.2819
+cap "vdd" "A2_and_B2" 40.8836
+cap "and_a0e_nand" "gnd" 148.342
+cap "and_a3e_nand" "gnd" 148.342
+cap "compare_B3e" "compare_B1e" 4.39414
+cap "gnd" "S1" 131.827
+cap "vdd" "and_a0e_nand" 94.003
+cap "vdd" "and_a1e" 144.029
+cap "A1" "compare_A1e_nand" 6.44802
+cap "vdd" "and_a3e_nand" 94.003
+cap "and_b3e" "and_b0e" 17.6402
+cap "compare_B2e" "A2c" 14.3315
+cap "gnd" "A_equal_B_c" 58.8591
+cap "gnd" "compare_A2e" 154.655
+cap "and_a2e" "and_a0e" 8.59191
+cap "gnd" "compare_node_5" 76.8303
+cap "xnor_12" "gnd" 0.147193
+cap "vdd" "S1" 201.098
+cap "compare_node_4" "compare_A0e_nand" 85.2819
+cap "vdd" "A_equal_B_c" 227.022
+cap "vdd" "compare_A2e" 188.526
+cap "ander_node_5" "and_b0e_nand" 85.2819
+cap "and_a3e" "and_a1e" 53.8936
+cap "B1" "compare_B1e_nand" 6.44802
+cap "B3" "ander_node_8" 88.2215
+cap "A1_and_B1_nand" "A1_and_B1" 30.251
+cap "and_a3e_nand" "and_a3e" 30.251
+cap "DEC_AND_NODE_4" "gnd" 77.0615
+cap "gnd" "ander_node_5" 76.8303
+cap "and_a0e" "ander_node_12" 88.2215
+cap "gnd" "compare_B0e" 702.733
+cap "compare_node_6" "D2" 89.1066
+cap "and_a0e" "A0_and_B0_nand" 6.44802
+cap "A3" "compare_A3e_nand" 6.44802
+cap "vdd" "compare_B0e" 162.042
+cap "compare_A3e" "A0" 16.5845
+cap "and_b3e" "gnd" 81.0834
+cap "B1" "compare_B2e" 10.0938
+cap "and_b3e_nand" "and_b3e" 30.251
+cap "vdd" "A3" 216.408
+cap "compare_node_4" "gnd" 76.8303
+cap "compare_A1e" "xor_3" 8.86099
+cap "and_b3e" "vdd" 117.01
+cap "and_a1e_nand" "and_a1e" 30.251
+cap "A_equal_B" "gnd" 51.6155
+cap "A_equal_B" "vdd" 40.9802
+cap "compare_node_7" "compare_B2e_nand" 85.2819
+cap "compare_node_7" "D2" 89.1066
+cap "compare_A2e" "xor_2" 8.86099
+cap "gnd" "ander_node_1" 76.8303
+cap "DEC_D3_NAND" "S0" 15.3106
+cap "compare_B0e_nand" "compare_node_5" 85.2819
+cap "A3e_xnor_B3e" "A_equal_B_c" 29.2906
+cap "gnd" "A1c" 1437.21
+cap "compare_A3e" "A1" 16.5845
+cap "D3" "and_b0e_nand" 15.3106
+cap "compare_B1e" "compare_A0e" 20.7958
+cap "ander_node_9" "gnd" 76.8303
+cap "xor_4" "gnd" 127.657
+cap "compare_node_5" "D2" 89.1066
+cap "vdd" "A1c" 146.829
+cap "compare_A1e" "compare_B2e" 12.3732
+cap "compare_B3e" "compare_A0e" 11.7815
+cap "compare_B1e" "B1c" 30.251
+cap "vdd" "xor_4" 515.131
+cap "D3" "gnd" 313.918
+cap "and_b3e_nand" "D3" 15.3106
+cap "and_b3e" "and_b1e" 10.4016
+cap "gnd" "A1_and_B1" 51.6155
+cap "gnd" "A2c" 1437.21
+cap "gnd" "and_b1e_nand" 148.342
+cap "A2_and_B2_nand" "gnd" 148.342
+cap "vdd" "D3" 659.484
+cap "gnd" "compare_node_1" 76.8303
+cap "compare_node_1" "compare_A3e_nand" 85.2819
+cap "compare_B0e_nand" "compare_B0e" 30.251
+cap "ander_node_12" "A0_and_B0_nand" 85.2819
+cap "vdd" "and_b1e_nand" 94.003
+cap "vdd" "A1_and_B1" 40.8836
+cap "and_a0e" "and_a1e" 12.2154
+cap "vdd" "A2c" 146.829
+cap "vdd" "A2_and_B2_nand" 94.003
+cap "and_b2e" "and_b0e" 17.6402
+cap "ander_node_9" "and_a3e" 88.2215
+cap "and_a0e" "and_a0e_nand" 30.251
+cap "S0c" "S1" 511.187
+cap "D3" "ander_node_6" 89.1066
+cap "DEC_D2_NAND" "DEC_AND_NODE_3" 85.2819
+cap "ander_node_6" "and_b1e_nand" 85.2819
+cap "B0" "compare_node_5" 88.2215
+cap "A0" "compare_A0e_nand" 6.44802
+cap "D3" "and_a3e" 0.0170329
+cap "compare_node_4" "D2" 89.1066
+cap "ander_node_11" "and_a1e" 88.2215
+cap "ander_node_5" "B0" 88.2215
+cap "compare_B3e_nand" "compare_node_8" 85.2819
+cap "compare_B3e" "compare_A2e" 29.5104
+cap "DEC_D0_NAND" "D0" 30.251
+cap "and_a2e_nand" "gnd" 148.342
+cap "B1" "gnd" 8.7497
+cap "gnd" "A0e_xnor_B0e" 142.939
+cap "A_equal_B_c" "A1e_xnor_B1e" 17.9481
+cap "D3" "ander_node_7" 89.1066
+cap "compare_A3e" "A3c" 40.4341
+cap "vdd" "and_a2e_nand" 94.003
+cap "xnor_7" "gnd" 0.147193
+cap "Dec_AND_node_1" "S1c" 89.1066
+cap "vdd" "A0e_xnor_B0e" 139.586
+cap "S0" "S1c" 73.08
+cap "D3" "and_b1e" 7.97631
+cap "ander_node_10" "gnd" 76.8303
+cap "A_equal_B_c" "A2e_xnor_B2e" 17.9481
+cap "and_b2e" "gnd" 114.913
+cap "vdd" "B1" 151.575
+cap "and_a2e" "and_a1e" 10.2675
+cap "compare_A2e_nand" "compare_node_2" 85.2819
+cap "and_b1e" "and_b1e_nand" 30.251
+cap "D3" "and_a1e_nand" 15.3106
+cap "and_b3e" "B0" 5.58819
+cap "gnd" "D0" 51.6155
+cap "A0" "gnd" 115.105
+cap "compare_A2e_nand" "gnd" 148.342
+cap "vdd" "and_b2e" 117.01
+cap "B1" "ander_node_6" 88.2215
+cap "compare_B1e" "compare_B0e" 14.402
+cap "compare_A2e_nand" "vdd" 94.003
+cap "vdd" "D0" 40.8836
+cap "DEC_D3_NAND" "gnd" 157.853
+cap "vdd" "A0" 181.592
+cap "compare_B3e" "compare_B0e" 8.16182
+cap "A2c" "xor_2" 35.74
+cap "and_b3e" "A3_and_B3_nand" 15.3106
+cap "vdd" "DEC_D3_NAND" 94.0594
+cap "D3" "D2" 10.2675
+cap "A0c" "compare_A0e" 38.7049
+cap "compare_node_1" "D2" 89.1066
+cap "gnd" "compare_A1e_nand" 148.342
+cap "A0" "and_a3e" 13.6868
+cap "compare_A1e" "gnd" 210.082
+cap "vdd" "compare_A1e_nand" 94.003
+cap "compare_A1e" "vdd" 190.258
+cap "gnd" "D1" 51.6155
+cap "A1" "gnd" 64.4792
+cap "xor_4" "xnor_15" 0.147193
+cap "vdd" "D1" 40.9802
+cap "A1" "vdd" 200.057
+cap "and_b2e" "and_b1e" 10.4016
+cap "compare_B1e" "A1c" 14.3315
+cap "D3" "B0" 8.11588
+cap "ander_node_9" "A3_and_B3_nand" 85.2819
+cap "xnor_7" "xor_2" 0.147193
+cap "and_a0e_nand" "ander_node_4" 85.2819
+cap "A1c" "A1e_xnor_B1e" 49.4856
+cap "B1" "D2" 7.98766
+cap "DEC_D0_NAND" "S1c" 15.3106
+cap "gnd" "DEC_AND_NODE_3" 77.1959
+cap "D3" "ander_node_3" 89.1066
+cap "A1" "and_a3e" 10.5842
+cap "gnd" "compare_B3e_nand" 148.342
+cap "D3" "ander_node_8" 89.1066
+cap "ander_node_2" "gnd" 76.8303
+cap "B2" "gnd" 20.1428
+cap "vdd" "compare_B3e_nand" 94.003
+cap "compare_A2e_nand" "D2" 15.3106
+cap "B3c" "gnd" 80.7838
+cap "B3c" "xor_1" 75.4881
+cap "vdd" "B2" 151.575
+cap "gnd" "S1c" 55.4061
+cap "gnd" "xor_3" 127.657
+cap "vdd" "B3c" 302.542
+cap "vdd" "S1c" 192.69
+cap "D3" "B3" 4.54211
+cap "A2e_xnor_B2e" "A2c" 41.238
+cap "vdd" "xor_3" 531.725
+cap "gnd" "compare_B1e_nand" 148.342
+cap "compare_B0e" "compare_A0e" 142.568
+cap "A0c" "compare_B0e" 14.3315
+cap "compare_A3e" "compare_A3e_nand" 30.251
+cap "compare_A1e_nand" "D2" 15.3106
+cap "vdd" "compare_B1e_nand" 94.003
+cap "and_a2e" "A2_and_B2_nand" 6.44802
+cap "compare_A3e" "gnd" 150.654
+cap "A1" "and_a1e_nand" 6.44802
+cap "A3c" "gnd" 1437.21
+cap "and_b2e" "B0" 7.97631
+cap "Dec_AND_node_2" "S1c" 88.2215
+cap "compare_A1e" "D2" 0.0170329
+cap "compare_A3e" "xor_1" 8.86099
+cap "A3c" "xor_1" 35.74
+cap "Dec_AND_node_1" "DEC_D0_NAND" 85.2819
+cap "compare_A3e" "vdd" 208.157
+cap "DEC_D2_NAND" "gnd" 157.853
+cap "D3" "and_b2e_nand" 15.3106
+cap "vdd" "A3c" 146.105
+cap "vdd" "DEC_D2_NAND" 94.003
+cap "compare_B3e" "B1" 7.97631
+cap "B0c" "gnd" 610.987
+cap "gnd" "compare_B2e" 281
+cap "A0e_xnor_B0e" "A1e_xnor_B1e" 229.516
+cap "B2" "ander_node_7" 88.2215
+cap "vdd" "B0c" 206.704
+cap "Dec_AND_node_1" "gnd" 76.8303
+cap "D1" "DEC_D1_NAND" 30.251
+cap "vdd" "compare_B2e" 162.042
+cap "gnd" "S0" 92.3343
+cap "gnd" "compare_node_8" 76.8303
+cap "DEC_AND_NODE_4" "S1" 88.2215
+cap "vdd" "S0" 202.099
+cap "A1_and_B1_nand" "gnd" 148.342
+cap "and_a2e" "and_a2e_nand" 30.251
+cap "A1_and_B1_nand" "vdd" 94.003
+cap "compare_B3e_nand" "D2" 15.3106
+cap "compare_B2e_nand" "B2" 6.44802
+cap "xor_4" "compare_A0e" 8.86099
+cap "A3" "and_a3e_nand" 6.44802
+cap "B2" "D2" 7.97631
+cap "xor_4" "A0c" 35.74
+cap "S0" "Dec_AND_node_2" 89.1066
+cap "and_a2e" "ander_node_10" 88.2215
+cap "compare_A1e" "compare_B1e" 36.0907
+cap "D3" "ander_node_4" 89.1066
+cap "compare_A1e" "compare_B3e" 26.206
+cap "and_a2e" "A0" 10.5672
+cap "and_b0e" "and_b0e_nand" 30.251
+cap "and_b2e" "and_b2e_nand" 30.251
+cap "compare_node_3" "compare_A1e_nand" 85.2819
+cap "A_equal_B" "A_equal_B_c" 30.251
+cap "A1" "ander_node_3" 90.4105
+cap "compare_B1e_nand" "D2" 15.3106
+cap "DEC_D1_NAND" "S1c" 6.44802
+cap "S0c" "DEC_AND_NODE_3" 88.2215
+cap "and_a3e_nand" "ander_node_1" 85.2819
+cap "A3c" "A3e_xnor_B3e" 41.238
+cap "gnd" "compare_A0e_nand" 148.342
+cap "gnd" "and_b0e" 113.067
+cap "B2c" "compare_B2e" 30.251
+cap "vdd" "and_b0e" 116.913
+cap "vdd" "compare_A0e_nand" 94.003
+cap "DEC_D2_NAND" "D2" 30.251
+cap "A1" "compare_node_3" 88.9508
+cap "S0c" "S1c" 15.9851
+cap "compare_B2e_nand" "compare_B2e" 30.251
+cap "A1_and_B1_nand" "and_b1e" 15.3106
+cap "gnd" "DEC_D0_NAND" 145.266
+cap "A2_and_B2_nand" "A2_and_B2" 30.251
+cap "D3" "and_a0e_nand" 15.3106
+cap "compare_B2e" "D2" 4.39414
+cap "and_a2e" "A1" 77.2992
+cap "D3" "and_a3e_nand" 15.3106
+cap "compare_B3e" "compare_B3e_nand" 30.251
+fet nfet -904 -82 -903 -81 25 20 "Gnd!" "compare_B0e" 10 0 "gnd" 5 35,24 "B0c" 5 40,26
+fet pfet -904 -60 -903 -59 25 20 "vdd" "compare_B0e" 10 0 "vdd" 5 35,24 "B0c" 5 40,26
+fet pfet -964 -60 -963 -59 25 20 "vdd" "A0c" 10 0 "xnor_16" 5 32,18 "xor_4" 5 40,26
+fet pfet -982 -60 -981 -59 25 20 "vdd" "compare_B0e" 10 0 "vdd" 5 40,26 "xnor_16" 5 32,18
+fet nfet -1047 -60 -1046 -59 25 20 "Gnd!" "compare_A0e" 10 0 "xnor_14" 5 32,18 "xor_4" 5 40,26
+fet nfet -1065 -60 -1064 -59 25 20 "Gnd!" "compare_B0e" 10 0 "gnd" 5 40,26 "xnor_14" 5 32,18
+fet nfet -1116 -39 -1115 -38 25 20 "Gnd!" "compare_A0e" 10 0 "A0c" 5 40,26 "gnd" 5 35,24
+fet nfet -1176 -39 -1175 -38 25 20 "Gnd!" "xor_4" 10 0 "gnd" 5 35,24 "A0e_xnor_B0e" 5 40,26
+fet nfet -964 -21 -963 -20 25 20 "Gnd!" "B0c" 10 0 "xnor_15" 5 32,18 "xor_4" 5 40,26
+fet nfet -982 -21 -981 -20 25 20 "Gnd!" "A0c" 10 0 "gnd" 5 40,26 "xnor_15" 5 32,18
+fet pfet -1047 -21 -1046 -20 25 20 "vdd" "B0c" 10 0 "xnor_13" 5 32,18 "xor_4" 5 40,26
+fet pfet -1065 -21 -1064 -20 25 20 "vdd" "compare_A0e" 10 0 "vdd" 5 40,26 "xnor_13" 5 32,18
+fet pfet -1116 -17 -1115 -16 25 20 "vdd" "compare_A0e" 10 0 "A0c" 5 40,26 "vdd" 5 35,24
+fet pfet -1176 -17 -1175 -16 25 20 "vdd" "xor_4" 10 0 "vdd" 5 35,24 "A0e_xnor_B0e" 5 40,26
+fet nfet 255 39 256 40 25 20 "Gnd!" "DEC_D3_NAND" 10 0 "gnd" 5 35,24 "D3" 5 40,26
+fet nfet 198 47 199 48 25 20 "Gnd!" "S0" 10 0 "gnd" 5 30,22 "DEC_AND_NODE_4" 5 35,24
+fet nfet 175 47 176 48 25 20 "Gnd!" "S1" 10 0 "DEC_AND_NODE_4" 5 35,24 "DEC_D3_NAND" 5 30,22
+fet pfet 255 61 256 62 25 20 "vdd" "DEC_D3_NAND" 10 0 "vdd" 5 35,24 "D3" 5 40,26
+fet pfet 198 76 199 77 25 20 "vdd" "S0" 10 0 "DEC_D3_NAND" 5 45,23 "vdd" 5 35,24
+fet pfet 175 76 176 77 25 20 "vdd" "S1" 10 0 "vdd" 5 35,24 "DEC_D3_NAND" 5 45,23
+fet nfet -904 93 -903 94 25 20 "Gnd!" "compare_B1e" 10 0 "gnd" 5 35,24 "B1c" 5 40,26
+fet nfet 256 135 257 136 25 20 "Gnd!" "DEC_D2_NAND" 10 0 "gnd" 5 35,24 "D2" 5 40,26
+fet pfet -904 115 -903 116 25 20 "vdd" "compare_B1e" 10 0 "vdd" 5 35,24 "B1c" 5 40,26
+fet pfet -964 115 -963 116 25 20 "vdd" "A1c" 10 0 "xnor_11" 5 32,18 "xor_3" 5 40,26
+fet pfet -982 115 -981 116 25 20 "vdd" "compare_B1e" 10 0 "vdd" 5 40,26 "xnor_11" 5 32,18
+fet nfet -1047 115 -1046 116 25 20 "Gnd!" "compare_A1e" 10 0 "xnor_10" 5 32,18 "xor_3" 5 40,26
+fet nfet -1065 115 -1064 116 25 20 "Gnd!" "compare_B1e" 10 0 "gnd" 5 40,26 "xnor_10" 5 32,18
+fet nfet -1116 136 -1115 137 25 20 "Gnd!" "compare_A1e" 10 0 "A1c" 5 40,26 "gnd" 5 35,24
+fet nfet -1176 136 -1175 137 25 20 "Gnd!" "xor_3" 10 0 "gnd" 5 35,24 "A1e_xnor_B1e" 5 40,26
+fet nfet -1263 132 -1262 133 25 20 "Gnd!" "A0e_xnor_B0e" 10 0 "A_compare_B_node_1" 5 27,16 "gnd" 5 40,26
+fet nfet -1279 132 -1278 133 25 20 "Gnd!" "A1e_xnor_B1e" 10 0 "A_compare_B_node_2" 5 27,16 "A_compare_B_node_1" 5 27,16
+fet nfet -1295 132 -1294 133 25 20 "Gnd!" "A2e_xnor_B2e" 10 0 "A_compare_B_node_3" 5 27,16 "A_compare_B_node_2" 5 27,16
+fet nfet -1311 132 -1310 133 25 20 "Gnd!" "A3e_xnor_B3e" 10 0 "A_equal_B_c" 5 35,24 "A_compare_B_node_3" 5 27,16
+fet nfet 198 143 199 144 25 20 "Gnd!" "S1" 10 0 "gnd" 5 30,22 "DEC_AND_NODE_3" 5 35,24
+fet nfet 175 143 176 144 25 20 "Gnd!" "S0c" 10 0 "DEC_AND_NODE_3" 5 35,24 "DEC_D2_NAND" 5 30,22
+fet pfet 256 157 257 158 25 20 "vdd" "DEC_D2_NAND" 10 0 "vdd" 5 35,24 "D2" 5 40,26
+fet nfet -964 154 -963 155 25 20 "Gnd!" "B1c" 10 0 "xnor_12" 5 32,18 "xor_3" 5 40,26
+fet nfet -982 154 -981 155 25 20 "Gnd!" "A1c" 10 0 "gnd" 5 40,26 "xnor_12" 5 32,18
+fet pfet -1047 154 -1046 155 25 20 "vdd" "B1c" 10 0 "xnor_9" 5 32,18 "xor_3" 5 40,26
+fet pfet -1065 154 -1064 155 25 20 "vdd" "compare_A1e" 10 0 "vdd" 5 40,26 "xnor_9" 5 32,18
+fet pfet 198 172 199 173 25 20 "vdd" "S1" 10 0 "DEC_D2_NAND" 5 45,23 "vdd" 5 35,24
+fet pfet 175 172 176 173 25 20 "vdd" "S0c" 10 0 "vdd" 5 35,24 "DEC_D2_NAND" 5 45,23
+fet pfet -1116 158 -1115 159 25 20 "vdd" "compare_A1e" 10 0 "A1c" 5 40,26 "vdd" 5 35,24
+fet pfet -1176 158 -1175 159 25 20 "vdd" "xor_3" 10 0 "vdd" 5 35,24 "A1e_xnor_B1e" 5 40,26
+fet nfet -1370 148 -1369 149 25 20 "Gnd!" "A_equal_B_c" 10 0 "A_equal_B" 5 40,26 "gnd" 5 35,24
+fet pfet -1263 166 -1262 167 25 20 "vdd" "A0e_xnor_B0e" 10 0 "A_equal_B_c" 5 27,16 "vdd" 5 40,26
+fet pfet -1279 166 -1278 167 25 20 "vdd" "A1e_xnor_B1e" 10 0 "vdd" 5 27,16 "A_equal_B_c" 5 27,16
+fet pfet -1295 166 -1294 167 25 20 "vdd" "A2e_xnor_B2e" 10 0 "A_equal_B_c" 5 27,16 "vdd" 5 27,16
+fet pfet -1311 166 -1310 167 25 20 "vdd" "A3e_xnor_B3e" 10 0 "vdd" 5 40,26 "A_equal_B_c" 5 27,16
+fet nfet -266 205 -265 206 25 20 "Gnd!" "compare_B3e_nand" 10 0 "compare_B3e" 5 40,26 "gnd" 5 35,24
+fet nfet -185 213 -184 214 25 20 "Gnd!" "B3" 10 0 "compare_B3e_nand" 5 30,22 "compare_node_8" 5 35,24
+fet nfet -208 213 -207 214 25 20 "Gnd!" "D2" 10 0 "compare_node_8" 5 35,24 "gnd" 5 30,22
+fet pfet -1370 170 -1369 171 25 20 "vdd" "A_equal_B_c" 10 0 "A_equal_B" 5 40,26 "vdd" 5 35,24
+fet nfet -410 205 -409 206 25 20 "Gnd!" "compare_B2e_nand" 10 0 "compare_B2e" 5 40,26 "gnd" 5 35,24
+fet nfet -329 213 -328 214 25 20 "Gnd!" "B2" 10 0 "compare_B2e_nand" 5 30,22 "compare_node_7" 5 35,24
+fet nfet -352 213 -351 214 25 20 "Gnd!" "D2" 10 0 "compare_node_7" 5 35,24 "gnd" 5 30,22
+fet nfet -559 207 -558 208 25 20 "Gnd!" "compare_B1e_nand" 10 0 "compare_B1e" 5 40,26 "gnd" 5 35,24
+fet nfet 255 239 256 240 25 20 "Gnd!" "DEC_D1_NAND" 10 0 "gnd" 5 35,24 "D1" 5 40,26
+fet nfet 66 219 67 220 25 20 "Gnd!" "S1" 10 0 "gnd" 5 35,24 "S1c" 5 40,26
+fet nfet 28 219 29 220 25 20 "Gnd!" "S0" 10 0 "gnd" 5 35,24 "S0c" 5 40,26
+fet pfet 66 241 67 242 25 20 "vdd" "S1" 10 0 "vdd" 5 35,24 "S1c" 5 40,26
+fet pfet 28 241 29 242 25 20 "vdd" "S0" 10 0 "vdd" 5 35,24 "S0c" 5 40,26
+fet pfet -266 227 -265 228 25 20 "vdd" "compare_B3e_nand" 10 0 "compare_B3e" 5 40,26 "vdd" 5 35,24
+fet nfet -478 215 -477 216 25 20 "Gnd!" "B1" 10 0 "compare_B1e_nand" 5 30,22 "compare_node_6" 5 35,24
+fet nfet -501 215 -500 216 25 20 "Gnd!" "D2" 10 0 "compare_node_6" 5 35,24 "gnd" 5 30,22
+fet nfet -704 208 -703 209 25 20 "Gnd!" "compare_B0e_nand" 10 0 "compare_B0e" 5 40,26 "gnd" 5 35,24
+fet pfet -410 227 -409 228 25 20 "vdd" "compare_B2e_nand" 10 0 "compare_B2e" 5 40,26 "vdd" 5 35,24
+fet nfet 199 247 200 248 25 20 "Gnd!" "S0" 10 0 "gnd" 5 30,22 "Dec_AND_node_2" 5 35,24
+fet nfet 176 247 177 248 25 20 "Gnd!" "S1c" 10 0 "Dec_AND_node_2" 5 35,24 "DEC_D1_NAND" 5 30,22
+fet pfet -185 242 -184 243 25 20 "vdd" "B3" 10 0 "compare_B3e_nand" 5 45,23 "vdd" 5 35,24
+fet pfet -208 242 -207 243 25 20 "vdd" "D2" 10 0 "vdd" 5 35,24 "compare_B3e_nand" 5 45,23
+fet pfet -329 242 -328 243 25 20 "vdd" "B2" 10 0 "compare_B2e_nand" 5 45,23 "vdd" 5 35,24
+fet pfet -352 242 -351 243 25 20 "vdd" "D2" 10 0 "vdd" 5 35,24 "compare_B2e_nand" 5 45,23
+fet nfet -623 216 -622 217 25 20 "Gnd!" "B0" 10 0 "compare_B0e_nand" 5 30,22 "compare_node_5" 5 35,24
+fet nfet -646 216 -645 217 25 20 "Gnd!" "D2" 10 0 "compare_node_5" 5 35,24 "gnd" 5 30,22
+fet pfet -559 229 -558 230 25 20 "vdd" "compare_B1e_nand" 10 0 "compare_B1e" 5 40,26 "vdd" 5 35,24
+fet pfet 255 261 256 262 25 20 "vdd" "DEC_D1_NAND" 10 0 "vdd" 5 35,24 "D1" 5 40,26
+fet pfet -478 244 -477 245 25 20 "vdd" "B1" 10 0 "compare_B1e_nand" 5 45,23 "vdd" 5 35,24
+fet pfet -501 244 -500 245 25 20 "vdd" "D2" 10 0 "vdd" 5 35,24 "compare_B1e_nand" 5 45,23
+fet pfet -704 230 -703 231 25 20 "vdd" "compare_B0e_nand" 10 0 "compare_B0e" 5 40,26 "vdd" 5 35,24
+fet pfet -623 245 -622 246 25 20 "vdd" "B0" 10 0 "compare_B0e_nand" 5 45,23 "vdd" 5 35,24
+fet pfet -646 245 -645 246 25 20 "vdd" "D2" 10 0 "vdd" 5 35,24 "compare_B0e_nand" 5 45,23
+fet pfet 199 276 200 277 25 20 "vdd" "S0" 10 0 "DEC_D1_NAND" 5 45,23 "vdd" 5 35,24
+fet pfet 176 276 177 277 25 20 "vdd" "S1c" 10 0 "vdd" 5 35,24 "DEC_D1_NAND" 5 45,23
+fet nfet -907 278 -906 279 25 20 "Gnd!" "compare_B2e" 10 0 "gnd" 5 35,24 "B2c" 5 40,26
+fet nfet -266 313 -265 314 25 20 "Gnd!" "compare_A3e_nand" 10 0 "compare_A3e" 5 40,26 "gnd" 5 35,24
+fet nfet -185 321 -184 322 25 20 "Gnd!" "A3" 10 0 "compare_A3e_nand" 5 30,22 "compare_node_1" 5 35,24
+fet nfet -208 321 -207 322 25 20 "Gnd!" "D2" 10 0 "compare_node_1" 5 35,24 "gnd" 5 30,22
+fet nfet -402 313 -401 314 25 20 "Gnd!" "compare_A2e_nand" 10 0 "compare_A2e" 5 40,26 "gnd" 5 35,24
+fet nfet -321 321 -320 322 25 20 "Gnd!" "A2" 10 0 "compare_A2e_nand" 5 30,22 "compare_node_2" 5 35,24
+fet nfet -344 321 -343 322 25 20 "Gnd!" "D2" 10 0 "compare_node_2" 5 35,24 "gnd" 5 30,22
+fet nfet -548 315 -547 316 25 20 "Gnd!" "compare_A1e_nand" 10 0 "compare_A1e" 5 40,26 "gnd" 5 35,24
+fet nfet 256 358 257 359 25 20 "Gnd!" "DEC_D0_NAND" 10 0 "gnd" 5 35,24 "D0" 5 40,26
+fet pfet -266 335 -265 336 25 20 "vdd" "compare_A3e_nand" 10 0 "compare_A3e" 5 40,26 "vdd" 5 35,24
+fet nfet -467 323 -466 324 25 20 "Gnd!" "A1" 10 0 "compare_A1e_nand" 5 30,22 "compare_node_3" 5 35,24
+fet nfet -490 323 -489 324 25 20 "Gnd!" "D2" 10 0 "compare_node_3" 5 35,24 "gnd" 5 30,22
+fet pfet -907 300 -906 301 25 20 "vdd" "compare_B2e" 10 0 "vdd" 5 35,24 "B2c" 5 40,26
+fet pfet -967 300 -966 301 25 20 "vdd" "A2c" 10 0 "xnor_8" 5 32,18 "xor_2" 5 40,26
+fet pfet -985 300 -984 301 25 20 "vdd" "compare_B2e" 10 0 "vdd" 5 40,26 "xnor_8" 5 32,18
+fet nfet -695 315 -694 316 25 20 "Gnd!" "compare_A0e_nand" 10 0 "compare_A0e" 5 40,26 "gnd" 5 35,24
+fet nfet -614 323 -613 324 25 20 "Gnd!" "A0" 10 0 "compare_A0e_nand" 5 30,22 "compare_node_4" 5 35,24
+fet nfet -637 323 -636 324 25 20 "Gnd!" "D2" 10 0 "compare_node_4" 5 35,24 "gnd" 5 30,22
+fet nfet -1050 300 -1049 301 25 20 "Gnd!" "compare_A2e" 10 0 "xnor_6" 5 32,18 "xor_2" 5 40,26
+fet nfet -1068 300 -1067 301 25 20 "Gnd!" "compare_B2e" 10 0 "gnd" 5 40,26 "xnor_6" 5 32,18
+fet nfet -1119 321 -1118 322 25 20 "Gnd!" "compare_A2e" 10 0 "A2c" 5 40,26 "gnd" 5 35,24
+fet nfet -1179 321 -1178 322 25 20 "Gnd!" "xor_2" 10 0 "gnd" 5 35,24 "A2e_xnor_B2e" 5 40,26
+fet pfet -402 335 -401 336 25 20 "vdd" "compare_A2e_nand" 10 0 "compare_A2e" 5 40,26 "vdd" 5 35,24
+fet pfet -185 350 -184 351 25 20 "vdd" "A3" 10 0 "compare_A3e_nand" 5 45,23 "vdd" 5 35,24
+fet pfet -208 350 -207 351 25 20 "vdd" "D2" 10 0 "vdd" 5 35,24 "compare_A3e_nand" 5 45,23
+fet pfet -321 350 -320 351 25 20 "vdd" "A2" 10 0 "compare_A2e_nand" 5 45,23 "vdd" 5 35,24
+fet pfet -344 350 -343 351 25 20 "vdd" "D2" 10 0 "vdd" 5 35,24 "compare_A2e_nand" 5 45,23
+fet pfet -548 337 -547 338 25 20 "vdd" "compare_A1e_nand" 10 0 "compare_A1e" 5 40,26 "vdd" 5 35,24
+fet pfet -695 337 -694 338 25 20 "vdd" "compare_A0e_nand" 10 0 "compare_A0e" 5 40,26 "vdd" 5 35,24
+fet nfet -967 339 -966 340 25 20 "Gnd!" "B2c" 10 0 "xnor_7" 5 32,18 "xor_2" 5 40,26
+fet nfet -985 339 -984 340 25 20 "Gnd!" "A2c" 10 0 "gnd" 5 40,26 "xnor_7" 5 32,18
+fet pfet -1050 339 -1049 340 25 20 "vdd" "B2c" 10 0 "xnor_5" 5 32,18 "xor_2" 5 40,26
+fet pfet -1068 339 -1067 340 25 20 "vdd" "compare_A2e" 10 0 "vdd" 5 40,26 "xnor_5" 5 32,18
+fet nfet 200 365 201 366 25 20 "Gnd!" "S1c" 10 0 "gnd" 5 30,22 "Dec_AND_node_1" 5 35,24
+fet nfet 177 365 178 366 25 20 "Gnd!" "S0c" 10 0 "Dec_AND_node_1" 5 35,24 "DEC_D0_NAND" 5 30,22
+fet pfet -467 352 -466 353 25 20 "vdd" "A1" 10 0 "compare_A1e_nand" 5 45,23 "vdd" 5 35,24
+fet pfet -490 352 -489 353 25 20 "vdd" "D2" 10 0 "vdd" 5 35,24 "compare_A1e_nand" 5 45,23
+fet pfet -614 352 -613 353 25 20 "vdd" "A0" 10 0 "compare_A0e_nand" 5 45,23 "vdd" 5 35,24
+fet pfet -637 352 -636 353 25 20 "vdd" "D2" 10 0 "vdd" 5 35,24 "compare_A0e_nand" 5 45,23
+fet pfet 256 380 257 381 25 20 "vdd" "DEC_D0_NAND" 10 0 "vdd" 5 35,24 "D0" 5 40,26
+fet pfet -1119 343 -1118 344 25 20 "vdd" "compare_A2e" 10 0 "A2c" 5 40,26 "vdd" 5 35,24
+fet pfet -1179 343 -1178 344 25 20 "vdd" "xor_2" 10 0 "vdd" 5 35,24 "A2e_xnor_B2e" 5 40,26
+fet pfet 200 394 201 395 25 20 "vdd" "S1c" 10 0 "DEC_D0_NAND" 5 45,23 "vdd" 5 35,24
+fet pfet 177 394 178 395 25 20 "vdd" "S0c" 10 0 "vdd" 5 35,24 "DEC_D0_NAND" 5 45,23
+fet nfet 1003 430 1004 431 25 20 "Gnd!" "and_b0e_nand" 10 0 "gnd" 5 35,24 "and_b0e" 5 40,26
+fet nfet 858 429 859 430 25 20 "Gnd!" "and_b1e_nand" 10 0 "gnd" 5 35,24 "and_b1e" 5 40,26
+fet nfet 709 427 710 428 25 20 "Gnd!" "and_b2e_nand" 10 0 "gnd" 5 35,24 "and_b2e" 5 40,26
+fet nfet 565 427 566 428 25 20 "Gnd!" "and_b3e_nand" 10 0 "gnd" 5 35,24 "and_b3e" 5 40,26
+fet nfet 945 438 946 439 25 20 "Gnd!" "D3" 10 0 "gnd" 5 30,22 "ander_node_5" 5 35,24
+fet nfet 922 438 923 439 25 20 "Gnd!" "B0" 10 0 "ander_node_5" 5 35,24 "and_b0e_nand" 5 30,22
+fet nfet 800 437 801 438 25 20 "Gnd!" "D3" 10 0 "gnd" 5 30,22 "ander_node_6" 5 35,24
+fet nfet 777 437 778 438 25 20 "Gnd!" "B1" 10 0 "ander_node_6" 5 35,24 "and_b1e_nand" 5 30,22
+fet nfet 651 435 652 436 25 20 "Gnd!" "D3" 10 0 "gnd" 5 30,22 "ander_node_7" 5 35,24
+fet nfet 628 435 629 436 25 20 "Gnd!" "B2" 10 0 "ander_node_7" 5 35,24 "and_b2e_nand" 5 30,22
+fet nfet 507 435 508 436 25 20 "Gnd!" "D3" 10 0 "gnd" 5 30,22 "ander_node_8" 5 35,24
+fet nfet 484 435 485 436 25 20 "Gnd!" "B3" 10 0 "ander_node_8" 5 35,24 "and_b3e_nand" 5 30,22
+fet pfet 1003 452 1004 453 25 20 "vdd" "and_b0e_nand" 10 0 "vdd" 5 35,24 "and_b0e" 5 40,26
+fet pfet 858 451 859 452 25 20 "vdd" "and_b1e_nand" 10 0 "vdd" 5 35,24 "and_b1e" 5 40,26
+fet pfet 709 449 710 450 25 20 "vdd" "and_b2e_nand" 10 0 "vdd" 5 35,24 "and_b2e" 5 40,26
+fet pfet 565 449 566 450 25 20 "vdd" "and_b3e_nand" 10 0 "vdd" 5 35,24 "and_b3e" 5 40,26
+fet pfet 945 467 946 468 25 20 "vdd" "D3" 10 0 "and_b0e_nand" 5 45,23 "vdd" 5 35,24
+fet pfet 922 467 923 468 25 20 "vdd" "B0" 10 0 "vdd" 5 35,24 "and_b0e_nand" 5 45,23
+fet pfet 800 466 801 467 25 20 "vdd" "D3" 10 0 "and_b1e_nand" 5 45,23 "vdd" 5 35,24
+fet pfet 777 466 778 467 25 20 "vdd" "B1" 10 0 "vdd" 5 35,24 "and_b1e_nand" 5 45,23
+fet pfet 651 464 652 465 25 20 "vdd" "D3" 10 0 "and_b2e_nand" 5 45,23 "vdd" 5 35,24
+fet pfet 628 464 629 465 25 20 "vdd" "B2" 10 0 "vdd" 5 35,24 "and_b2e_nand" 5 45,23
+fet pfet 507 464 508 465 25 20 "vdd" "D3" 10 0 "and_b3e_nand" 5 45,23 "vdd" 5 35,24
+fet pfet 484 464 485 465 25 20 "vdd" "B3" 10 0 "vdd" 5 35,24 "and_b3e_nand" 5 45,23
+fet nfet -904 500 -903 501 25 20 "Gnd!" "compare_B3e" 10 0 "gnd" 5 35,24 "B3c" 5 40,26
+fet nfet 1635 538 1636 539 25 20 "Gnd!" "A0_and_B0_nand" 10 0 "gnd" 5 35,24 "A0_and_B0" 5 40,26
+fet nfet 1488 538 1489 539 25 20 "Gnd!" "A1_and_B1_nand" 10 0 "gnd" 5 35,24 "A1_and_B1" 5 40,26
+fet nfet 1577 546 1578 547 25 20 "Gnd!" "and_b0e" 10 0 "gnd" 5 30,22 "ander_node_12" 5 35,24
+fet nfet 1554 546 1555 547 25 20 "Gnd!" "and_a0e" 10 0 "ander_node_12" 5 35,24 "A0_and_B0_nand" 5 30,22
+fet nfet 1342 536 1343 537 25 20 "Gnd!" "A2_and_B2_nand" 10 0 "gnd" 5 35,24 "A2_and_B2" 5 40,26
+fet nfet 1206 536 1207 537 25 20 "Gnd!" "A3_and_B3_nand" 10 0 "gnd" 5 35,24 "A3_and_B3" 5 40,26
+fet nfet 1430 546 1431 547 25 20 "Gnd!" "and_b1e" 10 0 "gnd" 5 30,22 "ander_node_11" 5 35,24
+fet nfet 1407 546 1408 547 25 20 "Gnd!" "and_a1e" 10 0 "ander_node_11" 5 35,24 "A1_and_B1_nand" 5 30,22
+fet nfet 1284 544 1285 545 25 20 "Gnd!" "and_b2e" 10 0 "gnd" 5 30,22 "ander_node_10" 5 35,24
+fet nfet 1261 544 1262 545 25 20 "Gnd!" "and_a2e" 10 0 "ander_node_10" 5 35,24 "A2_and_B2_nand" 5 30,22
+fet nfet 994 537 995 538 25 20 "Gnd!" "and_a0e_nand" 10 0 "gnd" 5 35,24 "and_a0e" 5 40,26
+fet nfet 1148 544 1149 545 25 20 "Gnd!" "and_b3e" 10 0 "gnd" 5 30,22 "ander_node_9" 5 35,24
+fet nfet 1125 544 1126 545 25 20 "Gnd!" "and_a3e" 10 0 "ander_node_9" 5 35,24 "A3_and_B3_nand" 5 30,22
+fet nfet 847 537 848 538 25 20 "Gnd!" "and_a1e_nand" 10 0 "gnd" 5 35,24 "and_a1e" 5 40,26
+fet pfet 1635 560 1636 561 25 20 "vdd" "A0_and_B0_nand" 10 0 "vdd" 5 35,24 "A0_and_B0" 5 40,26
+fet pfet 1488 560 1489 561 25 20 "vdd" "A1_and_B1_nand" 10 0 "vdd" 5 35,24 "A1_and_B1" 5 40,26
+fet pfet 1342 558 1343 559 25 20 "vdd" "A2_and_B2_nand" 10 0 "vdd" 5 35,24 "A2_and_B2" 5 40,26
+fet pfet 1206 558 1207 559 25 20 "vdd" "A3_and_B3_nand" 10 0 "vdd" 5 35,24 "A3_and_B3" 5 40,26
+fet nfet 936 545 937 546 25 20 "Gnd!" "D3" 10 0 "gnd" 5 30,22 "ander_node_4" 5 35,24
+fet nfet 913 545 914 546 25 20 "Gnd!" "A0" 10 0 "ander_node_4" 5 35,24 "and_a0e_nand" 5 30,22
+fet nfet 701 535 702 536 25 20 "Gnd!" "and_a2e_nand" 10 0 "gnd" 5 35,24 "and_a2e" 5 40,26
+fet nfet 565 535 566 536 25 20 "Gnd!" "and_a3e_nand" 10 0 "gnd" 5 35,24 "and_a3e" 5 40,26
+fet nfet 789 545 790 546 25 20 "Gnd!" "D3" 10 0 "gnd" 5 30,22 "ander_node_3" 5 35,24
+fet nfet 766 545 767 546 25 20 "Gnd!" "A1" 10 0 "ander_node_3" 5 35,24 "and_a1e_nand" 5 30,22
+fet nfet 643 543 644 544 25 20 "Gnd!" "D3" 10 0 "gnd" 5 30,22 "ander_node_2" 5 35,24
+fet nfet 620 543 621 544 25 20 "Gnd!" "A2" 10 0 "ander_node_2" 5 35,24 "and_a2e_nand" 5 30,22
+fet pfet -904 522 -903 523 25 20 "vdd" "compare_B3e" 10 0 "vdd" 5 35,24 "B3c" 5 40,26
+fet pfet -964 522 -963 523 25 20 "vdd" "A3c" 10 0 "xnor_4" 5 32,18 "xor_1" 5 40,26
+fet pfet -982 522 -981 523 25 20 "vdd" "compare_B3e" 10 0 "vdd" 5 40,26 "xnor_4" 5 32,18
+fet nfet -1047 522 -1046 523 25 20 "Gnd!" "compare_A3e" 10 0 "xnor_2" 5 32,18 "xor_1" 5 40,26
+fet nfet -1065 522 -1064 523 25 20 "Gnd!" "compare_B3e" 10 0 "gnd" 5 40,26 "xnor_2" 5 32,18
+fet nfet 507 543 508 544 25 20 "Gnd!" "D3" 10 0 "gnd" 5 30,22 "ander_node_1" 5 35,24
+fet nfet 484 543 485 544 25 20 "Gnd!" "A3" 10 0 "ander_node_1" 5 35,24 "and_a3e_nand" 5 30,22
+fet pfet 994 559 995 560 25 20 "vdd" "and_a0e_nand" 10 0 "vdd" 5 35,24 "and_a0e" 5 40,26
+fet pfet 1577 575 1578 576 25 20 "vdd" "and_b0e" 10 0 "A0_and_B0_nand" 5 45,23 "vdd" 5 35,24
+fet pfet 1554 575 1555 576 25 20 "vdd" "and_a0e" 10 0 "vdd" 5 35,24 "A0_and_B0_nand" 5 45,23
+fet pfet 1430 575 1431 576 25 20 "vdd" "and_b1e" 10 0 "A1_and_B1_nand" 5 45,23 "vdd" 5 35,24
+fet pfet 1407 575 1408 576 25 20 "vdd" "and_a1e" 10 0 "vdd" 5 35,24 "A1_and_B1_nand" 5 45,23
+fet pfet 1284 573 1285 574 25 20 "vdd" "and_b2e" 10 0 "A2_and_B2_nand" 5 45,23 "vdd" 5 35,24
+fet pfet 1261 573 1262 574 25 20 "vdd" "and_a2e" 10 0 "vdd" 5 35,24 "A2_and_B2_nand" 5 45,23
+fet pfet 1148 573 1149 574 25 20 "vdd" "and_b3e" 10 0 "A3_and_B3_nand" 5 45,23 "vdd" 5 35,24
+fet pfet 1125 573 1126 574 25 20 "vdd" "and_a3e" 10 0 "vdd" 5 35,24 "A3_and_B3_nand" 5 45,23
+fet pfet 847 559 848 560 25 20 "vdd" "and_a1e_nand" 10 0 "vdd" 5 35,24 "and_a1e" 5 40,26
+fet pfet 701 557 702 558 25 20 "vdd" "and_a2e_nand" 10 0 "vdd" 5 35,24 "and_a2e" 5 40,26
+fet pfet 565 557 566 558 25 20 "vdd" "and_a3e_nand" 10 0 "vdd" 5 35,24 "and_a3e" 5 40,26
+fet nfet -1116 543 -1115 544 25 20 "Gnd!" "compare_A3e" 10 0 "A3c" 5 40,26 "gnd" 5 35,24
+fet nfet -1176 543 -1175 544 25 20 "Gnd!" "xor_1" 10 0 "gnd" 5 35,24 "A3e_xnor_B3e" 5 40,26
+fet nfet -964 561 -963 562 25 20 "Gnd!" "B3c" 10 0 "xnor_3" 5 32,18 "xor_1" 5 40,26
+fet nfet -982 561 -981 562 25 20 "Gnd!" "A3c" 10 0 "gnd" 5 40,26 "xnor_3" 5 32,18
+fet pfet -1047 561 -1046 562 25 20 "vdd" "B3c" 10 0 "xnor_1" 5 32,18 "xor_1" 5 40,26
+fet pfet -1065 561 -1064 562 25 20 "vdd" "compare_A3e" 10 0 "vdd" 5 40,26 "xnor_1" 5 32,18
+fet pfet 936 574 937 575 25 20 "vdd" "D3" 10 0 "and_a0e_nand" 5 45,23 "vdd" 5 35,24
+fet pfet 913 574 914 575 25 20 "vdd" "A0" 10 0 "vdd" 5 35,24 "and_a0e_nand" 5 45,23
+fet pfet 789 574 790 575 25 20 "vdd" "D3" 10 0 "and_a1e_nand" 5 45,23 "vdd" 5 35,24
+fet pfet 766 574 767 575 25 20 "vdd" "A1" 10 0 "vdd" 5 35,24 "and_a1e_nand" 5 45,23
+fet pfet 643 572 644 573 25 20 "vdd" "D3" 10 0 "and_a2e_nand" 5 45,23 "vdd" 5 35,24
+fet pfet 620 572 621 573 25 20 "vdd" "A2" 10 0 "vdd" 5 35,24 "and_a2e_nand" 5 45,23
+fet pfet 507 572 508 573 25 20 "vdd" "D3" 10 0 "and_a3e_nand" 5 45,23 "vdd" 5 35,24
+fet pfet 484 572 485 573 25 20 "vdd" "A3" 10 0 "vdd" 5 35,24 "and_a3e_nand" 5 45,23
+fet pfet -1116 565 -1115 566 25 20 "vdd" "compare_A3e" 10 0 "A3c" 5 40,26 "vdd" 5 35,24
+fet pfet -1176 565 -1175 566 25 20 "vdd" "xor_1" 10 0 "vdd" 5 35,24 "A3e_xnor_B3e" 5 40,26

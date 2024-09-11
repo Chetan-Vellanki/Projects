@@ -1,0 +1,32 @@
+
+.include "TSMC_180nm.txt"
+.include NOT.sub
+
+.subckt four_input_and input_A input_B input_C input_D output vdd gnd
+M_n_1 output_nand input_A node_1 node_1 CMOSN W = {w} L = {l}
++ AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+M_n_2 node_1 input_B node_2 gnd CMOSN W = {w} L = {l}
++ AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+M_n_3 node_2 input_C node_3 gnd CMOSN W = {w} L = {l}
++ AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+M_n_4 node_3 input_D gnd gnd CMOSN W = {w} L = {l}
++ AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+M_p_1 output_nand input_A vdd vdd CMOSP W = {w} L = {l}
++ AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+M_p_2 output_nand input_B vdd vdd CMOSP W = {w} L = {l}
++AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+M_p_3 output_nand input_C vdd vdd CMOSP W = {w} L = {l}
++ AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+M_p_4 output_nand input_D vdd vdd CMOSP W = {w} L = {l}
++ AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+X_four_nand_to_NOT output_nand output vdd gnd NOT
+
+.ends four_input_and

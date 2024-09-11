@@ -1,0 +1,2529 @@
+.include TSMC_180nm.txt
+.param supply_voltage = 1.8
+
+.global gnd
+.global vdd
+
+VDD vdd gnd 'supply_voltage'
+** GIVING INPUT signals S0 S1 ,A and B
+V_input_S0 S0 gnd PULSE(0 1.8 200n 50p 50p 200n 400n)
+V_input_S1 S1 gnd PULSE(0 1.8 400n 50p 50p 400n 800n)
+V_input_A3 A3 gnd PULSE(0 1.8 0 50p 50p 50n 100n)
+V_input_A2 A2 gnd PULSE(0 1.8 50n 50p 50p 75n 150n)
+V_input_A1 A1 gnd PULSE(0 1.8 0 50p 50p 100n 200n)
+V_input_A0 A0 gnd PULSE(0 1.8 50n 50p 50p 50n 100n)
+V_input_B3 B3 gnd PULSE(0 1.8 0 50p 50p 50n 100n)
+V_input_B2 B2 gnd PULSE(0 1.8 75n 50p 50p 75n 150n)  
+V_input_B1 B1 gnd PULSE(0 1.8 0 50p 50p 100n 200n)
+V_input_B0 B0 gnd PULSE(1.8 0 50n 50p 50p 50n 100n)
+* SPICE3 file created from ALU.ext - technology: scmos
+
+.option scale=90n
+
+M1000 vdd B3e_xor_M a_1580_205# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1001 adder_xor_node4 adder_B3e vdd vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1002 B0e_xor_M D1 adder_xor_node15 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1003 a_1584_374# B3e_xor_M vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1004 D0_or_D1 D0_OR_D1_node vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1005 compare_B1e_nand D2 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1006 vdd A3 compare_A3e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1007 gnd D1 a_1998_265# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1008 gnd D2 compare_node_5 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1009 a_1435_n913# a_1399_n1043# gnd Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1010 vdd D3 and_b2e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1011 compare_A1e_nand D2 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1012 xor_2 B2c xnor_5 vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1013 gnd A3_and_B3c A_GT_B_c Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1014 vdd adder_A1e a_1704_n706# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1015 adder_node4 D0_or_D1 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1016 vdd a_1270_n596# a_1262_n591# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1017 a_1704_n255# a_1548_n316# a_1218_n321# vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1018 xnor_13 compare_A0e vdd vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1019 a_1366_n706# a_1210_n767# Sum1 vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1020 a_1458_n1035# B0e_xor_M a_1407_n1048# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1021 B1e_xor_M D1 adder_xor_node11 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1022 vdd adder_A3e a_1584_374# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1023 gnd B1e_xor_M a_1548_n767# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1024 compare_node_5 B0 compare_B0e_nand Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1025 vdd S1c DEC_D0_NAND vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1026 vdd adder_A3e a_1736_266# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1027 adder_xor_node9 a_1998_265# gnd Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1028 and_b2e and_b2e_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1029 xnor_8 compare_B2e vdd vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1030 a_1448_374# carry3 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1031 A0_and_B0_nand and_a0e vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1032 compare_A2e_nand D2 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1033 xnor_12 A1c gnd Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1034 A0e_xnor_B0e xor_4 vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1035 A1e_xnor_B1e xor_3 vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1036 vdd B3e_xor_M a_1448_374# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1037 gnd a_1278_n785# a_1283_n706# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1038 Adder_B1ec B1 adder_node6 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1039 and_a1e_nand A1 ander_node_3 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1040 ander_node_5 D3 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1041 gnd a_1616_n334# a_1621_n255# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1042 and_b3e and_b3e_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1043 B2e_xor_M D1 adder_xor_node7 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1044 vdd a_1218_n321# a_1210_n316# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1045 vdd a_1571_478# a_1560_532# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1046 vdd B0e_xor_M a_1612_n1195# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1047 vdd B0e_xor_M a_1539_n1217# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1048 gnd a_1218_n772# a_1366_n745# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1049 a_1357_n1156# a_1201_n1217# Sum0 vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1050 adder_node6 D0_or_D1 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1051 vdd compare_A0e_nand compare_A0e vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1052 gnd B2e_xor_M a_1704_n294# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1053 vdd B3c A3_nand_B3c vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1054 vdd D3 and_a3e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1055 gnd D1 a_2010_437# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1056 gnd a_1584_374# a_1571_478# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1057 a_1476_509# a_1440_379# gnd Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1058 and_a2e_nand A2 ander_node_2 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1059 a_1366_n294# carry2 sum2 Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1060 vdd D1 a_1998_265# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1061 compare_node_4 A0 compare_A0e_nand Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1062 D2 DEC_D2_NAND gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1063 adder_A0e Adder_A0ec gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1064 vdd A3_eq_B3_A2_gt_B2_c A3_eq_B3_A2_gt_B2 vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1065 S1c S1 gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1066 gnd compare_A2e_nand compare_A2e Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1067 adder_xor_node6 a_2010_437# gnd Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1068 gnd a_1261_n1046# a_1253_n1041# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1069 adder_node7 D0_or_D1 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1070 a_1261_n1046# adder_A0e vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1071 a_1653_266# a_1580_205# a_1250_200# Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1072 gnd a_1448_374# a_1440_379# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1073 B3e_xor_M a_2016_620# adder_xor_node4 vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1074 a_1552_n598# B1e_xor_M vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1075 vdd a_1250_200# a_1315_227# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1076 a_1444_n12# a_1408_n142# gnd Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1077 gnd a_1539_n494# a_1444_n463# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1078 vdd adder_A0e a_1695_n1156# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1079 Adder_B2ec B2 adder_node7 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1080 A_greater_B_node_6 A3e_xnor_B3e A_greater_B_node_7 Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1081 gnd a_1250_200# a_1242_205# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1082 a_1467_n585# B1e_xor_M a_1416_n598# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1083 gnd D2 compare_node_7 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1084 and_a1e and_a1e_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1085 a_1283_n706# a_1210_n767# Sum1 Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1086 gnd D2 compare_node_1 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1087 a_1621_n255# a_1548_n316# a_1218_n321# Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1088 xor_4 B0c xnor_13 vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1089 vdd carry2 a_1270_n145# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1090 A_GT_B_c A3_and_B3c A_GT_B_node_1 vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1091 and_b0e and_b0e_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1092 and_b3e and_b3e_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1093 a_1512_n440# a_1262_n591# a_1444_n463# vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=40p ps=26u
+M1094 vdd A2e_xnor_B2e A_equal_B_c vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1095 B0e_xor_M 01ec_M adder_xor_node13 vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1096 adder_xor_node1 a_2016_620# gnd Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1097 B1e_xor_M B1ec_M adder_xor_node9 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1098 xor_2 A2c xnor_8 vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1099 a_1543_n1048# B0e_xor_M vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1100 DEC_D3_NAND S1 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1101 compare_node_7 B2 compare_B2e_nand Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1102 xor_3 B1c xnor_12 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1103 gnd A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0_c A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0 Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1104 and_a0e and_a0e_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1105 gnd adder_A3e a_1353_389# Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1106 vdd D1 a_2010_437# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1107 gnd A0e_xnor_B0e A_compare_B_node_1 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1108 vdd and_b2e A2_and_B2_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1109 vdd S0 DEC_D3_NAND vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1110 Adder_B0ec B0 adder_node5 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1111 vdd a_1218_n321# a_1283_n294# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1112 vdd adder_A2e a_1552_n147# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1113 Adder_A3ec A3 adder_node1 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1114 vdd D1 a_1357_n1156# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1115 and_b0e_nand B0 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1116 compare_node_2 A2 compare_A2e_nand Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1117 a_1312_n1033# D1 a_1261_n1046# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1118 D2 DEC_D2_NAND vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1119 A3_and_B3_nand and_a3e ander_node_9 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1120 vdd D3 and_b1e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1121 a_1353_389# carry3 a_1302_376# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1122 vdd B1c A3_eq_B3_A2_eq_B2_A1_gt_B1_c vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1123 vdd compare_B1e_nand compare_B1e vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1124 vdd compare_A2e_nand compare_A2e vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1125 vdd a_1302_376# a_1294_381# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1126 vdd D0_or_D1 Adder_A2ec vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1127 adder_node5 D0_or_D1 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1128 adder_node1 D0_or_D1 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1129 a_1607_n1235# adder_A0e vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1130 adder_A1e Adder_A1ec gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1131 a_1416_n147# carry2 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1132 Adder_A2ec A2 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1133 B1c compare_B1e vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1134 A_greater_B_node_2 B2c A_greater_B_node_3 Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1135 vdd a_1250_200# a_1242_205# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1136 gnd a_1416_n147# a_1408_n142# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1137 gnd D2 compare_node_6 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1138 compare_A0e_nand D2 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1139 and_a1e and_a1e_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1140 ander_node_7 D3 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1141 gnd D2 compare_node_3 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1142 vdd a_1584_374# a_1571_478# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1143 vdd D3 and_a0e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1144 vdd a_1407_n1048# a_1399_n1043# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1145 gnd A3_eq_B3_A2_eq_B2_A1_gt_B1_c A3_eq_B3_A2_eq_B2_A1_gt_B1 Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1146 vdd B1 compare_B1e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1147 A_GT_B_c A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0 gnd Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=40p ps=26u
+M1148 xor_1 B3c xnor_1 vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1149 B2e_xor_M B2ec_M adder_xor_node6 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1150 gnd a_1648_187# a_1653_266# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1151 adder_B2e Adder_B2ec gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1152 adder_B3e Adder_B3ec vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1153 Adder_B3ec B3 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1154 A1_and_B1_nand and_a1e vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1155 a_1607_n1235# adder_A0e gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1156 xnor_6 compare_B2e gnd Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1157 adder_xor_node3 adder_B3e gnd Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1158 a_1270_n145# adder_A2e vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1159 compare_B3e_nand D2 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1160 Dec_AND_node_1 S1c gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1161 A0_and_B0_nand and_a0e ander_node_12 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1162 A_greater_B_node_9 A2e_xnor_B2e A_greater_B_node_10 Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1163 and_a0e and_a0e_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1164 a_1274_n1195# a_1269_n1235# Sum0 vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1165 gnd B2e_xor_M a_1603_n134# Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1166 vdd carry3 a_1398_266# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1167 vdd compare_A2e A3_eq_B3_A2_gt_B2_c vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=40p ps=26u
+M1168 and_b1e and_b1e_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1169 a_1283_n294# a_1278_n334# sum2 vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1170 vdd a_1448_374# a_1440_379# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1171 gnd a_1407_n1048# a_1399_n1043# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1172 vdd D0_or_D1 Adder_B3ec vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1173 vdd a_1530_n944# a_1519_n890# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1174 vdd a_840_1472# A_LS_B_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1175 D0_OR_D1_node_2 D0 vdd vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=35p ps=24u
+M1176 B3e_xor_M B3ec_M adder_xor_node1 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1177 A2_and_B2_nand and_a2e vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1178 a_1616_n334# adder_A2e vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1179 a_1560_532# a_1440_379# a_1544_532# vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1180 A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0_c a_706_1232# vdd vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1181 B0e_xor_M a_1989_81# adder_xor_node16 vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1182 vdd B0e_xor_M a_1407_n1048# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1183 adder_xor_node10 D1 vdd vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1184 A_greater_B_node_5 compare_A1e A_greater_B_node_6 Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1185 A_greater_B_node_1 B3c A3_nand_B3c Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1186 ander_node_1 D3 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1187 gnd a_1294_381# a_1476_509# Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=40p ps=26u
+M1188 xnor_9 compare_A1e vdd vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1189 vdd a_754_1232# A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0_c vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1190 a_1616_n334# adder_A2e gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1191 xnor_1 compare_A3e vdd vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1192 xnor_16 compare_B0e vdd vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1193 01ec_M adder_B0e vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1194 vdd carry2 a_1366_n255# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1195 a_1704_n706# a_1548_n767# a_1218_n772# vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1196 vdd a_1552_n598# a_1539_n494# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1197 gnd a_1270_n596# a_1262_n591# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1198 gnd compare_B1e_nand compare_B1e Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1199 xnor_5 compare_A2e vdd vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1200 gnd a_1302_376# a_1294_381# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1201 gnd a_1262_n140# a_1444_n12# Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=40p ps=26u
+M1202 a_1315_266# a_1242_205# sum3 Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1203 gnd A_equal_B_c A_equal_B Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1204 D1 DEC_D1_NAND vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1205 and_b2e_nand B2 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1206 vdd a_1543_n1048# a_1530_n944# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1207 B1c compare_B1e gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1208 vdd D3 and_b3e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1209 vdd A0_B0_XOR a_1274_n1195# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1210 A_equal_B_c A3e_xnor_B3e vdd vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=40p ps=26u
+M1211 gnd a_1552_n598# a_1539_n494# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1212 B1ec_M adder_B1e gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1213 A_GT_B_node_3 A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0 vdd vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=40p ps=26u
+M1214 B3e_xor_M D1 adder_xor_node3 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1215 vdd a_690_1233# A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0_c vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=40p ps=26u
+M1216 A3e_xnor_B3e xor_1 gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1217 DEC_D0_NAND S0c vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1218 gnd a_1616_n785# a_1621_n706# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1219 gnd a_1444_n12# carry3 Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1220 adder_xor_node5 D1 vdd vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1221 gnd A3e_xnor_B3e A_greater_B_node_2 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1222 DEC_D3_NAND S1 DEC_AND_NODE_4 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1223 a_1736_227# adder_A3e a_1250_200# Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1224 xor_1 A3c xnor_4 vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1225 vdd a_1218_n772# a_1210_n767# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1226 gnd D1 a_1458_n1035# Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1227 gnd A_LS_B_nand A_LS_B Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1228 A_compare_B_node_1 A1e_xnor_B1e A_compare_B_node_2 Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1229 gnd a_1543_n1048# a_1530_n944# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1230 B0e_xor_M 01ec_M adder_xor_node14 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1231 gnd B1e_xor_M a_1704_n745# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1232 a_1398_227# carry3 sum3 Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1233 ander_node_10 and_b2e gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1234 gnd compare_A3e_nand compare_A3e Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1235 DEC_AND_NODE_4 S0 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1236 a_1704_n294# adder_A2e a_1218_n321# Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1237 a_1512_11# a_1262_n140# a_1444_n12# vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=40p ps=26u
+M1238 gnd compare_A0e A0c Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1239 a_1366_n745# carry1 Sum1 Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1240 gnd compare_A1e A1c Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1241 and_b0e_nand B0 ander_node_5 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1242 xor_2 compare_A2e xnor_6 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1243 vdd B1e_xor_M a_1416_n598# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1244 gnd a_1530_n944# a_1435_n913# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1245 gnd D1 a_2016_620# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1246 A_greater_B_node_8 A3e_xnor_B3e A_greater_B_node_9 Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1247 a_1278_n334# carry2 vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1248 and_a2e and_a2e_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1249 ander_node_6 D3 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1250 a_1695_n1156# a_1539_n1217# A0_B0_XOR vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1251 a_1321_n583# carry1 a_1270_n596# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1252 A3_eq_B3_A2_eq_B2_A1_gt_B1_c A2e_xnor_B2e vdd vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=40p ps=26u
+M1253 gnd a_1218_n772# a_1210_n767# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1254 adder_node2 D0_or_D1 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1255 A3_nand_B3c compare_A3e vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1256 vdd a_1270_n145# a_1262_n140# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1257 xor_3 B1c xnor_9 vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1258 and_a3e_nand A3 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1259 B3c compare_B3e gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1260 A2e_xnor_B2e xor_2 gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1261 gnd B2e_xor_M a_1548_n316# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1262 Adder_A2ec A2 adder_node2 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1263 vdd A_equal_B_c A_equal_B vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1264 vdd D3 and_a1e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1265 vdd compare_B3e_nand compare_B3e vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1266 xor_4 A0c xnor_16 vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1267 gnd D2 compare_node_4 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1268 a_1278_n334# carry2 gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1269 gnd B3e_xor_M a_1635_387# Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1270 ander_node_4 D3 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1271 a_1603_n585# adder_A1e a_1552_n598# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1272 compare_node_6 B1 compare_B1e_nand Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1273 adder_xor_node2 D1 vdd vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1274 a_1621_n706# a_1548_n767# a_1218_n772# Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1275 vdd a_1552_n147# a_1539_n43# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1276 B1ec_M adder_B1e vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1277 gnd a_1270_n145# a_1262_n140# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1278 B1e_xor_M B1ec_M adder_xor_node10 vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1279 a_1648_187# adder_A3e gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1280 xnor_4 compare_B3e vdd vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1281 a_1357_n1195# D1 Sum0 Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1282 Adder_B3ec B3 adder_node8 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1283 A3e_xnor_B3e xor_1 vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1284 A1_and_B1_nand and_a1e ander_node_11 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1285 vdd D1 a_1261_n1046# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1286 D0_OR_D1_node D1 D0_OR_D1_node_2 vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=35p ps=24u
+M1287 gnd D2 compare_node_8 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1288 S0c S0 gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1289 a_1594_n1035# adder_A0e a_1543_n1048# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1290 a_1635_387# adder_A3e a_1584_374# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1291 adder_A0e Adder_A0ec vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1292 DEC_D2_NAND S0c vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1293 vdd A_LS_B_nand A_LS_B vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1294 a_1612_n1156# a_1539_n1217# A0_B0_XOR Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1295 gnd A3_nand_B3c A3_and_B3c Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1296 S1c S1 vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1297 gnd carry1 a_1467_n585# Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1298 gnd carry3 a_1499_387# Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1299 gnd D0 D0_OR_D1_node Gnd CMOSN w=5 l=5
++  ad=47p pd=24u as=35p ps=24u
+M1300 adder_node8 D0_or_D1 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1301 vdd compare_A3e_nand compare_A3e vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1302 vdd compare_A0e A0c vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1303 vdd compare_A1e A1c vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1304 A_LS_B_node_1 a_840_1472# A_LS_B_nand Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1305 vdd a_1218_n772# a_1283_n745# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1306 a_1544_532# a_1294_381# a_1476_509# vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=40p ps=26u
+M1307 vdd D1 a_2016_620# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1308 vdd S1 DEC_D2_NAND vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1309 gnd A0_B0_XOR a_1201_n1217# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1310 vdd B2e_xor_M a_1621_n294# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1311 and_a2e and_a2e_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1312 A2_and_B2_nand and_a2e ander_node_10 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1313 B2e_xor_M B2ec_M adder_xor_node5 vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1314 gnd a_1476_509# sum4 Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1315 a_1499_387# B3e_xor_M a_1448_374# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1316 compare_node_1 A3 compare_A3e_nand Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1317 a_1310_187# carry3 gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1318 gnd a_1310_187# a_1315_266# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1319 adder_A2e Adder_A2ec gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1320 B2c compare_B2e gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1321 A3_and_B3 A3_and_B3_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1322 vdd B3 compare_B3e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1323 gnd adder_A1e a_1321_n583# Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1324 gnd B0e_xor_M a_1695_n1195# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1325 gnd a_1262_n591# a_1444_n463# Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=40p ps=26u
+M1326 A2e_xnor_B2e xor_2 vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1327 a_1552_n147# B2e_xor_M vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1328 xnor_14 compare_B0e gnd Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1329 vdd A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0_c A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0 vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1330 D0 DEC_D0_NAND gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1331 B2ec_M adder_B2e vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1332 and_b1e_nand B1 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1333 gnd D2 compare_node_2 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1334 a_1467_n134# B2e_xor_M a_1416_n147# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1335 gnd B3e_xor_M a_1736_227# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1336 adder_A3e Adder_A3ec gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1337 adder_xor_node15 adder_B0e gnd Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1338 A1_and_B1 A1_and_B1_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1339 a_1528_n440# a_1408_n593# a_1512_n440# vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1340 D3 DEC_D3_NAND gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1341 vdd A3_nand_B3c A3_and_B3c vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1342 gnd A0_B0_XOR a_1357_n1195# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1343 gnd compare_A3e A3c Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1344 vdd A3e_xnor_B3e A3_eq_B3_A2_eq_B2_A1_gt_B1_c vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1345 vdd and_b3e A3_and_B3_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1346 B3c compare_B3e vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1347 and_b2e_nand B2 ander_node_7 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1348 adder_B0e Adder_B0ec gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1349 and_a0e_nand A0 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1350 a_1283_n745# a_1278_n785# Sum1 vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1351 gnd compare_B3e_nand compare_B3e Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1352 adder_A1e Adder_A1ec vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1353 Adder_A1ec A1 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1354 gnd a_1607_n1235# a_1612_n1156# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1355 a_1621_n294# a_1616_n334# a_1218_n321# vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1356 B3e_xor_M B3ec_M adder_xor_node2 vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1357 ander_node_8 D3 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1358 vdd a_1444_n463# carry2 vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1359 compare_A3e_nand D2 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1360 vdd a_1476_509# sum4 vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1361 a_1616_n785# adder_A1e vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1362 adder_xor_node12 adder_B1e vdd vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1363 adder_A2e Adder_A2ec vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1364 DEC_D0_NAND S0c Dec_AND_node_1 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1365 B2c compare_B2e vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1366 A3_and_B3 A3_and_B3_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1367 vdd A3_eq_B3_A2_eq_B2_A1_gt_B1_c A3_eq_B3_A2_eq_B2_A1_gt_B1 vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1368 xnor_11 compare_B1e vdd vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1369 vdd D0_or_D1 Adder_A1ec vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1370 vdd and_b1e A1_and_B1_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1371 adder_B2e Adder_B2ec vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1372 vdd A0e_xnor_B0e A_equal_B_c vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1373 vdd A1 compare_A1e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1374 gnd a_1444_n463# carry2 Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1375 A_LS_B_nand A_equal_B_c vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1376 vdd B2e_xor_M a_1548_n316# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1377 D0 DEC_D0_NAND vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1378 gnd compare_A2e A2c Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1379 a_1616_n785# adder_A1e gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1380 adder_A3e Adder_A3ec vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1381 A_GT_B A_GT_B_c gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1382 vdd and_b0e A0_and_B0_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1383 A1_and_B1 A1_and_B1_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1384 gnd A3_eq_B3_A2_eq_B2_A1_gt_B1 A_GT_B_c Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1385 vdd A2 compare_A2e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1386 gnd compare_A3e A_greater_B_node_1 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1387 vdd carry1 a_1366_n706# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1388 vdd adder_A2e a_1704_n255# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1389 and_a3e_nand A3 ander_node_1 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1390 a_1503_n890# a_1253_n1041# a_1435_n913# vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=40p ps=26u
+M1391 gnd a_1435_n913# carry1 Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1392 a_1366_n255# a_1210_n316# sum2 vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1393 xor_4 compare_A0e xnor_14 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1394 A0_and_B0 A0_and_B0_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1395 a_1407_n1048# D1 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1396 vdd compare_A3e A3c vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1397 ander_node_3 D3 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1398 A_compare_B_node_2 A2e_xnor_B2e A_compare_B_node_3 Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1399 A3_eq_B3_A2_gt_B2_c B2c vdd vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1400 adder_B0e Adder_B0ec vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1401 a_1302_376# adder_A3e vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1402 adder_xor_node8 adder_B2e vdd vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1403 D0_OR_D1_node D1 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=47p ps=24u
+M1404 B2ec_M adder_B2e gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1405 vdd compare_B0e_nand compare_B0e vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1406 gnd A3_eq_B3_A2_gt_B2_c A3_eq_B3_A2_gt_B2 Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1407 a_1653_227# a_1648_187# a_1250_200# vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1408 vdd carry1 a_1270_n596# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1409 vdd A0_B0_XOR a_1201_n1217# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1410 DEC_D1_NAND S1c vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1411 a_840_1472# A_GT_B gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1412 gnd a_1278_n334# a_1283_n255# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1413 vdd carry3 a_1302_376# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1414 DEC_D2_NAND S0c DEC_AND_NODE_3 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1415 vdd A2e_xnor_B2e A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0_c vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1416 adder_xor_node13 D1 vdd vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1417 adder_B1e Adder_B1ec gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1418 gnd B1c A_greater_B_node_5 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1419 xnor_15 A0c gnd Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1420 and_b3e_nand B3 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1421 vdd a_1539_n494# a_1528_n440# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1422 vdd S0 DEC_D1_NAND vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1423 gnd a_1218_n321# a_1366_n294# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1424 vdd compare_A2e A2c vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1425 a_1704_n745# adder_A1e a_1218_n772# Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1426 DEC_AND_NODE_3 S1 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1427 B1e_xor_M a_1998_265# adder_xor_node12 vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1428 B3ec_M adder_B3e gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1429 Adder_A0ec A0 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1430 A_GT_B A_GT_B_c vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1431 vdd D3 and_a2e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1432 vdd adder_A1e a_1552_n598# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1433 a_1278_n785# carry1 vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1434 xor_3 A1c xnor_11 vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1435 and_b0e and_b0e_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1436 vdd a_1416_n598# a_1408_n593# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1437 vdd compare_B2e_nand compare_B2e vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1438 gnd compare_A1e_nand compare_A1e Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1439 and_a3e and_a3e_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1440 compare_B0e_nand D2 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1441 compare_node_8 B3 compare_B3e_nand Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1442 A3_eq_B3_A2_eq_B2_A1_gt_B1_c compare_A1e vdd vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1443 vdd D0_or_D1 Adder_A0ec vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1444 vdd adder_A0e a_1543_n1048# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1445 xor_1 compare_A3e xnor_2 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1446 vdd a_1261_n1046# a_1253_n1041# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1447 A0_and_B0 A0_and_B0_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1448 vdd B0 compare_B0e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1449 a_1416_n598# carry1 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1450 and_b1e_nand B1 ander_node_6 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1451 a_1278_n785# carry1 gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1452 xor_1 B3c xnor_3 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1453 A_greater_B_node_3 compare_A2e A3_eq_B3_A2_gt_B2_c Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=55p ps=32u
+M1454 gnd a_1416_n598# a_1408_n593# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1455 a_1274_n1156# a_1201_n1217# Sum0 Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1456 gnd a_1250_200# a_1398_227# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1457 A_GT_B_node_2 A3_eq_B3_A2_eq_B2_A1_gt_B1 A_GT_B_node_3 vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1458 a_1283_n255# a_1210_n316# sum2 Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1459 gnd a_1552_n147# a_1539_n43# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1460 a_1269_n1235# D1 vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1461 a_840_1472# A_GT_B vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1462 xor_2 B2c xnor_7 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1463 adder_B1e Adder_B1ec vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1464 Adder_B1ec B1 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1465 and_a1e_nand A1 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1466 gnd D1 a_1989_81# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1467 vdd D3 and_b0e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1468 a_1270_n596# adder_A1e vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1469 gnd a_1253_n1041# a_1435_n913# Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=40p ps=26u
+M1470 gnd adder_A0e a_1312_n1033# Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1471 ander_node_9 and_b3e gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1472 and_a0e_nand A0 ander_node_4 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1473 gnd B1e_xor_M a_1603_n585# Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1474 B0c compare_B0e gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1475 a_1695_n1195# adder_A0e A0_B0_XOR Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1476 B2e_xor_M a_2010_437# adder_xor_node8 vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1477 A_greater_B_node_10 a_706_1232# A_greater_B_node_11 Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1478 Adder_A1ec A1 adder_node3 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1479 A_GT_B_c A3_eq_B3_A2_gt_B2 gnd Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1480 vdd B3e_xor_M a_1653_227# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1481 adder_xor_node11 adder_B1e gnd Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1482 B3ec_M adder_B3e vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1483 vdd D0_or_D1 Adder_B1ec vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1484 vdd B1e_xor_M a_1621_n745# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1485 a_1269_n1235# D1 gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1486 vdd a_1444_n12# carry3 vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1487 gnd a_754_1232# A_greater_B_node_8 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1488 a_1519_n890# a_1399_n1043# a_1503_n890# vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1489 vdd B2e_xor_M a_1416_n147# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1490 xnor_10 compare_B1e gnd Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1491 a_1736_266# a_1580_205# a_1250_200# vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1492 vdd A3e_xnor_B3e A3_eq_B3_A2_gt_B2_c vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1493 vdd compare_A1e_nand compare_A1e vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1494 gnd compare_B0e_nand compare_B0e Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1495 and_a3e and_a3e_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1496 adder_B3e Adder_B3ec gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1497 and_a2e_nand A2 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1498 a_1321_n132# carry2 a_1270_n145# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1499 adder_node3 D0_or_D1 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1500 gnd a_1218_n321# a_1210_n316# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1501 gnd a_1571_478# a_1476_509# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1502 xnor_2 compare_B3e gnd Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1503 A2_and_B2 A2_and_B2_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1504 vdd A0 compare_A0e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1505 xor_4 B0c xnor_15 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1506 A_equal_B_c A1e_xnor_B1e vdd vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1507 ander_node_11 and_b1e gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1508 a_1648_187# adder_A3e vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1509 gnd B0e_xor_M a_1594_n1035# Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1510 gnd B0e_xor_M a_1539_n1217# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1511 a_1398_266# a_1242_205# sum3 vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1512 adder_xor_node16 adder_B0e vdd vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1513 compare_node_3 A1 compare_A1e_nand Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1514 S0c S0 vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1515 and_b1e and_b1e_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1516 vdd a_1539_n43# a_1528_11# vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1517 gnd A_equal_B_c A_LS_B_node_1 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1518 vdd a_1435_n913# carry1 vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1519 vdd D0_or_D1 Adder_B2ec vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1520 xnor_3 A3c gnd Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1521 vdd a_1416_n147# a_1408_n142# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1522 A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0_c A3e_xnor_B3e vdd vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1523 ander_node_12 and_b0e gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1524 gnd B3e_xor_M a_1580_205# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1525 a_1603_n134# adder_A2e a_1552_n147# Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1526 Adder_B2ec B2 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1527 D0_or_D1 D0_OR_D1_node gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1528 compare_B2e_nand D2 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1529 xnor_7 A2c gnd Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1530 gnd compare_B2e_nand compare_B2e Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1531 A_compare_B_node_3 A3e_xnor_B3e A_equal_B_c Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=35p ps=24u
+M1532 gnd a_1269_n1235# a_1274_n1156# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1533 a_1528_11# a_1408_n142# a_1512_11# vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1534 a_1310_187# carry3 vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1535 vdd D1 a_1989_81# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1536 A_greater_B_node_11 a_690_1233# A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0_c Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=40p ps=26u
+M1537 B0c compare_B0e vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1538 vdd B2 compare_B2e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1539 adder_xor_node7 adder_B2e gnd Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1540 gnd carry2 a_1467_n134# Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1541 and_b2e and_b2e_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1542 a_1621_n745# a_1616_n785# a_1218_n772# vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1543 01ec_M adder_B0e gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1544 gnd a_1539_n43# a_1444_n12# Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=27p ps=16u
+M1545 a_1315_227# a_1310_187# sum3 vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1546 Adder_B0ec B0 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1547 DEC_D1_NAND S1c Dec_AND_node_2 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1548 Adder_A3ec A3 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1549 A0e_xnor_B0e xor_4 gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1550 a_1612_n1195# a_1607_n1235# A0_B0_XOR vdd CMOSP w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1551 A1e_xnor_B1e xor_3 gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1552 A2_and_B2 A2_and_B2_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1553 A3_and_B3_nand and_a3e vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1554 a_1444_n463# a_1408_n593# gnd Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1555 gnd adder_A2e a_1321_n132# Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1556 A_greater_B_node_7 A2e_xnor_B2e A3_eq_B3_A2_eq_B2_A1_gt_B1_c Gnd CMOSN w=5 l=5
++  ad=27p pd=16u as=35p ps=24u
+M1557 and_b3e_nand B3 ander_node_8 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1558 vdd D0_or_D1 Adder_B0ec vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1559 D1 DEC_D1_NAND gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1560 Dec_AND_node_2 S0 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1561 vdd D0_or_D1 Adder_A3ec vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1562 adder_xor_node14 a_1989_81# gnd Gnd CMOSN w=5 l=5
++  ad=32p pd=18u as=40p ps=26u
+M1563 D3 DEC_D3_NAND vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1564 A_GT_B_node_1 A3_eq_B3_A2_gt_B2 A_GT_B_node_2 vdd CMOSP w=5 l=5
++  ad=27p pd=16u as=27p ps=16u
+M1565 vdd B1e_xor_M a_1548_n767# vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+M1566 xor_3 compare_A1e xnor_10 Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=32p ps=18u
+M1567 Adder_A0ec A0 adder_node4 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1568 ander_node_2 D3 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1569 gnd compare_A0e_nand compare_A0e Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=40p ps=26u
+C0 and_b2e and_b1e 0.010402f
+C1 and_b3e and_b0e 0.01764f
+C2 and_a2e and_a0e 0.008592f
+C3 B2 B1 0.320194f
+C4 adder_B2e Adder_B2ec 0.030251f
+C5 Adder_B3ec adder_node8 0.085282f
+C6 A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0_c vdd 0.264836f
+C7 a_1269_n1235# vdd 0.146278f
+C8 A_greater_B_node_3 gnd 6.22e-20
+C9 A3_eq_B3_A2_eq_B2_A1_gt_B1 vdd 0.162801f
+C10 A0c compare_A0e 0.038705f
+C11 compare_A2e compare_A2e_nand 0.030251f
+C12 gnd B1e_xor_M 0.645788f
+C13 a_1262_n140# a_1408_n142# 0.01218f
+C14 A1 compare_node_3 0.088951f
+C15 B3 D0 0.007255f
+C16 gnd ander_node_1 0.07683f
+C17 DEC_D3_NAND DEC_AND_NODE_4 0.085282f
+C18 Adder_A3ec D0_or_D1 0.015311f
+C19 gnd a_1270_n596# 0.148342f
+C20 A1e_xnor_B1e A0e_xnor_B0e 0.229516f
+C21 compare_B0e vdd 0.162042f
+C22 B3 B1 0.014599f
+C23 B0c compare_B2e 0.021297f
+C24 D3 ander_node_5 0.089107f
+C25 A0 vdd 0.28286f
+C26 compare_B1e_nand D2 0.015311f
+C27 A0 adder_node4 0.088797f
+C28 a_1552_n147# vdd 0.094003f
+C29 adder_A3e D2 0.010815f
+C30 B3 ander_node_8 0.088221f
+C31 a_1467_n134# carry2 0.089107f
+C32 a_1648_187# gnd 1.42864f
+C33 sum2 a_1283_n255# 1.47e-19
+C34 D2 compare_node_6 0.089107f
+C35 DEC_D3_NAND gnd 0.157853f
+C36 ander_node_9 A3_and_B3_nand 0.085282f
+C37 and_a3e_nand ander_node_1 0.085282f
+C38 xor_1 A3e_xnor_B3e 0.039012f
+C39 compare_B3e D2 0.005588f
+C40 vdd compare_A0e_nand 0.094003f
+C41 D1 B2 0.017522f
+C42 a_1435_n913# a_1399_n1043# 0.018351f
+C43 A1 vdd 0.298353f
+C44 and_a2e_nand vdd 0.094003f
+C45 B3c xor_1 0.075488f
+C46 B0 vdd 0.366669f
+C47 a_1635_387# gnd 0.07683f
+C48 B2 compare_node_7 0.088221f
+C49 B0e_xor_M a_1607_n1235# 0.014332f
+C50 a_1989_81# vdd 0.146829f
+C51 A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0_c a_690_1233# 0.029281f
+C52 a_1270_n596# a_1321_n583# 0.085282f
+C53 B3c A3e_xnor_B3e 0.051034f
+C54 and_a1e_nand ander_node_3 0.085282f
+C55 compare_B0e compare_B2e 0.008162f
+C56 ander_node_12 and_b0e 0.089107f
+C57 adder_xor_node6 B2e_xor_M 1.47e-19
+C58 ander_node_10 and_a2e 0.088221f
+C59 D1 B3 0.01451f
+C60 adder_B3e adder_B1e 0.00913f
+C61 ander_node_6 B1 0.088221f
+C62 D3 A2 0.011176f
+C63 D3 gnd 0.313918f
+C64 B3e_xor_M vdd 0.638514f
+C65 gnd A3_eq_B3_A2_gt_B2_c 0.139896f
+C66 carry2 a_1218_n321# 0.030342f
+C67 a_1242_205# a_1250_200# 0.030251f
+C68 DEC_D1_NAND gnd 0.159401f
+C69 A_greater_B_node_1 compare_A3e 0.089107f
+C70 Adder_B0ec D0_or_D1 0.015311f
+C71 and_a3e A3_and_B3_nand 0.006448f
+C72 D2 compare_A3e_nand 0.015311f
+C73 a_1440_379# vdd 0.121755f
+C74 carry2 gnd 0.322252f
+C75 B2 and_b2e_nand 0.006448f
+C76 a_1616_n785# a_1218_n772# 0.114173f
+C77 a_1584_374# gnd 0.164119f
+C78 a_1218_n772# carry1 0.030342f
+C79 vdd a_1399_n1043# 0.121755f
+C80 Adder_B3ec gnd 0.148342f
+C81 ander_node_5 and_b0e_nand 0.085282f
+C82 A0 adder_A0e 0.038444f
+C83 gnd a_1653_266# 1.47e-19
+C84 A2 ander_node_2 0.091719f
+C85 gnd ander_node_2 0.07683f
+C86 D1 a_1261_n1046# 0.006448f
+C87 B0 compare_B2e 0.004394f
+C88 gnd a_1408_n593# 0.117028f
+C89 a_1416_n147# carry2 0.015311f
+C90 vdd a_754_1232# 0.075131f
+C91 Adder_A1ec vdd 0.094003f
+C92 A2e_xnor_B2e xor_2 0.036f
+C93 S1c S0 0.07308f
+C94 a_1435_n913# carry1 0.030251f
+C95 ander_node_11 gnd 0.07683f
+C96 D3 and_a3e_nand 0.015311f
+C97 A1 adder_A0e 0.016632f
+C98 a_1548_n316# B2e_xor_M 0.958106f
+C99 a_1302_376# vdd 0.094003f
+C100 DEC_AND_NODE_3 S0c 0.088221f
+C101 a_1989_81# adder_B0e 0.014332f
+C102 xor_2 gnd 0.127657f
+C103 A1c vdd 0.146829f
+C104 D2 compare_A1e 1.7e-20
+C105 B2 D0_or_D1 0.006782f
+C106 DEC_D2_NAND S1 0.015311f
+C107 and_b2e gnd 0.114913f
+C108 gnd xnor_7 1.47e-19
+C109 S0c S0 0.043542f
+C110 B0e_xor_M a_1539_n1217# 0.958106f
+C111 A3_and_B3c gnd 0.136884f
+C112 A0e_xnor_B0e A_equal_B_c 0.003222f
+C113 vdd a_1416_n598# 0.094003f
+C114 Adder_B1ec B1 0.006448f
+C115 compare_A2e gnd 0.252662f
+C116 xor_4 gnd 0.127657f
+C117 compare_A3e B2c 0.090491f
+C118 and_b0e_nand gnd 0.148342f
+C119 D2 DEC_D2_NAND 0.030251f
+C120 a_1407_n1048# vdd 0.094003f
+C121 B3 D0_or_D1 0.00709f
+C122 gnd adder_node7 0.07683f
+C123 a_1616_n785# vdd 0.147147f
+C124 A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0 A3e_xnor_B3e 0.034381f
+C125 A3e_xnor_B3e A3_eq_B3_A2_eq_B2_A1_gt_B1_c 0.017948f
+C126 and_b2e A2_and_B2_nand 0.015311f
+C127 vdd carry1 0.432095f
+C128 a_1552_n598# a_1539_n494# 0.030251f
+C129 A3_eq_B3_A2_eq_B2_A1_gt_B1 A_GT_B_c 0.018351f
+C130 B3c A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0 0.029257f
+C131 A3_eq_B3_A2_eq_B2_A1_gt_B1 B1c 0.79062f
+C132 and_b3e vdd 0.11701f
+C133 a_1476_509# gnd 0.276004f
+C134 ander_node_11 and_a1e 0.088221f
+C135 Adder_B2ec adder_node7 0.085282f
+C136 adder_B3e gnd 0.271387f
+C137 compare_A3e vdd 0.284455f
+C138 a_1294_381# a_1440_379# 0.01218f
+C139 compare_B1e_nand gnd 0.148342f
+C140 xor_2 A2c 0.03574f
+C141 carry2 sum2 0.008861f
+C142 A2 adder_A3e 0.0357f
+C143 adder_A3e gnd 0.165494f
+C144 a_1408_n142# gnd 0.117028f
+C145 gnd compare_node_6 0.07683f
+C146 adder_xor_node6 gnd 1.47e-19
+C147 A0_B0_XOR a_1269_n1235# 0.014332f
+C148 A2c compare_A2e 0.038705f
+C149 carry2 adder_A2e 0.353293f
+C150 a_1353_389# adder_A3e 0.089107f
+C151 compare_B3e gnd 0.306994f
+C152 A0e_xnor_B0e gnd 0.142939f
+C153 compare_A2e compare_A0e 0.036913f
+C154 xor_4 compare_A0e 0.008861f
+C155 a_1603_n134# B2e_xor_M 0.089107f
+C156 Sum1 a_1278_n785# 0.129552f
+C157 a_1444_n12# a_1408_n142# 0.018351f
+C158 D3 ander_node_1 0.089107f
+C159 A3_and_B3c A3_nand_B3c 0.030251f
+C160 xor_4 A0c 0.03574f
+C161 Adder_A3ec adder_node1 0.085282f
+C162 a_1416_n147# a_1408_n142# 0.030251f
+C163 B3 B2 0.008592f
+C164 a_1302_376# a_1294_381# 0.030251f
+C165 B0e_xor_M a_1594_n1035# 0.089107f
+C166 vdd A1_and_B1_nand 0.094003f
+C167 a_1310_187# sum3 0.129552f
+C168 A1_and_B1 A1_and_B1_nand 0.030251f
+C169 and_b3e_nand gnd 0.148342f
+C170 and_a0e_nand gnd 0.148342f
+C171 gnd compare_A3e_nand 0.148342f
+C172 a_1548_n316# a_1218_n321# 0.005439f
+C173 vdd a_1539_n494# 0.124641f
+C174 S1c vdd 0.19269f
+C175 ander_node_12 A0_and_B0_nand 0.085282f
+C176 DEC_D3_NAND D3 0.030251f
+C177 a_1548_n316# gnd 0.080784f
+C178 adder_xor_node1 gnd 1.47e-19
+C179 vdd D0 0.184999f
+C180 compare_B3e compare_A0e 0.011781f
+C181 A1 adder_node3 0.088221f
+C182 a_1476_509# sum4 0.030251f
+C183 a_1571_478# gnd 0.117434f
+C184 B1 vdd 0.308324f
+C185 D1 a_2010_437# 0.040434f
+C186 A0c A0e_xnor_B0e 0.041238f
+C187 S0c vdd 0.230788f
+C188 01ec_M vdd 0.20793f
+C189 D2 compare_A0e_nand 0.015311f
+C190 adder_node1 D0_or_D1 0.089107f
+C191 ander_node_12 and_a0e 0.088221f
+C192 a_1269_n1235# Sum0 0.03574f
+C193 sum3 vdd 0.264599f
+C194 a_1584_374# a_1635_387# 0.085282f
+C195 adder_B3e adder_B2e 0.00913f
+C196 carry3 a_1310_187# 0.030251f
+C197 D2 B0 0.004411f
+C198 A3 A2 0.015965f
+C199 A3 gnd 0.017223f
+C200 a_1552_n147# B2e_xor_M 0.015311f
+C201 and_b1e B0 0.006782f
+C202 gnd compare_A1e 0.29778f
+C203 Adder_B1ec D0_or_D1 0.015311f
+C204 Adder_A0ec gnd 0.148342f
+C205 adder_A3e adder_A2e 0.020871f
+C206 DEC_D0_NAND Dec_AND_node_1 0.085282f
+C207 a_1448_374# gnd 0.148342f
+C208 B0e_xor_M a_1543_n1048# 0.015311f
+C209 DEC_D2_NAND gnd 0.157853f
+C210 compare_B2e_nand compare_node_7 0.085282f
+C211 compare_B3e compare_B3e_nand 0.030251f
+C212 B0 adder_node5 0.088221f
+C213 A0 adder_A1e 0.002486f
+C214 gnd a_1250_200# 0.296814f
+C215 D3 ander_node_2 0.089107f
+C216 A_greater_B_node_1 B3c 0.088221f
+C217 B1 compare_B2e 0.010094f
+C218 D1 vdd 1.24647f
+C219 Adder_A2ec vdd 0.094003f
+C220 A1e_xnor_B1e A1c 0.049486f
+C221 D2 compare_node_1 0.089107f
+C222 Adder_A1ec adder_node3 0.085282f
+C223 A3 and_a3e_nand 0.006448f
+C224 vdd a_1444_n463# 0.070873f
+C225 adder_B1e B0 0.013794f
+C226 a_1539_n43# vdd 0.124641f
+C227 a_1603_n134# gnd 0.07683f
+C228 carry3 vdd 0.425645f
+C229 01ec_M adder_B0e 0.030251f
+C230 xor_3 vdd 0.531725f
+C231 adder_A1e B0 5.25e-21
+C232 DEC_D0_NAND gnd 0.145266f
+C233 D3 and_b2e 0.00917f
+C234 and_a2e gnd 0.095887f
+C235 Adder_A3ec vdd 0.094003f
+C236 compare_A1e compare_A0e 0.016585f
+C237 adder_A3e a_1648_187# 0.030251f
+C238 B0c gnd 0.689019f
+C239 A3_eq_B3_A2_gt_B2 A3e_xnor_B3e 0.031799f
+C240 D3 and_b0e_nand 0.015311f
+C241 compare_A2e A3_eq_B3_A2_gt_B2_c 0.0242f
+C242 A3c gnd 1.43721f
+C243 A2e_xnor_B2e A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0_c 0.017948f
+C244 A3_eq_B3_A2_eq_B2_A1_gt_B1 A2e_xnor_B2e 0.020477f
+C245 a_2016_620# vdd 0.146829f
+C246 A3_eq_B3_A2_gt_B2 B3c 0.00709f
+C247 gnd a_1278_n785# 1.49794f
+C248 and_b2e_nand vdd 0.094003f
+C249 a_1218_n321# a_1621_n255# 1.47e-19
+C250 A3e_xnor_B3e B2c 0.293828f
+C251 and_a2e A2_and_B2_nand 0.006448f
+C252 adder_A3e a_1635_387# 0.088221f
+C253 A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0_c gnd 0.058859f
+C254 B0e_xor_M vdd 0.61468f
+C255 a_1269_n1235# gnd 1.49794f
+C256 A3_eq_B3_A2_eq_B2_A1_gt_B1 gnd 0.117028f
+C257 B3c B2c 0.07507f
+C258 and_a3e vdd 0.14109f
+C259 a_1621_n255# gnd 1.47e-19
+C260 ander_node_5 B0 0.088221f
+C261 xor_1 vdd 0.410409f
+C262 xnor_12 gnd 1.47e-19
+C263 Sum1 carry1 0.008861f
+C264 D1 adder_B0e 0.030342f
+C265 compare_B0e gnd 0.702733f
+C266 D3 adder_A3e 0.012553f
+C267 B3 compare_node_8 0.088221f
+C268 compare_B0e_nand compare_B0e 0.030251f
+C269 D1 adder_A0e 0.353293f
+C270 Adder_A1ec adder_A1e 0.030251f
+C271 xor_2 xnor_7 1.47e-19
+C272 vdd A3e_xnor_B3e 0.989055f
+C273 and_a2e and_a1e 0.010267f
+C274 and_a3e and_a0e 0.012211f
+C275 and_b3e and_b1e 0.010402f
+C276 B1 and_b1e_nand 0.006448f
+C277 compare_B1e vdd 0.162042f
+C278 adder_B3e Adder_B3ec 0.030251f
+C279 xor_2 compare_A2e 0.008861f
+C280 a_1584_374# adder_A3e 0.006448f
+C281 A0 gnd 0.162236f
+C282 vdd D0_or_D1 0.659742f
+C283 B3c vdd 0.46262f
+C284 adder_node4 D0_or_D1 0.089107f
+C285 B0c compare_A0e 0.021235f
+C286 a_1552_n147# gnd 0.164119f
+C287 A3 ander_node_1 0.088221f
+C288 D0_OR_D1_node_2 vdd 0.0082f
+C289 xor_1 xnor_3 1.47e-19
+C290 ander_node_7 gnd 0.07683f
+C291 Adder_B0ec vdd 0.094003f
+C292 compare_node_5 D2 0.089107f
+C293 gnd compare_A0e_nand 0.148342f
+C294 A2 and_a2e_nand 0.006448f
+C295 a_1444_n463# a_1262_n591# 0.027212f
+C296 A2 A1 0.02262f
+C297 a_1242_205# sum3 0.005439f
+C298 and_a2e_nand gnd 0.148342f
+C299 A1 gnd 0.109165f
+C300 a_1607_n1235# vdd 0.146423f
+C301 A2 B0 0.088593f
+C302 a_1218_n772# a_1548_n767# 0.005439f
+C303 D3 and_b3e_nand 0.015311f
+C304 S1c Dec_AND_node_2 0.088221f
+C305 B0 gnd 0.048114f
+C306 a_1270_n145# a_1321_n132# 0.085282f
+C307 adder_A1e a_1616_n785# 0.030251f
+C308 a_1603_n134# adder_A2e 0.088221f
+C309 compare_B2e_nand B2 0.006448f
+C310 compare_B0e_nand B0 0.006448f
+C311 B0e_xor_M adder_B0e 0.010038f
+C312 a_1989_81# gnd 1.40322f
+C313 gnd a_1467_n585# 0.07683f
+C314 D3 and_a0e_nand 0.015311f
+C315 adder_A1e carry1 0.353293f
+C316 B0e_xor_M adder_A0e 0.410102f
+C317 a_1315_266# gnd 1.47e-19
+C318 and_b1e A1_and_B1_nand 0.015311f
+C319 compare_B0e compare_A0e 0.142568f
+C320 vdd A3_and_B3_nand 0.094003f
+C321 a_1458_n1035# gnd 0.07683f
+C322 S1c S1 0.030251f
+C323 B3e_xor_M gnd 0.647319f
+C324 compare_B1e compare_B2e 0.015731f
+C325 A0c compare_B0e 0.014332f
+C326 and_a1e A0 0.010369f
+C327 B2 vdd 0.264944f
+C328 a_1210_n316# vdd 0.341723f
+C329 a_1440_379# gnd 0.117028f
+C330 A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0 B2c 0.11379f
+C331 a_1648_187# a_1250_200# 0.114173f
+C332 compare_B3e compare_A2e 0.02951f
+C333 xor_4 A0e_xnor_B0e 0.036f
+C334 gnd a_1399_n1043# 0.117028f
+C335 gnd compare_node_1 0.07683f
+C336 S0c S1 0.511187f
+C337 a_1584_374# a_1571_478# 0.030251f
+C338 a_1580_205# vdd 0.216574f
+C339 compare_A0e_nand compare_A0e 0.030251f
+C340 Adder_B0ec adder_B0e 0.030251f
+C341 D2 B1 0.007988f
+C342 A3 D3 0.118352f
+C343 B3 vdd 0.250235f
+C344 gnd a_754_1232# 0.018955f
+C345 Adder_A1ec gnd 0.148342f
+C346 vdd a_1548_n767# 0.216574f
+C347 D0_OR_D1_node D0 0.135644f
+C348 a_1552_n598# a_1603_n585# 0.085282f
+C349 vdd A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0 0.205943f
+C350 vdd A3_eq_B3_A2_eq_B2_A1_gt_B1_c 0.227022f
+C351 adder_A0e a_1607_n1235# 0.030251f
+C352 a_1302_376# gnd 0.148342f
+C353 a_1539_n1217# vdd 0.216574f
+C354 compare_B1e_nand compare_node_6 0.085282f
+C355 A1c gnd 1.43721f
+C356 A_greater_B_node_2 gnd 6.22e-20
+C357 xor_3 B1c 0.075488f
+C358 compare_A1e_nand compare_node_3 0.085282f
+C359 D1 a_1998_265# 0.040434f
+C360 a_1543_n1048# a_1594_n1035# 0.085282f
+C361 a_1552_n147# adder_A2e 0.006448f
+C362 a_1302_376# a_1353_389# 0.085282f
+C363 gnd a_1416_n598# 0.148342f
+C364 D1 A0_B0_XOR 0.030342f
+C365 A1e_xnor_B1e xor_3 0.055608f
+C366 vdd a_1261_n1046# 0.094003f
+C367 a_1407_n1048# gnd 0.148342f
+C368 A0_and_B0 A0_and_B0_nand 0.030251f
+C369 adder_B2e B0 0.013859f
+C370 a_1616_n785# gnd 1.42864f
+C371 a_1250_200# a_1653_266# 1.47e-19
+C372 A0_and_B0 vdd 0.040884f
+C373 adder_A2e B0 0.024339f
+C374 a_1543_n1048# a_1530_n944# 0.030251f
+C375 gnd carry1 0.31907f
+C376 adder_xor_node14 gnd 1.47e-19
+C377 and_b3e gnd 0.081083f
+C378 a_754_1232# compare_A0e 0.012143f
+C379 and_b0e A0_and_B0_nand 0.015311f
+C380 A2 compare_A3e 0.218758f
+C381 compare_A3e gnd 0.156193f
+C382 a_1476_509# a_1571_478# 0.003625f
+C383 compare_A2e compare_A1e 0.030403f
+C384 and_b0e vdd 0.116913f
+C385 D2 compare_node_7 0.089107f
+C386 vdd compare_A1e_nand 0.094003f
+C387 B3e_xor_M adder_A2e 0.018564f
+C388 and_a1e_nand vdd 0.094003f
+C389 a_1253_n1041# a_1399_n1043# 0.01218f
+C390 a_1435_n913# a_1530_n944# 0.003625f
+C391 B3ec_M vdd 0.20793f
+C392 D1 D0_OR_D1_node 0.033336f
+C393 a_1467_n585# B1e_xor_M 0.088221f
+C394 D1 B2e_xor_M 0.019263f
+C395 A3e_xnor_B3e B1c 0.036396f
+C396 compare_node_5 gnd 0.07683f
+C397 compare_B1e B1c 0.030251f
+C398 compare_B0e_nand compare_node_5 0.085282f
+C399 B0e_xor_M A0_B0_XOR 0.035048f
+C400 S1c Dec_AND_node_1 0.089107f
+C401 B3c B1c 0.017541f
+C402 A1e_xnor_B1e A3e_xnor_B3e 0.018378f
+C403 D1 adder_B1e 0.030342f
+C404 a_1616_n334# vdd 0.147147f
+C405 A3 adder_A3e 0.016569f
+C406 gnd A1_and_B1_nand 0.148342f
+C407 D1 adder_A1e 0.033423f
+C408 B3c A1e_xnor_B1e 0.093078f
+C409 a_1321_n583# carry1 0.088221f
+C410 D1 Sum0 0.008861f
+C411 S0c Dec_AND_node_1 0.088221f
+C412 adder_A0e a_1261_n1046# 0.015311f
+C413 vdd a_706_1232# 0.075131f
+C414 D2 compare_node_4 0.089107f
+C415 D3 A0 1.7e-20
+C416 vdd S0 0.28858f
+C417 compare_B3e compare_A1e 0.026206f
+C418 vdd a_1530_n944# 0.124641f
+C419 adder_node3 D0_or_D1 0.089107f
+C420 compare_A3e compare_A0e 0.036236f
+C421 B3e_xor_M a_1648_187# 0.014332f
+C422 B0c xor_4 0.075488f
+C423 gnd ander_node_3 0.07683f
+C424 adder_A3e a_1250_200# 0.008861f
+C425 B0c compare_A2e 0.030873f
+C426 D3 ander_node_7 0.089107f
+C427 compare_A3e A3_nand_B3c 0.015311f
+C428 S1c gnd 0.055406f
+C429 gnd a_1539_n494# 0.117434f
+C430 Adder_B1ec vdd 0.094003f
+C431 compare_B1e D2 0.004394f
+C432 a_1270_n145# vdd 0.094003f
+C433 gnd D0 0.062826f
+C434 ander_node_12 gnd 0.07683f
+C435 D3 and_a2e_nand 0.015311f
+C436 a_1607_n1235# A0_B0_XOR 0.114173f
+C437 A2 B1 0.00722f
+C438 D3 B0 0.008116f
+C439 B1 gnd 0.050606f
+C440 B3e_xor_M a_1635_387# 0.089107f
+C441 S0c gnd 0.051616f
+C442 01ec_M gnd 0.080784f
+C443 a_1416_n598# B1e_xor_M 0.006448f
+C444 A3 compare_A3e_nand 0.006448f
+C445 B0e_xor_M adder_A1e 0.020607f
+C446 D0_OR_D1_node D0_or_D1 0.030251f
+C447 sum3 gnd 0.08071f
+C448 adder_node5 D0_or_D1 0.089107f
+C449 and_a1e A1_and_B1_nand 0.006448f
+C450 A3_eq_B3_A2_gt_B2 B2c 0.001885f
+C451 adder_A0e a_1594_n1035# 0.088221f
+C452 vdd a_1552_n598# 0.094003f
+C453 and_a2e_nand ander_node_2 0.085282f
+C454 ander_node_8 gnd 0.07683f
+C455 a_1616_n785# B1e_xor_M 0.014332f
+C456 Adder_B0ec adder_node5 0.085282f
+C457 a_1543_n1048# vdd 0.094003f
+C458 A_GT_B_c A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0 0.003625f
+C459 a_1218_n772# vdd 0.430146f
+C460 A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0 B1c 0.08784f
+C461 B1c A3_eq_B3_A2_eq_B2_A1_gt_B1_c 0.003222f
+C462 B3e_xor_M a_1584_374# 0.015311f
+C463 B0c compare_B3e 0.245979f
+C464 adder_B1e D0_or_D1 0.002258f
+C465 A0 compare_A2e 0.03114f
+C466 compare_B3e A3c 0.014332f
+C467 adder_node8 D0_or_D1 0.089107f
+C468 a_1270_n596# carry1 0.006448f
+C469 a_2010_437# vdd 0.146829f
+C470 adder_A1e D0_or_D1 0.025801f
+C471 a_1310_187# vdd 0.147002f
+C472 A1e_xnor_B1e A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0 0.056906f
+C473 A3_eq_B3_A2_gt_B2 vdd 0.126896f
+C474 D2 B2 0.007976f
+C475 vdd a_1435_n913# 0.070873f
+C476 ander_node_6 and_b1e_nand 0.085282f
+C477 Adder_A2ec A2 0.006448f
+C478 and_b2e B0 0.007976f
+C479 D1 gnd 0.649609f
+C480 Adder_A2ec gnd 0.148342f
+C481 A1 compare_A2e 0.137799f
+C482 gnd a_1444_n463# 0.275682f
+C483 vdd A_GT_B 0.090595f
+C484 a_1539_n43# gnd 0.117434f
+C485 vdd B2c 0.429881f
+C486 B0 and_b0e_nand 0.006448f
+C487 compare_B2e_nand vdd 0.094003f
+C488 a_1499_387# gnd 0.07683f
+C489 carry3 gnd 0.308104f
+C490 ander_node_9 gnd 0.07683f
+C491 gnd compare_node_7 0.07683f
+C492 A0_B0_XOR a_1539_n1217# 0.005439f
+C493 xor_3 gnd 0.127657f
+C494 D2 B3 0.016016f
+C495 compare_B0e compare_B3e 0.008162f
+C496 B1 adder_node6 0.088221f
+C497 a_1444_n12# a_1539_n43# 0.003625f
+C498 A_equal_B_c A3e_xnor_B3e 0.029291f
+C499 a_1444_n12# carry3 0.030251f
+C500 Adder_A3ec gnd 0.148342f
+C501 carry3 a_1353_389# 0.088221f
+C502 Adder_A2ec adder_node2 0.085282f
+C503 vdd A0_and_B0_nand 0.094003f
+C504 a_2016_620# gnd 1.41348f
+C505 adder_B3e B0 0.013859f
+C506 adder_B2e B1 0.010707f
+C507 adder_A0e a_1543_n1048# 0.006448f
+C508 and_b2e_nand gnd 0.148342f
+C509 A1_and_B1 vdd 0.040884f
+C510 adder_A2e B1 0.025516f
+C511 adder_A3e B0 0.337848f
+C512 B0e_xor_M gnd 0.633569f
+C513 A2 and_a3e 0.164509f
+C514 D3 and_b3e 0.006732f
+C515 and_a3e gnd 0.051616f
+C516 and_a0e A0_and_B0_nand 0.006448f
+C517 compare_B3e B0 0.004394f
+C518 gnd compare_node_4 0.07683f
+C519 a_1416_n598# a_1408_n593# 0.030251f
+C520 B0c compare_A1e 0.015248f
+C521 B3e_xor_M adder_B3e 0.010038f
+C522 B2c compare_B2e 0.030251f
+C523 D1 a_1312_n1033# 0.088221f
+C524 A2e_xnor_B2e A3e_xnor_B3e 0.32451f
+C525 compare_B2e_nand compare_B2e 0.030251f
+C526 xor_1 gnd 0.127657f
+C527 and_a0e vdd 0.136432f
+C528 a_1476_509# a_1440_379# 0.018351f
+C529 B3 adder_node8 0.088317f
+C530 B3e_xor_M adder_A3e 0.470135f
+C531 A2e_xnor_B2e B3c 0.023722f
+C532 and_a0e_nand A0 0.006448f
+C533 gnd A3e_xnor_B3e 0.089328f
+C534 compare_B1e gnd 0.28163f
+C535 A2 D0_or_D1 0.001207f
+C536 gnd D0_or_D1 0.326955f
+C537 B3c gnd 0.088039f
+C538 D2 compare_A1e_nand 0.015311f
+C539 and_b1e and_b0e 0.01764f
+C540 and_a3e and_a3e_nand 0.030251f
+C541 vdd compare_B2e 0.162042f
+C542 Adder_B0ec gnd 0.148342f
+C543 Dec_AND_node_2 S0 0.089107f
+C544 D1 adder_B2e 0.030342f
+C545 Adder_B2ec D0_or_D1 0.015311f
+C546 D1 adder_A2e 0.00223f
+C547 Adder_A2ec adder_A2e 0.030251f
+C548 adder_B0e vdd 0.162042f
+C549 a_1607_n1235# gnd 1.42864f
+C550 vdd A_LS_B 0.04098f
+C551 DEC_AND_NODE_3 S1 0.089107f
+C552 and_b3e and_b2e 0.012211f
+C553 vdd a_690_1233# 0.075131f
+C554 and_a3e and_a1e 0.053894f
+C555 a_1270_n145# a_1262_n140# 0.030251f
+C556 adder_A0e vdd 0.37686f
+C557 a_1302_376# adder_A3e 0.015311f
+C558 A0 compare_A1e 0.260485f
+C559 adder_node2 D0_or_D1 0.089107f
+C560 S1 S0 0.028532f
+C561 Adder_A0ec A0 0.006448f
+C562 D1 B1e_xor_M 0.020457f
+C563 D3 ander_node_3 0.089107f
+C564 gnd A3_and_B3_nand 0.148342f
+C565 compare_A3e compare_A2e 0.182612f
+C566 a_1294_381# vdd 0.154614f
+C567 DEC_D1_NAND S1c 0.006448f
+C568 B3e_xor_M adder_xor_node1 1.47e-19
+C569 D3 D0 0.007255f
+C570 a_1210_n316# a_1218_n321# 0.030251f
+C571 A0e_xnor_B0e A1c 0.03623f
+C572 ander_node_4 gnd 0.07683f
+C573 compare_B1e compare_A0e 0.020796f
+C574 ander_node_11 A1_and_B1_nand 0.085282f
+C575 vdd a_1262_n591# 0.154614f
+C576 compare_A3e_nand compare_node_1 0.085282f
+C577 a_1616_n334# B2e_xor_M 0.014332f
+C578 A2 B2 0.061748f
+C579 A3 B0 0.015404f
+C580 D3 B1 0.0056f
+C581 B2 gnd 0.049122f
+C582 vdd A_equal_B 0.04098f
+C583 a_1210_n316# gnd 0.080784f
+C584 B3c A3_nand_B3c 0.006448f
+C585 a_1440_379# a_1571_478# 0.00261f
+C586 a_1580_205# gnd 0.080784f
+C587 adder_A1e a_1603_n585# 0.088221f
+C588 a_1408_n593# a_1539_n494# 0.00261f
+C589 adder_node6 D0_or_D1 0.089107f
+C590 Adder_B2ec B2 0.006448f
+C591 A2e_xnor_B2e A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0 0.052742f
+C592 A3_eq_B3_A2_gt_B2 A_GT_B_c 0.018351f
+C593 A3_and_B3 A3_and_B3_nand 0.030251f
+C594 D2 compare_node_8 0.089107f
+C595 A2e_xnor_B2e A3_eq_B3_A2_eq_B2_A1_gt_B1_c 0.029291f
+C596 A2 B3 0.006027f
+C597 D3 ander_node_8 0.089107f
+C598 B0c compare_B0e 0.030251f
+C599 a_1552_n147# a_1603_n134# 0.085282f
+C600 B3 gnd 0.033343f
+C601 and_a2e A0 0.01349f
+C602 and_b1e_nand vdd 0.094003f
+C603 gnd a_1548_n767# 0.080784f
+C604 A_GT_B_c A_GT_B 0.030251f
+C605 gnd A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0 0.117028f
+C606 A_LS_B_nand A_LS_B_node_1 0.085282f
+C607 gnd A3_eq_B3_A2_eq_B2_A1_gt_B1_c 0.058859f
+C608 B1c B2c 0.068709f
+C609 adder_B2e D0_or_D1 0.001885f
+C610 B3e_xor_M a_1448_374# 0.006448f
+C611 A3 compare_node_1 0.088221f
+C612 compare_B3e compare_A3e 0.046926f
+C613 a_1539_n1217# gnd 0.080784f
+C614 B2ec_M vdd 0.21398f
+C615 adder_A2e D0_or_D1 0.019637f
+C616 B3e_xor_M a_1250_200# 0.035048f
+C617 a_1242_205# vdd 0.341723f
+C618 Sum1 a_1218_n772# 0.027948f
+C619 a_1448_374# a_1440_379# 0.030251f
+C620 Adder_B1ec adder_B1e 0.030251f
+C621 and_a2e A1 0.077299f
+C622 and_a2e and_a2e_nand 0.030251f
+C623 A1e_xnor_B1e B2c 0.127099f
+C624 and_b3e and_b3e_nand 0.030251f
+C625 D1 D3 0.01451f
+C626 and_b2e B1 0.010094f
+C627 DEC_D1_NAND D1 0.030251f
+C628 gnd a_1261_n1046# 0.148342f
+C629 vdd A_GT_B_c 0.070745f
+C630 vdd B1c 0.644935f
+C631 D2 compare_node_3 0.089107f
+C632 A0_and_B0 gnd 0.051616f
+C633 A1c compare_A1e 0.038705f
+C634 carry2 a_1444_n463# 0.030251f
+C635 A_equal_B_c A_LS_B_node_1 0.089107f
+C636 compare_A3e compare_A3e_nand 0.030251f
+C637 a_1321_n132# gnd 0.07683f
+C638 a_1262_n140# vdd 0.154614f
+C639 A1e_xnor_B1e vdd 0.208204f
+C640 ander_node_6 gnd 0.07683f
+C641 a_2010_437# B2e_xor_M 0.037984f
+C642 compare_B2e_nand D2 0.015311f
+C643 vdd a_1998_265# 0.146829f
+C644 and_b0e gnd 0.113067f
+C645 a_1210_n316# sum2 0.005439f
+C646 adder_A1e a_1552_n598# 0.006448f
+C647 gnd compare_A1e_nand 0.148342f
+C648 a_1444_n463# a_1408_n593# 0.018351f
+C649 adder_A3e D0 0.010402f
+C650 and_a1e_nand gnd 0.148342f
+C651 A0_B0_XOR a_1612_n1156# 1.47e-19
+C652 B3ec_M gnd 0.080784f
+C653 A0_B0_XOR vdd 0.409517f
+C654 adder_B3e B1 0.010629f
+C655 D3 and_b2e_nand 0.015311f
+C656 vdd S1 0.270268f
+C657 A2_and_B2 vdd 0.040884f
+C658 compare_B1e_nand B1 0.006448f
+C659 DEC_AND_NODE_4 S0 0.089107f
+C660 adder_A3e B1 0.043787f
+C661 adder_A2e B2 0.066502f
+C662 adder_A1e a_1218_n772# 0.008861f
+C663 A0 compare_A0e_nand 0.006448f
+C664 Sum1 vdd 0.325985f
+C665 gnd a_1603_n585# 0.07683f
+C666 D3 and_a3e 1.7e-20
+C667 a_1616_n334# a_1218_n321# 0.114173f
+C668 A1 A0 0.103134f
+C669 B1 compare_node_6 0.088221f
+C670 D2 vdd 0.699465f
+C671 a_1594_n1035# gnd 0.07683f
+C672 compare_B3e B1 0.007976f
+C673 compare_A3e compare_A1e 0.012373f
+C674 and_b1e vdd 0.11701f
+C675 a_1616_n334# gnd 1.42864f
+C676 Sum1 a_1283_n706# 1.47e-19
+C677 vdd compare_A2e_nand 0.094003f
+C678 a_1312_n1033# a_1261_n1046# 0.085282f
+C679 compare_B3e_nand B3 0.006448f
+C680 adder_A2e B3 0.007554f
+C681 DEC_AND_NODE_3 gnd 0.077196f
+C682 a_1278_n334# vdd 0.147002f
+C683 A_LS_B_node_1 gnd 0.07683f
+C684 gnd a_706_1232# 0.015532f
+C685 A3e_xnor_B3e A3_eq_B3_A2_gt_B2_c 0.003222f
+C686 adder_node1 gnd 0.07683f
+C687 gnd S0 0.110102f
+C688 D0_OR_D1_node vdd 0.060978f
+C689 B2e_xor_M vdd 0.633132f
+C690 A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0_c a_754_1232# 0.003222f
+C691 gnd a_1530_n944# 0.117434f
+C692 and_b1e and_a0e 4.19e-21
+C693 a_1253_n1041# a_1261_n1046# 0.030251f
+C694 and_a1e and_a1e_nand 0.030251f
+C695 A1e_xnor_B1e a_690_1233# 0.006476f
+C696 Adder_B1ec gnd 0.148342f
+C697 and_b2e and_b2e_nand 0.030251f
+C698 D1 adder_B3e 0.030343f
+C699 a_1548_n767# B1e_xor_M 0.958106f
+C700 Adder_B3ec D0_or_D1 0.015311f
+C701 a_1270_n145# gnd 0.148342f
+C702 D1 adder_A3e 0.014979f
+C703 adder_B1e vdd 0.168824f
+C704 vdd A_LS_B_nand 0.094003f
+C705 adder_A0e A0_B0_XOR 0.008861f
+C706 and_b3e_nand ander_node_8 0.085282f
+C707 D2 compare_B2e 0.004394f
+C708 gnd compare_node_8 0.07683f
+C709 adder_A1e vdd 0.38786f
+C710 Sum0 vdd 0.259948f
+C711 A_greater_B_node_1 gnd 0.077137f
+C712 carry3 adder_A3e 0.353293f
+C713 a_1218_n772# a_1210_n767# 0.030251f
+C714 a_1408_n142# a_1539_n43# 0.00261f
+C715 a_1321_n132# adder_A2e 0.089107f
+C716 B0c compare_A3e 0.015831f
+C717 compare_A3e A3c 0.040434f
+C718 a_1278_n785# carry1 0.030251f
+C719 Adder_A3ec adder_A3e 0.030251f
+C720 gnd a_1552_n598# 0.164119f
+C721 ander_node_4 D3 0.089107f
+C722 a_2016_620# adder_B3e 0.014332f
+C723 a_1543_n1048# gnd 0.164119f
+C724 Adder_A1ec A1 0.006448f
+C725 D3 B2 0.006732f
+C726 A3 B1 0.0334f
+C727 a_1218_n772# gnd 0.296814f
+C728 A3_and_B3c B3c 0.008592f
+C729 a_2010_437# gnd 1.4467f
+C730 vdd A_equal_B_c 0.328347f
+C731 a_1310_187# gnd 1.49794f
+C732 adder_node7 D0_or_D1 0.089107f
+C733 gnd a_1435_n913# 0.275682f
+C734 gnd compare_node_3 0.07683f
+C735 A3_eq_B3_A2_gt_B2 gnd 0.119903f
+C736 A2e_xnor_B2e B2c 0.004638f
+C737 D3 B3 0.004542f
+C738 S0c DEC_D2_NAND 0.006448f
+C739 adder_B1e adder_B0e 0.009033f
+C740 a_1616_n334# adder_A2e 0.030251f
+C741 Adder_B1ec adder_node6 0.085282f
+C742 a_1603_n585# B1e_xor_M 0.089107f
+C743 gnd A_GT_B 0.113911f
+C744 gnd B2c 0.174287f
+C745 a_840_1472# A_LS_B_node_1 0.088221f
+C746 A_LS_B_nand A_LS_B 0.030251f
+C747 sum3 a_1250_200# 0.028178f
+C748 S1c DEC_D0_NAND 0.015311f
+C749 adder_B3e D0_or_D1 0.001885f
+C750 A_greater_B_node_1 A3_nand_B3c 0.085282f
+C751 compare_B2e_nand gnd 0.148342f
+C752 A0 compare_A3e 0.029337f
+C753 compare_B1e_nand compare_B1e 0.030251f
+C754 Adder_B3ec B3 0.006448f
+C755 vdd a_1210_n767# 0.341723f
+C756 DEC_D0_NAND D0 0.030251f
+C757 adder_A3e D0_or_D1 0.008592f
+C758 a_1416_n598# a_1467_n585# 0.085282f
+C759 B1ec_M vdd 0.209657f
+C760 and_b3e A1 4.73e-19
+C761 a_1201_n1217# vdd 0.359731f
+C762 A2e_xnor_B2e vdd 1.24529f
+C763 A1e_xnor_B1e B1c 0.011342f
+C764 compare_B3e compare_B1e 0.004394f
+C765 and_b1e and_b1e_nand 0.030251f
+C766 a_1218_n321# vdd 0.440806f
+C767 and_b3e B0 0.005588f
+C768 a_1407_n1048# a_1458_n1035# 0.085282f
+C769 S0c DEC_D0_NAND 0.006448f
+C770 a_1270_n145# adder_A2e 0.015311f
+C771 A1 compare_A3e 0.025755f
+C772 gnd A0_and_B0_nand 0.148342f
+C773 compare_B3e B3c 0.030251f
+C774 a_1467_n585# carry1 0.089107f
+C775 A2 vdd 0.533232f
+C776 a_1612_n1156# gnd 1.47e-19
+C777 a_1218_n772# a_1621_n706# 1.47e-19
+C778 vdd gnd 0.960443f
+C779 compare_B0e_nand vdd 0.094003f
+C780 gnd adder_node4 0.07683f
+C781 A1_and_B1 gnd 0.051616f
+C782 compare_B3e_nand compare_node_8 0.085282f
+C783 xor_3 compare_A1e 0.008861f
+C784 B2 adder_node7 0.088221f
+C785 a_1444_n12# vdd 0.070873f
+C786 a_1283_n706# gnd 1.47e-19
+C787 Adder_A3ec A3 0.006448f
+C788 a_1407_n1048# a_1399_n1043# 0.030251f
+C789 compare_node_5 B0 0.088221f
+C790 Adder_B2ec vdd 0.094003f
+C791 carry3 a_1448_374# 0.015311f
+C792 D3 ander_node_6 0.089107f
+C793 a_1448_374# a_1499_387# 0.085282f
+C794 B2ec_M B2e_xor_M 0.005439f
+C795 a_1416_n147# vdd 0.094003f
+C796 a_1321_n132# carry2 0.088221f
+C797 and_a0e gnd 0.083816f
+C798 vdd A2_and_B2_nand 0.094003f
+C799 carry3 a_1250_200# 0.030342f
+C800 D3 and_a1e_nand 0.015311f
+C801 xnor_3 gnd 1.47e-19
+C802 xnor_15 gnd 1.47e-19
+C803 adder_B3e B2 0.010629f
+C804 A3_and_B3 vdd 0.040884f
+C805 a_1435_n913# a_1253_n1041# 0.027212f
+C806 and_a3e_nand vdd 0.094003f
+C807 adder_A3e B2 0.026848f
+C808 DEC_D3_NAND S0 0.015311f
+C809 adder_B2e a_2010_437# 0.014332f
+C810 a_1552_n598# B1e_xor_M 0.015311f
+C811 A_equal_B_c A_equal_B 0.030251f
+C812 A2c vdd 0.146829f
+C813 gnd compare_B2e 0.281f
+C814 compare_B3e B2 0.007976f
+C815 A1 ander_node_3 0.09041f
+C816 and_a1e vdd 0.144029f
+C817 vdd compare_A0e 0.176676f
+C818 a_1218_n772# B1e_xor_M 0.035048f
+C819 adder_A3e B3 0.013459f
+C820 A0c vdd 0.146829f
+C821 A3_nand_B3c vdd 0.094003f
+C822 adder_B0e gnd 0.302553f
+C823 A_LS_B gnd 0.051616f
+C824 a_840_1472# A_GT_B 0.030251f
+C825 gnd a_690_1233# 0.015532f
+C826 compare_B1e compare_A1e 0.036091f
+C827 adder_A0e gnd 0.154192f
+C828 B0 D0 0.018713f
+C829 a_1416_n598# carry1 0.015311f
+C830 DEC_D1_NAND S0 0.015311f
+C831 Adder_A0ec D0_or_D1 0.015311f
+C832 D1 a_1269_n1235# 0.030251f
+C833 D2 compare_A2e_nand 0.015311f
+C834 and_b2e and_b0e 0.01764f
+C835 and_a1e and_a0e 0.012215f
+C836 B1 B0 0.022799f
+C837 ander_node_4 and_a0e_nand 0.085282f
+C838 vdd a_1253_n1041# 0.154614f
+C839 adder_B1e a_1998_265# 0.014332f
+C840 sum4 vdd 0.04098f
+C841 a_1294_381# gnd 0.119903f
+C842 and_b0e and_b0e_nand 0.030251f
+C843 sum2 vdd 0.325985f
+C844 adder_B2e vdd 0.168824f
+C845 gnd a_1262_n591# 0.119903f
+C846 vdd a_840_1472# 0.275571f
+C847 and_a3e and_a2e 0.029024f
+C848 a_1270_n145# carry2 0.006448f
+C849 B3 and_b3e_nand 0.006448f
+C850 gnd A_equal_B 0.051616f
+C851 adder_A2e vdd 0.437198f
+C852 ander_node_10 gnd 0.07683f
+C853 compare_B3e_nand vdd 0.094003f
+C854 A2c compare_B2e 0.014332f
+C855 sum3 a_1315_266# 1.47e-19
+C856 xnor_12 xor_3 1.47e-19
+C857 compare_A0e compare_B2e 0.014064f
+C858 xor_1 A3c 0.03574f
+C859 vdd B1e_xor_M 0.620954f
+C860 a_1552_n147# a_1539_n43# 0.030251f
+C861 B3ec_M adder_B3e 0.030251f
+C862 ander_node_10 A2_and_B2_nand 0.085282f
+C863 A1e_xnor_B1e A_equal_B_c 0.017948f
+C864 A3c A3e_xnor_B3e 0.041238f
+C865 vdd a_1270_n596# 0.094003f
+C866 A3 B2 0.006955f
+C867 adder_A0e a_1312_n1033# 0.089107f
+C868 and_b1e_nand gnd 0.148342f
+C869 B0c compare_B1e 0.020681f
+C870 D1 B0 0.034544f
+C871 B2ec_M gnd 0.080784f
+C872 a_1989_81# D1 0.030251f
+C873 a_1242_205# gnd 0.080784f
+C874 A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0_c A3e_xnor_B3e 0.017948f
+C875 A3_eq_B3_A2_gt_B2 A3_eq_B3_A2_gt_B2_c 0.030251f
+C876 A2e_xnor_B2e B1c 0.005883f
+C877 D1 a_1458_n1035# 0.089107f
+C878 A3_eq_B3_A2_eq_B2_A1_gt_B1 A3e_xnor_B3e 0.035581f
+C879 A3 B3 0.005749f
+C880 a_1648_187# vdd 0.147147f
+C881 B3e_xor_M D1 0.020971f
+C882 adder_B2e adder_B0e 0.009033f
+C883 A3_eq_B3_A2_eq_B2_A1_gt_B1 B3c 0.017618f
+C884 and_a3e A0 0.022279f
+C885 DEC_D3_NAND vdd 0.094059f
+C886 ander_node_7 and_b2e_nand 0.085282f
+C887 DEC_AND_NODE_4 S1 0.088221f
+C888 gnd A_GT_B_c 0.317056f
+C889 gnd B1c 0.630143f
+C890 a_1580_205# a_1250_200# 0.005439f
+C891 B3e_xor_M a_1499_387# 0.088221f
+C892 B2c A3_eq_B3_A2_gt_B2_c 0.020823f
+C893 A3_eq_B3_A2_eq_B2_A1_gt_B1_c compare_A1e 0.017948f
+C894 A2e_xnor_B2e A1e_xnor_B1e 0.012877f
+C895 A0 compare_node_4 0.088221f
+C896 compare_B0e compare_B1e 0.014402f
+C897 adder_A3e adder_node1 3.74e-20
+C898 a_1262_n140# gnd 0.119903f
+C899 gnd Dec_AND_node_2 0.077312f
+C900 a_1274_n1156# Sum0 1.47e-19
+C901 A0_B0_XOR a_1201_n1217# 0.030251f
+C902 and_a3e A1 0.013003f
+C903 A1e_xnor_B1e gnd 0.233988f
+C904 a_1467_n134# B2e_xor_M 0.088221f
+C905 compare_A0e_nand compare_node_4 0.085282f
+C906 Sum1 a_1210_n767# 0.005439f
+C907 gnd a_1998_265# 1.41167f
+C908 a_1444_n12# a_1262_n140# 0.027212f
+C909 and_b3e B1 0.00709f
+C910 a_1989_81# B0e_xor_M 0.038607f
+C911 a_2016_620# B3e_xor_M 0.038607f
+C912 A0_B0_XOR gnd 0.296814f
+C913 D3 vdd 0.677006f
+C914 vdd A3_eq_B3_A2_gt_B2_c 0.188033f
+C915 DEC_D1_NAND vdd 0.094035f
+C916 gnd adder_node3 0.07683f
+C917 gnd S1 0.131827f
+C918 A2_and_B2 gnd 0.051616f
+C919 B0e_xor_M a_1458_n1035# 0.088221f
+C920 carry2 vdd 0.425645f
+C921 A_equal_B_c A_LS_B_nand 0.015311f
+C922 Sum1 gnd 0.08071f
+C923 a_1584_374# vdd 0.094003f
+C924 A1 D0_or_D1 2.27e-20
+C925 A3_eq_B3_A2_gt_B2 A3_and_B3c 0.016979f
+C926 compare_B1e B0 0.013715f
+C927 Adder_B3ec vdd 0.094003f
+C928 carry3 a_1302_376# 0.006448f
+C929 D2 gnd 0.358476f
+C930 xor_2 B2c 0.075488f
+C931 B0 D0_or_D1 0.006802f
+C932 compare_B0e_nand D2 0.015311f
+C933 and_b1e gnd 0.102119f
+C934 a_1278_n334# a_1218_n321# 0.014332f
+C935 A2 compare_A2e_nand 0.006448f
+C936 xor_3 A1c 0.03574f
+C937 gnd compare_A2e_nand 0.148342f
+C938 compare_A1e compare_A1e_nand 0.030251f
+C939 a_1270_n596# a_1262_n591# 0.030251f
+C940 vdd a_1408_n593# 0.121755f
+C941 A2_and_B2 A2_and_B2_nand 0.030251f
+C942 Adder_B0ec B0 0.006448f
+C943 D1 a_1407_n1048# 0.015311f
+C944 a_1218_n321# B2e_xor_M 0.035048f
+C945 a_1278_n334# gnd 1.49794f
+C946 D0_OR_D1_node gnd 0.093247f
+C947 adder_B2e B2ec_M 0.030251f
+C948 gnd adder_node5 0.07683f
+C949 B2e_xor_M gnd 0.643347f
+C950 ander_node_4 A0 0.08968f
+C951 D1 carry1 0.008162f
+C952 adder_B1e B1ec_M 0.030251f
+C953 xor_2 vdd 0.452209f
+C954 A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0_c A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0 0.030251f
+C955 A3_eq_B3_A2_eq_B2_A1_gt_B1 A3_eq_B3_A2_eq_B2_A1_gt_B1_c 0.030251f
+C956 and_b2e vdd 0.11701f
+C957 a_1201_n1217# Sum0 0.005439f
+C958 ander_node_9 and_b3e 0.089107f
+C959 A3_and_B3c vdd 0.126682f
+C960 ander_node_7 B2 0.088221f
+C961 compare_A2e vdd 0.282244f
+C962 xor_4 vdd 0.515131f
+C963 adder_B1e gnd 0.271704f
+C964 gnd adder_node8 0.07683f
+C965 a_1416_n147# B2e_xor_M 0.006448f
+C966 and_b0e_nand vdd 0.094003f
+C967 A_LS_B_nand gnd 0.148342f
+C968 A3 adder_node1 0.088452f
+C969 S0c S1c 0.015985f
+C970 adder_A1e gnd 0.162489f
+C971 B1 D0 0.014786f
+C972 Sum0 gnd 0.068798f
+C973 Adder_A1ec D0_or_D1 0.015311f
+C974 a_1274_n1156# gnd 1.47e-19
+C975 B2 B0 0.01945f
+C976 DEC_AND_NODE_3 DEC_D2_NAND 0.085282f
+C977 B0e_xor_M a_1407_n1048# 0.006448f
+C978 compare_B3e B2c 0.020796f
+C979 compare_B1e A1c 0.014332f
+C980 a_1476_509# vdd 0.070873f
+C981 gnd adder_xor_node9 1.47e-19
+C982 xor_4 xnor_15 1.47e-19
+C983 adder_B3e vdd 0.168798f
+C984 B0e_xor_M adder_xor_node14 1.47e-19
+C985 A2e_xnor_B2e A_equal_B_c 0.017948f
+C986 D2 compare_node_2 0.089107f
+C987 compare_B1e_nand vdd 0.094003f
+C988 B3 B0 0.016101f
+C989 adder_A3e vdd 0.399515f
+C990 compare_A2e_nand compare_node_2 0.085282f
+C991 a_1408_n142# vdd 0.121755f
+C992 a_1467_n134# gnd 0.07683f
+C993 A_equal_B_c gnd 0.148523f
+C994 a_1998_265# B1e_xor_M 0.03923f
+C995 B3e_xor_M a_1580_205# 0.958106f
+C996 compare_B3e vdd 0.162042f
+C997 compare_A2e compare_B2e 0.03971f
+C998 A0e_xnor_B0e vdd 0.139586f
+C999 xor_1 compare_A3e 0.008861f
+C1000 ander_node_5 gnd 0.07683f
+C1001 compare_B3e_nand D2 0.015311f
+C1002 a_1278_n334# sum2 0.129552f
+C1003 adder_A1e a_1321_n583# 0.089107f
+C1004 gnd Dec_AND_node_1 0.07683f
+C1005 D1 D0 0.010567f
+C1006 a_1444_n463# a_1539_n494# 0.003625f
+C1007 a_1262_n591# a_1408_n593# 0.01218f
+C1008 DEC_AND_NODE_4 gnd 0.077062f
+C1009 B0c a_706_1232# 0.009511f
+C1010 D3 and_b1e_nand 0.015311f
+C1011 a_1416_n147# a_1467_n134# 0.085282f
+C1012 D1 B1 0.053628f
+C1013 adder_B2e B2e_xor_M 0.007871f
+C1014 gnd a_1210_n767# 0.080784f
+C1015 and_b3e_nand vdd 0.094003f
+C1016 adder_A2e B2e_xor_M 0.505415f
+C1017 B1ec_M gnd 0.080784f
+C1018 a_1201_n1217# gnd 0.080784f
+C1019 A2e_xnor_B2e gnd 0.071179f
+C1020 A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0_c a_706_1232# 0.020823f
+C1021 and_a0e_nand vdd 0.094003f
+C1022 a_1218_n321# gnd 0.296814f
+C1023 vdd compare_A3e_nand 0.094003f
+C1024 ander_node_10 and_b2e 0.089107f
+C1025 adder_B3e adder_B0e 0.008502f
+C1026 adder_B2e adder_B1e 0.011022f
+C1027 carry3 sum3 0.008861f
+C1028 A1 compare_A1e_nand 0.006448f
+C1029 A2 gnd 0.192503f
+C1030 a_1548_n316# vdd 0.216574f
+C1031 A1 and_a1e_nand 0.006448f
+C1032 DEC_D3_NAND S1 0.006448f
+C1033 a_840_1472# A_LS_B_nand 0.006448f
+C1034 compare_B0e_nand gnd 0.148342f
+C1035 a_1310_187# a_1250_200# 0.014332f
+C1036 compare_B3e compare_B2e 0.004394f
+C1037 and_b3e A3_and_B3_nand 0.015311f
+C1038 a_1571_478# vdd 0.124641f
+C1039 a_1476_509# a_1294_381# 0.027212f
+C1040 and_a0e_nand and_a0e 0.030251f
+C1041 a_1444_n12# gnd 0.275842f
+C1042 a_1353_389# gnd 0.07683f
+C1043 DEC_D1_NAND Dec_AND_node_2 0.085282f
+C1044 Adder_B2ec gnd 0.148342f
+C1045 adder_B1e B1e_xor_M 0.012205f
+C1046 and_b3e B2 0.105897f
+C1047 a_1416_n147# gnd 0.148342f
+C1048 adder_A1e B1e_xor_M 0.512102f
+C1049 gnd A2_and_B2_nand 0.148342f
+C1050 01ec_M B0e_xor_M 0.005439f
+C1051 A3 vdd 0.313038f
+C1052 B3ec_M B3e_xor_M 0.005439f
+C1053 A2 adder_node2 0.088221f
+C1054 vdd compare_A1e 0.265389f
+C1055 A2e_xnor_B2e A2c 0.041238f
+C1056 Adder_A0ec vdd 0.094003f
+C1057 adder_A1e a_1270_n596# 0.015311f
+C1058 gnd adder_node2 0.07683f
+C1059 A3_and_B3 gnd 0.051616f
+C1060 Adder_A0ec adder_node4 0.085282f
+C1061 and_a3e_nand gnd 0.148342f
+C1062 a_1218_n772# a_1278_n785# 0.014332f
+C1063 a_1448_374# vdd 0.094003f
+C1064 B1e_xor_M adder_xor_node9 1.47e-19
+C1065 carry3 a_1499_387# 0.089107f
+C1066 D3 D2 0.010267f
+C1067 DEC_D2_NAND vdd 0.094003f
+C1068 A2c gnd 1.43721f
+C1069 B1 D0_or_D1 0.006794f
+C1070 D3 and_b1e 0.007976f
+C1071 gnd a_1321_n583# 0.07683f
+C1072 and_a1e gnd 0.084316f
+C1073 vdd a_1250_200# 0.430136f
+C1074 gnd compare_A0e 0.218845f
+C1075 A3_and_B3c A_GT_B_c 0.027212f
+C1076 a_1312_n1033# gnd 0.07683f
+C1077 A3_nand_B3c gnd 0.162217f
+C1078 A0c gnd 1.43721f
+C1079 a_2016_620# D1 0.043904f
+C1080 compare_A2e B1c 0.016406f
+C1081 a_1621_n706# gnd 1.47e-19
+C1082 a_1283_n255# gnd 1.47e-19
+C1083 A3_eq_B3_A2_eq_B2_A1_gt_B1 A3_eq_B3_A2_gt_B2 0.063504f
+C1084 gnd adder_node6 0.07683f
+C1085 B0e_xor_M D1 0.008861f
+C1086 a_1278_n334# carry2 0.030251f
+C1087 sum2 a_1218_n321# 0.027948f
+C1088 A2 compare_node_2 0.088221f
+C1089 DEC_D0_NAND vdd 0.094023f
+C1090 gnd compare_node_2 0.07683f
+C1091 gnd a_1253_n1041# 0.119903f
+C1092 compare_A1e compare_B2e 0.012373f
+C1093 A3_eq_B3_A2_eq_B2_A1_gt_B1 B2c 0.142748f
+C1094 and_a2e vdd 0.135377f
+C1095 sum4 gnd 0.065361f
+C1096 sum2 gnd 0.08071f
+C1097 a_1399_n1043# a_1530_n944# 0.00261f
+C1098 ander_node_11 and_b1e 0.089107f
+C1099 ander_node_9 and_a3e 0.088221f
+C1100 a_1218_n321# adder_A2e 0.008861f
+C1101 B0c vdd 0.212299f
+C1102 A3c vdd 0.146105f
+C1103 adder_B2e gnd 0.271279f
+C1104 a_840_1472# gnd 0.060377f
+C1105 B1ec_M B1e_xor_M 0.005439f
+C1106 compare_B3e_nand gnd 0.148342f
+C1107 B2 D0 0.008761f
+C1108 adder_A2e gnd 0.163415f
+C1109 Adder_A0ec adder_A0e 0.030251f
+C1110 vdd a_1278_n785# 0.147002f
+C1111 Adder_A2ec D0_or_D1 0.015311f
+* C1112 A0_B0_XOR 0 7.8486f **FLOATING
+* C1113 a_1607_n1235# 0 1.66247f **FLOATING
+* C1114 Sum0 0 0.476765f **FLOATING
+* C1115 a_1539_n1217# 0 1.89303f **FLOATING
+* C1116 a_1269_n1235# 0 1.64594f **FLOATING
+* C1117 a_1201_n1217# 0 1.96892f **FLOATING
+* C1118 a_1594_n1035# 0 0.248064f **FLOATING
+* C1119 a_1458_n1035# 0 0.248064f **FLOATING
+* C1120 a_1312_n1033# 0 0.248064f **FLOATING
+* C1121 a_1543_n1048# 0 0.52029f **FLOATING
+* C1122 a_1407_n1048# 0 0.52029f **FLOATING
+* C1123 a_1261_n1046# 0 0.52029f **FLOATING
+* C1124 a_1530_n944# 0 1.70616f **FLOATING
+* C1125 a_1399_n1043# 0 3.07859f **FLOATING
+* C1126 a_1253_n1041# 0 4.44495f **FLOATING
+* C1127 a_1435_n913# 0 0.634226f **FLOATING
+* C1128 a_1218_n772# 0 7.81225f **FLOATING
+* C1129 a_1616_n785# 0 1.66247f **FLOATING
+* C1130 Sum1 0 1.39464f **FLOATING
+* C1131 a_1548_n767# 0 1.89303f **FLOATING
+* C1132 a_1278_n785# 0 1.64f **FLOATING
+* C1133 a_1210_n767# 0 1.96894f **FLOATING
+* C1134 a_1603_n585# 0 0.248064f **FLOATING
+* C1135 a_1467_n585# 0 0.248064f **FLOATING
+* C1136 a_1321_n583# 0 0.248064f **FLOATING
+* C1137 a_1552_n598# 0 0.52029f **FLOATING
+* C1138 a_1416_n598# 0 0.52029f **FLOATING
+* C1139 a_1270_n596# 0 0.52029f **FLOATING
+* C1140 carry1 0 7.3867f **FLOATING
+* C1141 a_1539_n494# 0 1.70616f **FLOATING
+* C1142 a_1408_n593# 0 3.07859f **FLOATING
+* C1143 a_1262_n591# 0 4.44495f **FLOATING
+* C1144 a_1444_n463# 0 0.634226f **FLOATING
+* C1145 a_1218_n321# 0 7.806089f **FLOATING
+* C1146 a_1616_n334# 0 1.66247f **FLOATING
+* C1147 sum2 0 1.39464f **FLOATING
+* C1148 a_1548_n316# 0 1.89303f **FLOATING
+* C1149 a_1278_n334# 0 1.64f **FLOATING
+* C1150 a_1210_n316# 0 1.96894f **FLOATING
+* C1151 a_1603_n134# 0 0.248064f **FLOATING
+* C1152 a_1467_n134# 0 0.248064f **FLOATING
+* C1153 a_1321_n132# 0 0.248064f **FLOATING
+* C1154 a_1552_n147# 0 0.52029f **FLOATING
+* C1155 a_1416_n147# 0 0.52029f **FLOATING
+* C1156 a_1270_n145# 0 0.52029f **FLOATING
+* C1157 carry2 0 7.38209f **FLOATING
+* C1158 a_1539_n43# 0 1.70616f **FLOATING
+* C1159 a_1408_n142# 0 3.07859f **FLOATING
+* C1160 a_1262_n140# 0 4.44495f **FLOATING
+* C1161 a_1444_n12# 0 0.634226f **FLOATING
+* C1162 B0e_xor_M 0 12.2699f **FLOATING
+* C1163 a_1989_81# 0 1.67812f **FLOATING
+* C1164 01ec_M 0 1.98176f **FLOATING
+* C1165 a_1250_200# 0 7.81214f **FLOATING
+* C1166 B1e_xor_M 0 12.390599f **FLOATING
+* C1167 a_1998_265# 0 1.67916f **FLOATING
+* C1168 a_1648_187# 0 1.66247f **FLOATING
+* C1169 sum3 0 1.44632f **FLOATING
+* C1170 a_1580_205# 0 1.89303f **FLOATING
+* C1171 a_1310_187# 0 1.64f **FLOATING
+* C1172 a_1242_205# 0 1.96894f **FLOATING
+* C1173 B1ec_M 0 1.98176f **FLOATING
+* C1174 a_1635_387# 0 0.248064f **FLOATING
+* C1175 a_1499_387# 0 0.248064f **FLOATING
+* C1176 a_1353_389# 0 0.248064f **FLOATING
+* C1177 a_1584_374# 0 0.52029f **FLOATING
+* C1178 a_1448_374# 0 0.52029f **FLOATING
+* C1179 a_1302_376# 0 0.52029f **FLOATING
+* C1180 carry3 0 7.82533f **FLOATING
+* C1181 B2e_xor_M 0 11.795799f **FLOATING
+* C1182 a_2010_437# 0 1.67429f **FLOATING
+* C1183 B2ec_M 0 1.98176f **FLOATING
+* C1184 a_1571_478# 0 1.70616f **FLOATING
+* C1185 a_1440_379# 0 3.07859f **FLOATING
+* C1186 a_1294_381# 0 4.44495f **FLOATING
+* C1187 sum4 0 0.215746f **FLOATING
+* C1188 a_1476_509# 0 0.634226f **FLOATING
+* C1189 B3e_xor_M 0 11.3159f **FLOATING
+* C1190 a_2016_620# 0 1.67916f **FLOATING
+* C1191 B3ec_M 0 1.98176f **FLOATING
+* C1192 A0c 0 1.68244f **FLOATING
+* C1193 xor_4 0 1.62527f **FLOATING
+* C1194 B0c 0 3.62443f **FLOATING
+* C1195 DEC_AND_NODE_4 0 0.248064f **FLOATING
+* C1196 DEC_D3_NAND 0 0.516966f **FLOATING
+* C1197 adder_node5 0 0.248064f **FLOATING
+* C1198 adder_node6 0 0.248064f **FLOATING
+* C1199 adder_node7 0 0.248064f **FLOATING
+* C1200 adder_node8 0 0.248064f **FLOATING
+* C1201 DEC_AND_NODE_3 0 0.248064f **FLOATING
+* C1202 adder_B0e 0 6.4243f **FLOATING
+* C1203 adder_B1e 0 6.45761f **FLOATING
+* C1204 adder_B2e 0 6.208991f **FLOATING
+* C1205 adder_B3e 0 5.94931f **FLOATING
+* C1206 Adder_B0ec 0 0.52029f **FLOATING
+* C1207 Adder_B1ec 0 0.52029f **FLOATING
+* C1208 Adder_B2ec 0 0.52029f **FLOATING
+* C1209 Adder_B3ec 0 0.52029f **FLOATING
+* C1210 DEC_D2_NAND 0 0.52029f **FLOATING
+* C1211 A1c 0 1.67561f **FLOATING
+* C1212 xor_3 0 1.78086f **FLOATING
+* C1213 A0e_xnor_B0e 0 2.34631f **FLOATING
+* C1214 A1e_xnor_B1e 0 10.189f **FLOATING
+* C1215 D0_OR_D1_node_2 0 0.039778f **FLOATING
+* C1216 D0_OR_D1_node 0 0.61471f **FLOATING
+* C1217 adder_node4 0 0.248064f **FLOATING
+* C1218 adder_node3 0 0.248064f **FLOATING
+* C1219 adder_node2 0 0.248064f **FLOATING
+* C1220 compare_node_8 0 0.248064f **FLOATING
+* C1221 A_equal_B 0 0.088325f **FLOATING
+* C1222 compare_node_7 0 0.248064f **FLOATING
+* C1223 compare_node_6 0 0.248064f **FLOATING
+* C1224 Dec_AND_node_2 0 0.248064f **FLOATING
+* C1225 S1 0 2.7544f **FLOATING
+* C1226 compare_B3e_nand 0 0.52029f **FLOATING
+* C1227 compare_B2e_nand 0 0.52029f **FLOATING
+* C1228 compare_node_5 0 0.248064f **FLOATING
+* C1229 compare_B1e 0 11.4538f **FLOATING
+* C1230 adder_node1 0 0.248064f **FLOATING
+* C1231 adder_A0e 0 52.4077f **FLOATING
+* C1232 adder_A1e 0 45.818104f **FLOATING
+* C1233 adder_A2e 0 18.876698f **FLOATING
+* C1234 adder_A3e 0 9.93111f **FLOATING
+* C1235 D1 0 38.6805f **FLOATING
+* C1236 compare_B1e_nand 0 0.52029f **FLOATING
+* C1237 compare_B0e 0 7.35184f **FLOATING
+* C1238 compare_B0e_nand 0 0.52029f **FLOATING
+* C1239 DEC_D1_NAND 0 0.513722f **FLOATING
+* C1240 Adder_A0ec 0 0.52029f **FLOATING
+* C1241 Adder_A1ec 0 0.52029f **FLOATING
+* C1242 Adder_A2ec 0 0.52029f **FLOATING
+* C1243 Adder_A3ec 0 0.52029f **FLOATING
+* C1244 D0_or_D1 0 20.5486f **FLOATING
+* C1245 S0 0 7.9098f **FLOATING
+* C1246 compare_node_1 0 0.248064f **FLOATING
+* C1247 compare_node_2 0 0.248064f **FLOATING
+* C1248 compare_node_3 0 0.248064f **FLOATING
+* C1249 compare_node_4 0 0.248064f **FLOATING
+* C1250 compare_B2e 0 13.3011f **FLOATING
+* C1251 compare_A3e_nand 0 0.52029f **FLOATING
+* C1252 compare_A2e_nand 0 0.52029f **FLOATING
+* C1253 compare_A0e 0 13.6565f **FLOATING
+* C1254 Dec_AND_node_1 0 0.248064f **FLOATING
+* C1255 compare_A1e_nand 0 0.52029f **FLOATING
+* C1256 compare_A0e_nand 0 0.52029f **FLOATING
+* C1257 D0 0 4.3431f **FLOATING
+* C1258 D2 0 28.4568f **FLOATING
+* C1259 A2c 0 1.6834f **FLOATING
+* C1260 xor_2 0 1.63601f **FLOATING
+* C1261 DEC_D0_NAND 0 0.511796f **FLOATING
+* C1262 ander_node_5 0 0.248064f **FLOATING
+* C1263 ander_node_6 0 0.248064f **FLOATING
+* C1264 ander_node_7 0 0.248064f **FLOATING
+* C1265 S1c 0 4.36861f **FLOATING
+* C1266 S0c 0 5.09312f **FLOATING
+* C1267 ander_node_8 0 0.248064f **FLOATING
+* C1268 and_b0e_nand 0 0.52029f **FLOATING
+* C1269 and_b1e_nand 0 0.52029f **FLOATING
+* C1270 and_b2e_nand 0 0.52029f **FLOATING
+* C1271 and_b3e_nand 0 0.52029f **FLOATING
+* C1272 B0 0 29.6936f **FLOATING
+* C1273 B1 0 25.1336f **FLOATING
+* C1274 B2 0 20.133501f **FLOATING
+* C1275 B3 0 12.7984f **FLOATING
+* C1276 ander_node_12 0 0.248064f **FLOATING
+* C1277 ander_node_11 0 0.248064f **FLOATING
+* C1278 ander_node_10 0 0.248064f **FLOATING
+* C1279 ander_node_9 0 0.248064f **FLOATING
+* C1280 A0_and_B0 0 0.075352f **FLOATING
+* C1281 A1_and_B1 0 0.075352f **FLOATING
+* C1282 A2_and_B2 0 0.075352f **FLOATING
+* C1283 A3_and_B3 0 0.075352f **FLOATING
+* C1284 ander_node_4 0 0.248064f **FLOATING
+* C1285 ander_node_3 0 0.248064f **FLOATING
+* C1286 ander_node_2 0 0.248064f **FLOATING
+* C1287 ander_node_1 0 0.248064f **FLOATING
+* C1288 A0_and_B0_nand 0 0.52029f **FLOATING
+* C1289 A1_and_B1_nand 0 0.52029f **FLOATING
+* C1290 A2_and_B2_nand 0 0.52029f **FLOATING
+* C1291 A3_and_B3_nand 0 0.52029f **FLOATING
+* C1292 and_b0e 0 3.10166f **FLOATING
+* C1293 and_a0e 0 3.54193f **FLOATING
+* C1294 and_b1e 0 3.64923f **FLOATING
+* C1295 and_a1e 0 5.29932f **FLOATING
+* C1296 and_b2e 0 3.87059f **FLOATING
+* C1297 and_a2e 0 5.463779f **FLOATING
+* C1298 and_b3e 0 3.78326f **FLOATING
+* C1299 and_a3e 0 9.53388f **FLOATING
+* C1300 and_a0e_nand 0 0.52029f **FLOATING
+* C1301 and_a1e_nand 0 0.52029f **FLOATING
+* C1302 and_a2e_nand 0 0.52029f **FLOATING
+* C1303 and_a3e_nand 0 0.52029f **FLOATING
+* C1304 A_greater_B_node_1 0 0.248064f **FLOATING
+* C1305 compare_B3e 0 16.0881f **FLOATING
+* C1306 A0 0 28.1625f **FLOATING
+* C1307 A1 0 42.1157f **FLOATING
+* C1308 A2 0 18.2933f **FLOATING
+* C1309 D3 0 23.202501f **FLOATING
+* C1310 A3 0 15.9802f **FLOATING
+* C1311 A3_nand_B3c 0 0.52029f **FLOATING
+* C1312 compare_A2e 0 14.2568f **FLOATING
+* C1313 A3c 0 1.6834f **FLOATING
+* C1314 compare_A3e 0 12.8447f **FLOATING
+* C1315 xor_1 0 1.64089f **FLOATING
+* C1316 B3c 0 12.7175f **FLOATING
+* C1317 A3_eq_B3_A2_gt_B2_c 0 0.59518f **FLOATING
+* C1318 compare_A1e 0 15.1418f **FLOATING
+* C1319 a_754_1232# 0 0.388565f **FLOATING
+* C1320 A3_eq_B3_A2_eq_B2_A1_gt_B1_c 0 0.617397f **FLOATING
+* C1321 B2c 0 7.22845f **FLOATING
+* C1322 B1c 0 7.55881f **FLOATING
+* C1323 A3e_xnor_B3e 0 19.5984f **FLOATING
+* C1324 a_706_1232# 0 0.388565f **FLOATING
+* C1325 a_690_1233# 0 0.38028f **FLOATING
+* C1326 A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0_c 0 0.644677f **FLOATING
+* C1327 A2e_xnor_B2e 0 9.465691f **FLOATING
+* C1328 A3_and_B3c 0 3.03158f **FLOATING
+* C1329 A3_eq_B3_A2_gt_B2 0 2.92765f **FLOATING
+* C1330 A3_eq_B3_A2_eq_B2_A1_gt_B1 0 1.909f **FLOATING
+* C1331 A3_eq_B3_A2_eq_B2_A1_eq_B1_A0_gt_B0 0 2.4789f **FLOATING
+* C1332 A_GT_B 0 0.421262f **FLOATING
+* C1333 A_GT_B_c 0 0.668379f **FLOATING
+* C1334 gnd 0 0.162303p **FLOATING
+* C1335 A_LS_B_node_1 0 0.248064f **FLOATING
+* C1336 A_LS_B 0 0.101396f **FLOATING
+* C1337 A_LS_B_nand 0 0.52029f **FLOATING
+* C1338 a_840_1472# 0 1.40121f **FLOATING
+* C1339 A_equal_B_c 0 18.6104f **FLOATING
+* C1340 vdd 0 0.383305p **FLOATING
+
+
+
+
+
+** testing ADDER_SUBTRACTOR MODULE
+.tran 1n 1u
+.control
+run
+plot v(S1)+32 v(S0)+30 v(D0)+28 v(D1)+26 v(A3)+24 v(A2)+22 v(A1)+20 v(A0)+18 v(B3)+16 v(B2)+14 v(B1)+12 v(B0)+10 v(sum4)+8 v(sum3)+6 v(sum2)+4 v(Sum1)+2 v(Sum0) 
+.endc
+.end
+
+* .tran 1n 900n
+* .control  
+* run 
+* plot  v(S1)+24 v(S0)+22 v(A3)+20 v(B3)+18 v(A2)+16 v(B2)+14 v(A1)+12 v(B1)+10 v(A0)+8 v(B0)+6 v(A_GT_B)+4 v(A_LS_B)+2 v(A_equal_B)
+* .endc
+* .end
+
+* .tran 10n 2u
+* .control
+* run
+* plot v(S1)+26 v(S0)+24 v(A3)+22 v(B3)+20 v(A2)+18 v(B2)+16 v(A1)+14 v(B1)+12 v(A0)+10 v(B0)+8 v(A3_and_B3)+6 v(A2_and_B2)+4 v(A1_and_B1)+2 v(A0_and_B0)
+* .endc
+* .end

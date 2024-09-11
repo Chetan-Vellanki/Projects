@@ -1,0 +1,19 @@
+*2 INPUT NOR GATE CMOS IMPLEMENTATION
+.include "TSMC_180nm.txt"
+.include NOT.sub
+
+.subckt OR input_A input_B  output vdd gnd
+M_n_1 output_nor input_A gnd gnd CMOSN W = {w} L = {l}
++ AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+M_n_2 output_nor input_B gnd gnd CMOSN W = {w} L = {l}
++ AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+M_p_1 node_p_1 input_A vdd vdd CMOSP W = {w} L = {l}
++ AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+M_p_2 output_nor input_B node_p_1 vdd CMOSP W = {w} L = {l}
++AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+X_nor_to_nor output_nor output vdd gnd NOT
+.ends OR

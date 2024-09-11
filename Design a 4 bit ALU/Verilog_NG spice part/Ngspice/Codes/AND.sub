@@ -1,0 +1,21 @@
+*2 INPUT NAND GATE CMOS IMPLEMENTATION
+.include "TSMC_180nm.txt"
+.include NOT.sub
+
+.subckt AND input_A input_B  output vdd gnd
+M_n_1 output_nand input_A node_1 gnd CMOSN W = {w} L = {l}
++ AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+M_n_2 node_1 input_B gnd gnd CMOSN W = {w} L = {l}
++ AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+M_p_1 output_nand input_A vdd vdd CMOSP W = {w} L = {l}
++ AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+M_p_2 output_nand input_B vdd vdd CMOSP W = {w} L = {l}
++ AS = {5*w*lambda} PS = {10*lambda + 2*w} AD = {5*w*lambda} PD = {10*lambda + 2*w}
+
+X_link_nand_not output_nand output vdd gnd NOT
+
+
+.ends AND

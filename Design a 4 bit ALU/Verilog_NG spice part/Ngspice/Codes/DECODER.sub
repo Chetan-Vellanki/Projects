@@ -1,0 +1,15 @@
+.include TSMC_180nm.txt
+.include AND.sub
+.include NOT.sub
+
+.subckt DECODER S0 S1 D0 D1 D2 D3 vdd gnd
+* finding complements of S0 and S1
+
+X_S0c S0 S0c vdd gnd NOT
+X_S1c S1 S1c vdd gnd NOT
+X_D0 S0c S1c D0 vdd gnd AND
+X_D1 S1c S0 D1 vdd gnd AND
+X_D2 S0c S1 D2 vdd gnd AND
+X_D3 S0 S1 D3 vdd gnd AND
+
+.ends DECODER

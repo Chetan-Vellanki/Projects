@@ -1,0 +1,15 @@
+.include TSMC_180nm.txt
+.include three_input_xor.sub
+.include three_input_or.sub
+.include AND.sub
+.subckt FULL_ADDER input_A input_B input_C output_sum output_carry vdd gnd
+* SUM bit is the XOR of three inputs A^B^C
+X_find_sum input_A input_B input_C output_sum vdd gnd three_input_xor
+* CARRY bit is A.B + B.C + C.A
+X_and_A_B input_A input_B and_AB vdd gnd AND
+X_and_B_C input_B input_C and_BC vdd gnd AND
+X_and_C_A input_C input_A and_CA vdd gnd AND
+
+X_carry_bit and_AB and_BC and_CA output_carry vdd gnd three_input_or
+
+.ends FULL_ADDER

@@ -1,0 +1,517 @@
+.include TSMC_180nm.txt
+.param supply_voltage = 1
+.global gnd
+.global vdd
+
+
+VDD vdd gnd 'supply_voltage'
+** GIVING INPUT signals S0 S1 ,A and B
+V_input_S0 S0 gnd PULSE(0 1 200n 50p 50p 200n 400n)
+V_input_S1 S1 gnd PULSE(0 1 400n 50p 50p 400n 800n)
+V_input_A3 A3 gnd PULSE(0 1 0 50p 50p 50n 100n)
+V_input_A2 A2 gnd PULSE(0 1 50n 50p 50p 75n 150n)
+V_input_A1 A1 gnd PULSE(0 1 0 50p 50p 100n 200n)
+V_input_A0 A0 gnd PULSE(0 1 50n 50p 50p 50n 100n)
+V_input_B3 B3 gnd PULSE(0 1 0 50p 50p 75n 150n)
+V_input_B2 B2 gnd PULSE(0 1 75n 50p 50p 75n 150n)  
+V_input_B1 B1 gnd PULSE(1 0 100n 50p 50p 100n 200n)
+V_input_B0 B0 gnd PULSE(1 0 50n 50p 50p 100n 200n)
+
+* SPICE3 file created from DEC_ANDER.ext - technology: scmos
+
+.option scale=90n
+
+M1000 vdd and_b1e A1_and_B1_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1001 vdd D3 and_a1e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1002 A1_and_B1_nand and_a1e vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1003 and_a3e and_a3e_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1004 A2_and_B2 A2_and_B2_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1005 A3_and_B3 A3_and_B3_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1006 DEC_D1_NAND S1c vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1007 and_a0e_nand A0 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1008 DEC_D2_NAND S0c DEC_AND_NODE_3 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1009 ander_node_8 D3 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1010 vdd S0 DEC_D1_NAND vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1011 A0_and_B0_nand and_a0e ander_node_12 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1012 vdd D3 and_a0e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1013 DEC_AND_NODE_3 S1 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1014 and_a2e and_a2e_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1015 ander_node_12 and_b0e gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1016 Dec_AND_node_1 S1c gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1017 and_b1e and_b1e_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1018 and_b1e_nand B1 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1019 and_a1e_nand A1 ander_node_3 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1020 and_b3e and_b3e_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1021 ander_node_11 and_b1e gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1022 ander_node_3 D3 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1023 S0c S0 gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1024 vdd D3 and_b2e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1025 A1_and_B1_nand and_a1e ander_node_11 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1026 and_a2e and_a2e_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1027 S1c S1 vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1028 D3 DEC_D3_NAND vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1029 and_b2e_nand B2 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1030 DEC_D3_NAND S1 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1031 D0 DEC_D0_NAND gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1032 and_b0e and_b0e_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1033 and_b3e and_b3e_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1034 and_b0e_nand B0 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1035 and_a3e_nand A3 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1036 A2_and_B2_nand and_a2e vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1037 vdd D3 and_b0e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1038 DEC_D1_NAND S1c Dec_AND_node_2 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1039 and_a0e_nand A0 ander_node_4 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1040 vdd and_b2e A2_and_B2_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1041 A1_and_B1 A1_and_B1_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1042 A3_and_B3_nand and_a3e vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1043 D1 DEC_D1_NAND gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1044 Dec_AND_node_2 S0 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1045 ander_node_4 D3 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1046 vdd and_b3e A3_and_B3_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1047 and_b0e and_b0e_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1048 and_b1e_nand B1 ander_node_6 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1049 vdd D3 and_b1e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1050 and_a0e and_a0e_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1051 ander_node_7 D3 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1052 D2 DEC_D2_NAND gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1053 and_b2e_nand B2 ander_node_7 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1054 DEC_D3_NAND S1 DEC_AND_NODE_4 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1055 A0_and_B0 A0_and_B0_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1056 vdd S0 DEC_D3_NAND vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1057 and_a2e_nand A2 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1058 and_b0e_nand B0 ander_node_5 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1059 and_a3e_nand A3 ander_node_1 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1060 A2_and_B2_nand and_a2e ander_node_10 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1061 and_a0e and_a0e_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1062 vdd D3 and_a2e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1063 ander_node_5 D3 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1064 ander_node_10 and_b2e gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1065 and_a1e and_a1e_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1066 D2 DEC_D2_NAND vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1067 A3_and_B3_nand and_a3e ander_node_9 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1068 vdd D3 and_a3e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1069 and_b3e_nand B3 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1070 ander_node_9 and_b3e gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1071 S0c S0 vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1072 ander_node_6 D3 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1073 D0 DEC_D0_NAND vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1074 and_a1e and_a1e_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1075 DEC_D0_NAND S0c vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1076 DEC_AND_NODE_4 S0 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1077 A1_and_B1 A1_and_B1_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1078 D1 DEC_D1_NAND vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1079 and_a2e_nand A2 ander_node_2 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1080 and_b1e and_b1e_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1081 ander_node_2 D3 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1082 ander_node_1 D3 gnd Gnd CMOSN w=5 l=5
++  ad=35p pd=24u as=29.999998p ps=22u
+M1083 and_b3e_nand B3 ander_node_8 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1084 S1c S1 gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1085 D3 DEC_D3_NAND gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1086 and_b2e and_b2e_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1087 DEC_D2_NAND S0c vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1088 vdd D3 and_b3e_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1089 A0_and_B0 A0_and_B0_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1090 A0_and_B0_nand and_a0e vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+M1091 vdd S1 DEC_D2_NAND vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1092 DEC_D0_NAND S0c Dec_AND_node_1 Gnd CMOSN w=5 l=5
++  ad=29.999998p pd=22u as=35p ps=24u
+M1093 vdd and_b0e A0_and_B0_nand vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1094 vdd S1c DEC_D0_NAND vdd CMOSP w=5 l=5
++  ad=35p pd=24u as=45p ps=23u
+M1095 and_a3e and_a3e_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1096 A2_and_B2 A2_and_B2_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1097 and_b2e and_b2e_nand vdd vdd CMOSP w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1098 A3_and_B3 A3_and_B3_nand gnd Gnd CMOSN w=5 l=5
++  ad=40p pd=26u as=35p ps=24u
+M1099 and_a1e_nand A1 vdd vdd CMOSP w=5 l=5
++  ad=45p pd=23u as=35p ps=24u
+C0 ander_node_9 A3_and_B3_nand 0.085282f
+C1 gnd DEC_AND_NODE_4 0.077062f
+C2 and_a3e and_a1e 0.053894f
+C3 gnd ander_node_10 0.07683f
+C4 gnd A2_and_B2 0.051616f
+C5 and_a3e_nand gnd 0.148342f
+C6 Dec_AND_node_2 DEC_D1_NAND 0.085282f
+C7 vdd DEC_D2_NAND 0.094003f
+C8 and_a0e and_b1e 4.19e-21
+C9 A1 gnd 0.03151f
+C10 S1 gnd 0.131827f
+C11 and_b0e and_b3e 0.01764f
+C12 DEC_AND_NODE_4 DEC_D3_NAND 0.085282f
+C13 A3_and_B3 A3_and_B3_nand 0.030251f
+C14 ander_node_4 A0 0.088221f
+C15 gnd and_b3e 0.081186f
+C16 and_a2e gnd 0.095887f
+C17 vdd A2 0.075788f
+C18 vdd and_b2e_nand 0.094003f
+C19 S1 DEC_D3_NAND 0.006448f
+C20 and_b2e ander_node_10 0.089107f
+C21 Dec_AND_node_1 S1c 0.089107f
+C22 B2 and_b2e_nand 0.006448f
+C23 and_b0e and_b0e_nand 0.030251f
+C24 gnd DEC_D1_NAND 0.159401f
+C25 and_a3e_nand ander_node_1 0.085282f
+C26 vdd and_a1e 0.144029f
+C27 and_b3e_nand and_b3e 0.030251f
+C28 Dec_AND_node_1 DEC_D0_NAND 0.085282f
+C29 and_a0e_nand ander_node_4 0.085282f
+C30 vdd A2_and_B2_nand 0.094003f
+C31 vdd A1_and_B1_nand 0.094003f
+C32 gnd and_b0e_nand 0.148342f
+C33 and_b3e and_b1e 0.010402f
+C34 and_a3e ander_node_9 0.088221f
+C35 and_b2e and_b3e 0.012211f
+C36 and_a3e_nand D3 0.015311f
+C37 vdd and_a1e_nand 0.094003f
+C38 A0_and_B0_nand ander_node_12 0.085282f
+C39 gnd Dec_AND_node_2 0.077312f
+C40 A1 ander_node_3 0.088221f
+C41 S0 S0c 0.043542f
+C42 ander_node_5 and_b0e_nand 0.085282f
+C43 D3 and_b3e 0.006782f
+C44 B3 and_b3e_nand 0.006448f
+C45 S1c S0c 0.015985f
+C46 DEC_D0_NAND S0c 0.006448f
+C47 and_b0e gnd 0.113067f
+C48 S1 DEC_D2_NAND 0.015311f
+C49 and_a0e and_a1e 0.012215f
+C50 and_a0e_nand A0 0.006448f
+C51 D3 and_b0e_nand 0.015311f
+C52 vdd S0c 0.230788f
+C53 and_a3e A3_and_B3_nand 0.006448f
+C54 vdd A3 0.075788f
+C55 vdd A1_and_B1 0.040884f
+C56 A2_and_B2_nand ander_node_10 0.085282f
+C57 A2_and_B2_nand A2_and_B2 0.030251f
+C58 gnd and_b3e_nand 0.148342f
+C59 and_b0e and_b1e 0.01764f
+C60 vdd D2 0.04098f
+C61 gnd DEC_D3_NAND 0.157853f
+C62 vdd and_a2e_nand 0.094003f
+C63 vdd A3_and_B3 0.040884f
+C64 and_b2e and_b0e 0.01764f
+C65 gnd and_b1e 0.102119f
+C66 gnd ander_node_1 0.07683f
+C67 gnd ander_node_5 0.07683f
+C68 and_a2e and_a1e 0.010267f
+C69 ander_node_7 gnd 0.07683f
+C70 and_b2e gnd 0.114913f
+C71 and_a2e A2_and_B2_nand 0.006448f
+C72 and_a1e_nand A1 0.006448f
+C73 vdd A3_and_B3_nand 0.094003f
+C74 D3 gnd 0.313918f
+C75 gnd ander_node_6 0.07683f
+C76 gnd ander_node_2 0.07683f
+C77 vdd A0 0.075788f
+C78 gnd ander_node_3 0.07683f
+C79 and_b2e and_b1e 0.010402f
+C80 D3 and_b3e_nand 0.015311f
+C81 A0_and_B0_nand A0_and_B0 0.030251f
+C82 vdd D1 0.04098f
+C83 D3 DEC_D3_NAND 0.030251f
+C84 S1 DEC_AND_NODE_3 0.089107f
+C85 DEC_D2_NAND gnd 0.157853f
+C86 ander_node_12 and_a0e 0.088221f
+C87 D3 and_b1e 0.007976f
+C88 S1 S0c 0.511187f
+C89 D3 ander_node_1 0.089107f
+C90 D3 ander_node_5 0.089107f
+C91 vdd and_a0e_nand 0.094003f
+C92 ander_node_7 D3 0.089107f
+C93 D3 B1 1.14e-20
+C94 and_a3e_nand A3 0.006448f
+C95 D3 and_b2e 0.00917f
+C96 B1 ander_node_6 0.088221f
+C97 ander_node_9 and_b3e 0.089107f
+C98 vdd A0_and_B0_nand 0.094003f
+C99 gnd A2 0.044196f
+C100 gnd and_b2e_nand 0.148342f
+C101 gnd and_a1e 0.084316f
+C102 D3 ander_node_6 0.089107f
+C103 D3 ander_node_2 0.089107f
+C104 vdd and_a3e 0.139621f
+C105 D3 ander_node_3 0.089107f
+C106 S0 S1c 0.07308f
+C107 and_a2e and_a2e_nand 0.030251f
+C108 gnd A2_and_B2_nand 0.148342f
+C109 gnd A1_and_B1_nand 0.148342f
+C110 gnd Dec_AND_node_1 0.07683f
+C111 S0 vdd 0.202099f
+C112 DEC_D0_NAND S1c 0.015311f
+C113 vdd A0_and_B0 0.040884f
+C114 and_a1e_nand gnd 0.148342f
+C115 ander_node_7 and_b2e_nand 0.085282f
+C116 and_a0e_nand and_a0e 0.030251f
+C117 and_b3e A3_and_B3_nand 0.015311f
+C118 and_b2e and_b2e_nand 0.030251f
+C119 vdd S1c 0.19269f
+C120 vdd DEC_D0_NAND 0.094023f
+C121 A1_and_B1_nand and_b1e 0.015311f
+C122 A0_and_B0_nand and_a0e 0.006448f
+C123 gnd ander_node_11 0.07683f
+C124 vdd and_b1e_nand 0.094003f
+C125 and_b2e A2_and_B2_nand 0.015311f
+C126 B0 vdd 0.075788f
+C127 vdd B2 0.075788f
+C128 D3 and_b2e_nand 0.015311f
+C129 ander_node_2 A2 0.088221f
+C130 and_a3e and_a0e 0.012211f
+C131 gnd DEC_AND_NODE_3 0.077196f
+C132 ander_node_9 gnd 0.07683f
+C133 gnd S0c 0.051616f
+C134 ander_node_11 and_b1e 0.089107f
+C135 D1 DEC_D1_NAND 0.030251f
+C136 gnd ander_node_4 0.07683f
+C137 gnd A1_and_B1 0.051616f
+C138 D0 DEC_D0_NAND 0.030251f
+C139 and_a1e_nand D3 0.015311f
+C140 and_b0e ander_node_12 0.089107f
+C141 D2 gnd 0.051616f
+C142 and_a3e_nand and_a3e 0.030251f
+C143 S0 DEC_AND_NODE_4 0.089107f
+C144 gnd and_a2e_nand 0.148342f
+C145 vdd D0 0.040884f
+C146 gnd A3_and_B3 0.051616f
+C147 and_a1e_nand ander_node_3 0.085282f
+C148 gnd ander_node_12 0.07683f
+C149 vdd and_a0e 0.136432f
+C150 and_a3e and_a2e 0.032478f
+C151 S1 S0 0.028532f
+C152 B3 ander_node_8 0.088221f
+C153 A3 ander_node_1 0.088221f
+C154 gnd A3_and_B3_nand 0.148342f
+C155 vdd A2_and_B2 0.040884f
+C156 S1 S1c 0.030251f
+C157 A1_and_B1_nand and_a1e 0.006448f
+C158 and_a3e_nand vdd 0.094003f
+C159 D3 ander_node_4 0.089107f
+C160 gnd A0 0.031203f
+C161 vdd A1 0.075788f
+C162 S0 DEC_D1_NAND 0.015311f
+C163 D3 A3 0.032811f
+C164 S1 vdd 0.201098f
+C165 gnd D1 0.051616f
+C166 and_a1e_nand and_a1e 0.030251f
+C167 DEC_D2_NAND DEC_AND_NODE_3 0.085282f
+C168 gnd ander_node_8 0.07683f
+C169 D3 and_a2e_nand 0.015311f
+C170 vdd and_b3e 0.11701f
+C171 S1c DEC_D1_NAND 0.006448f
+C172 vdd and_a2e 0.135377f
+C173 DEC_D2_NAND S0c 0.006448f
+C174 ander_node_2 and_a2e_nand 0.085282f
+C175 A0_and_B0_nand and_b0e 0.015311f
+C176 ander_node_11 and_a1e 0.088221f
+C177 and_a0e_nand gnd 0.148342f
+C178 vdd DEC_D1_NAND 0.094035f
+C179 and_b3e_nand ander_node_8 0.085282f
+C180 ander_node_11 A1_and_B1_nand 0.085282f
+C181 A0_and_B0_nand gnd 0.148342f
+C182 DEC_D2_NAND D2 0.030251f
+C183 S0 Dec_AND_node_2 0.089107f
+C184 vdd and_b0e_nand 0.094003f
+C185 B0 and_b0e_nand 0.006448f
+C186 Dec_AND_node_2 S1c 0.088221f
+C187 and_a3e gnd 0.051616f
+C188 Dec_AND_node_1 S0c 0.088221f
+C189 vdd B3 0.075948f
+C190 A2 and_a2e_nand 0.006448f
+C191 D3 ander_node_8 0.089107f
+C192 S0 gnd 0.092334f
+C193 and_a2e and_a0e 0.008592f
+C194 S1 DEC_AND_NODE_4 0.088221f
+C195 A1_and_B1_nand A1_and_B1 0.030251f
+C196 gnd A0_and_B0 0.051616f
+C197 and_a0e_nand D3 0.015311f
+C198 gnd S1c 0.055406f
+C199 vdd and_b0e 0.116913f
+C200 gnd DEC_D0_NAND 0.145266f
+C201 and_a2e ander_node_10 0.088221f
+C202 S0 DEC_D3_NAND 0.015311f
+C203 and_b1e_nand gnd 0.148342f
+C204 vdd gnd 0.061951f
+C205 gnd B2 5.76e-19
+C206 DEC_AND_NODE_3 S0c 0.088221f
+C207 vdd and_b3e_nand 0.094003f
+C208 vdd DEC_D3_NAND 0.094059f
+C209 and_b1e_nand and_b1e 0.030251f
+C210 vdd and_b1e 0.11701f
+C211 B0 ander_node_5 0.088221f
+C212 and_b1e_nand B1 0.006448f
+C213 vdd B1 0.075788f
+C214 vdd and_b2e 0.11701f
+C215 ander_node_7 B2 0.088221f
+C216 gnd D0 0.051616f
+C217 D3 and_b1e_nand 0.015311f
+C218 gnd and_a0e 0.083816f
+C219 B0 D3 1.7e-20
+C220 vdd D3 0.659791f
+C221 and_b1e_nand ander_node_6 0.085282f
+* C222 DEC_AND_NODE_4 0 0.248064f **FLOATING
+* C223 DEC_D3_NAND 0 0.516966f **FLOATING
+* C224 DEC_AND_NODE_3 0 0.248064f **FLOATING
+* C225 D2 0 0.114466f **FLOATING
+* C226 DEC_D2_NAND 0 0.52029f **FLOATING
+* C227 Dec_AND_node_2 0 0.248064f **FLOATING
+* C228 S1 0 2.76414f **FLOATING
+* C229 D1 0 0.104663f **FLOATING
+* C230 DEC_D1_NAND 0 0.513722f **FLOATING
+* C231 S0 0 7.918251f **FLOATING
+* C232 Dec_AND_node_1 0 0.248064f **FLOATING
+* C233 D0 0 0.395495f **FLOATING
+* C234 DEC_D0_NAND 0 0.511796f **FLOATING
+* C235 ander_node_5 0 0.248064f **FLOATING
+* C236 ander_node_6 0 0.248064f **FLOATING
+* C237 ander_node_7 0 0.248064f **FLOATING
+* C238 S1c 0 4.36861f **FLOATING
+* C239 S0c 0 5.09312f **FLOATING
+* C240 ander_node_8 0 0.248064f **FLOATING
+* C241 and_b0e_nand 0 0.52029f **FLOATING
+* C242 and_b1e_nand 0 0.52029f **FLOATING
+* C243 and_b2e_nand 0 0.52029f **FLOATING
+* C244 and_b3e_nand 0 0.52029f **FLOATING
+* C245 B0 0 0.775356f **FLOATING
+* C246 B1 0 0.782982f **FLOATING
+* C247 B2 0 0.782829f **FLOATING
+* C248 B3 0 0.796852f **FLOATING
+* C249 ander_node_12 0 0.248064f **FLOATING
+* C250 ander_node_11 0 0.248064f **FLOATING
+* C251 ander_node_10 0 0.248064f **FLOATING
+* C252 ander_node_9 0 0.248064f **FLOATING
+* C253 A0_and_B0 0 0.075352f **FLOATING
+* C254 A1_and_B1 0 0.075352f **FLOATING
+* C255 A2_and_B2 0 0.075352f **FLOATING
+* C256 A3_and_B3 0 0.075352f **FLOATING
+* C257 ander_node_4 0 0.248064f **FLOATING
+* C258 ander_node_3 0 0.248064f **FLOATING
+* C259 ander_node_2 0 0.248064f **FLOATING
+* C260 gnd 0 30.8673f **FLOATING
+* C261 ander_node_1 0 0.248064f **FLOATING
+* C262 A0_and_B0_nand 0 0.52029f **FLOATING
+* C263 A1_and_B1_nand 0 0.52029f **FLOATING
+* C264 A2_and_B2_nand 0 0.52029f **FLOATING
+* C265 A3_and_B3_nand 0 0.52029f **FLOATING
+* C266 and_b0e 0 3.10166f **FLOATING
+* C267 and_a0e 0 3.54193f **FLOATING
+* C268 and_b1e 0 3.65082f **FLOATING
+* C269 and_a1e 0 5.30212f **FLOATING
+* C270 and_b2e 0 3.87505f **FLOATING
+* C271 and_a2e 0 5.51845f **FLOATING
+* C272 and_b3e 0 3.80397f **FLOATING
+* C273 and_a3e 0 9.23816f **FLOATING
+* C274 and_a0e_nand 0 0.52029f **FLOATING
+* C275 and_a1e_nand 0 0.52029f **FLOATING
+* C276 and_a2e_nand 0 0.52029f **FLOATING
+* C277 and_a3e_nand 0 0.52029f **FLOATING
+* C278 A0 0 0.85906f **FLOATING
+* C279 A1 0 0.825224f **FLOATING
+* C280 A2 0 0.869022f **FLOATING
+* C281 D3 0 23.4535f **FLOATING
+* C282 A3 0 0.839399f **FLOATING
+* C283 vdd 0 48.651104f **FLOATING
+
+
+
+.tran 1n 1u
+.control 
+run
+plot v(S1)+26 v(S0)+24 v(A3)+22 v(B3)+20 v(A2)+18 v(B2)+16 v(A1)+14 v(B1)+12 v(A0)+10 v(B0)+8 v(A3_and_B3)+6 v(A2_and_B2)+4 v(A1_and_B1)+2 v(A0_and_B0)
+
+.endc 
+.end

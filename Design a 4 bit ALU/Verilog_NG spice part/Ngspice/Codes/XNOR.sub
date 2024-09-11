@@ -1,0 +1,10 @@
+** IMPLEMENTATION OF XOR USING NAND, NOT gates
+.include TSMC_180nm.txt
+.include XOR.sub
+.include NOT.sub
+
+.subckt XNOR input_A input_B output vdd gnd 
+X_finding_XOR input_A input_B output_xor vdd gnd XOR
+X_XNOR output_xor output vdd gnd NOT
+
+.ends XNOR
